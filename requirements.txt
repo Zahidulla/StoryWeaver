@@ -1,0 +1,4 @@
+selenium
+robotframework-seleniumlibrary
+webdriver-manager
+robotframework-pabot
