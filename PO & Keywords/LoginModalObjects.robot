@@ -30,17 +30,22 @@ Login
     element text should be    ${GlobalSlimNotification}      Login Successful
     Click Element    ${CloseButton}
 Click on Login/Signup button
+    Sleep    2s
     click Element   ${SignupLoginbutton}
 Verify the Login/signup modal should visible
+    Sleep    2s
     Element Should Be Visible    ${Login/SignupModal}
 click on Google button
     Click Element    //*[@class="pb-svg-icon pb-svg-icon--type-google pb-button__icon-left"]
 Click on Login/Signup button from generic login signup(Appear when clicked on action button)
+    Sleep    2s
     Click Element    ${LoginButtonSmallModal}
 Click on email option
+     Sleep    2s
      Click Element    ${Emailbuttonmodal}
 Enter email id
     [Arguments]     ${UserName}
+    Sleep    2s
     input text    ${EmailInputField}   ${UserName}
 Click on captcha button
     Select Frame    //iframe[@title='reCAPTCHA']
@@ -83,7 +88,7 @@ Click on Forgot password link from the login popup
 Click on Forget password button from login popup
     Click Button    ${ForgetPasswordButton}
 Forgot password notification should be visible
-    Sleep    2s
+    Sleep    3s
     [Arguments]     ${UserName}
     Element Should Contain    ${GlobalSlimNotification}    We have sent a password reset link to ${UserName}
 Manadatory login loader screen should appear

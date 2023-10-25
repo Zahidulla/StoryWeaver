@@ -39,7 +39,7 @@ Resend confirmation Test
     [Tags]      TC004       Sanity
     Click on Login/Signup button
     Click on email option
-    Enter email id      zahid14@yopmail.com
+    Enter email id      test41@yopmail.com
     Click on Resend confirmation links
     Click on Resend confirmation button
     Confirmation mail should be visible

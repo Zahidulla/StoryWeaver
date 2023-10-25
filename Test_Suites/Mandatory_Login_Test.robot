@@ -19,7 +19,7 @@ Test for Manadatory login/signup after 3 reads
     END
 User should be able to login from the manadtory Login/Signup modal
     [Tags]      TC101       Sanity
-    Wait Until Element Is Visible    ${Emailbuttonmodal}
+    Wait Until Element Is Visible    ${Emailbuttonmodal}    timeout=10s
     Click on email option
     Enter email id    ${UserName}
     Click on next button

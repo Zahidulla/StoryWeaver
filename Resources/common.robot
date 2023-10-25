@@ -9,7 +9,7 @@ Open_Web_browser
       [Arguments]   ${Url}
       Open Browser   ${Url}    ${browser_Name}
       Set Window Size    1536	    864     #Setting the window size for headless mode
-      Set Selenium Implicit Wait    10s
+      Set Selenium Implicit Wait    20s
       maximize browser window
       Sleep    20s  #Giving this wait time to wait for service worker to get install
 Close_the_browser

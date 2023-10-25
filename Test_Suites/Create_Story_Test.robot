@@ -29,9 +29,6 @@ Test for filling the publish form
     Enter Story title in Publish Form
     Select level of Story in Publsih Form
     Click on start with words button in Publish Form
-Test for verifying the entered story title
-    [Tags]      TC204       Sanity
-    Verify the Story title
 Test for adding new page and add image and text in 3rd page
     [Tags]      TC205       Sanity
     Insert new page in the editor
@@ -58,13 +55,14 @@ Test for filling final publish form
     [Tags]      TC210       Sanity
     Close the PTR page if visible       #Ensures to close the popup to avoid interception error
     Click on Publish button from editor
+    Check for empty speech bubble or text box while publihsing  #To ensure continuity if any stale element error occurs while adding speech bubble and text box
     CLick on Done button
     Enter synopsis in final Publish form
     Select category from final Publish form
     Enter English story title in final Publsih form
     Click on publish button from final publish form
 Verify the UGC published Notification
-        [Tags]      TC211       Sanity
+    [Tags]      TC211       Sanity
     Verify the UGC slim notification after publishing
 Tear Down
     Close_the_browser

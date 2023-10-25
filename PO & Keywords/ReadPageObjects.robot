@@ -10,7 +10,9 @@ ${CloseButton}    //div[@title="Close"]
 
 *** Keywords ***
 Hover on first card
+    Set Focus To Element    ${BookCard}
     Mouse Over    ${BookCard}
+    Sleep    2s
 Click on 3 dot icon
     Click Element       ${3DotMenu}
 Click on read story from 3 dot menu

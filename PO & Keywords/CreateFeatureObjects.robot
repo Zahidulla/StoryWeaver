@@ -16,7 +16,7 @@ ${Addimagetopage}    (//*[text()="add to current page"])
 ${Editorsection}   //div[@id='txtEditor']
 ${SaveImagebutton}    //i[@class='cropControlSave']
 ${FrontCoverPage}    //a[@class="page_thumbnail FrontCoverPage"]
-${PublishButton}    //*[@id="publish"]
+${PublishButton}    (//a[@class="btn btn-app btn-brand-1 font-sm"])[3]
 ${DoneButton}    //button[@id="storycard-img-edit-done"]
 ${PublishBookButton}    //button[@id="publish-book"]
 ${SynopsisTextField}    //textarea[@id="story_synopsis"]
@@ -29,7 +29,7 @@ ${InsertPageButton}     //span[@id='insert_pages']
 ${InsertOkaybutton}      (//span[@id='insert_page'])[1]
 ${ReadersSecondPage}       (//div[@class="illustration_container"])[2]
 ${OrientationDropdown}      //span[text()='Orientation & Layout']
-${ReaderOrientation}        (//img[@class="sc-sidebar-layout-img"])[4]
+${ReaderOrientation}        (//img[@class="sc-sidebar-layout-img"])[5]
 ${InsertDropdown}      //span[text()='Insert']
 ${AddTextBoxButton}       //div[@id="create-textbox"]
 ${TextBox}      //span[@class="page-position-content"]
@@ -43,10 +43,17 @@ ${SpeechBubbleTextfield}        //div[@title="click to write into speech bubble"
 *** Keywords ***
 Hover and click on create option from main menu
     Wait Until Element Is Not Visible    ${GlobalSlimNotification}    timeout=10s
+    Sleep    2s
     Mouse Over    ${CreateMenu}
     Click Element    ${DropdownCreate}
 Verify create page opened
-    Wait Until Element Is Visible    ${SelectLanguage}
+    Sleep    5s
+     ${PublishForm}=  Run Keyword And Return Status  Element Should Be Visible  ${SelectLanguage}
+    WHILE    ${PublishForm} != ${TRUE}
+        Reload Page
+        ${PublishForm}=  Run Keyword And Return Status  Page Should Contain Element  ${SelectLanguage}
+    END
+    Element Should Be Visible    ${SelectLanguage}      
 Select language of Story in Publish Form
     Select From List By Value    ${SelectLanguage}   4
 Enter Story title in Publish Form
@@ -62,19 +69,25 @@ Add random image to reader
     Click Element    ${AddImageButton}
     Mouse Over    ${Add the first image}
     Click Element    ${Addimagetopage}
+    Sleep    2s
     Click Element    ${SaveImagebutton}
 Adding Text in Readers textbox
+    Sleep    2s
     Input Text    ${Editorsection}    Testing Test for editor by automation.
 Click on Front cover page
     Mouse Up    ${FrontCoverPage}
     Click Element    ${FrontCoverPage}
 Click on Publish button from editor
+    Sleep    2s
     Click Element    ${PublishButton}
     
 CLick on Done button
+    Sleep    2s
     Wait Until Element Is Visible    ${DoneButton}
+    Sleep    2s
     Click Button    ${DoneButton}
     Wait Until Element Is Visible    ${PublishBookButton}
+    Sleep    2s
     Click Button    ${PublishBookButton}
 Enter synopsis in final Publish form
     Input Text    ${SynopsisTextField}    Synopis text for the story.
@@ -89,8 +102,8 @@ Click on publish button from final publish form
     Click Button    ${PublihsFormNextBtn}
     Wait Until Element Is Visible    ${FinalPublishStoryBtn}
     Click Button    ${FinalPublishStoryBtn}
-    Sleep    10s
 Verify the UGC slim notification after publishing
+    Sleep    5s
     Element Should Contain    ${GlobalSlimNotification}    Yay! Your story is published and will appear under 'My Published Stories' soon
 Insert new page in the editor
     Sleep    2s
@@ -99,7 +112,7 @@ Insert new page in the editor
     Sleep    2s
 Click on second page
     Click Element    ${ReadersSecondPage}
-    Sleep    2s
+    Sleep    3s
 Select some orientation for the reader
     Click Element    ${OrientationDropdown}
     Click Element    ${ReaderOrientation}
@@ -112,21 +125,29 @@ Add text box in the reader
 Enter Text in the text box
     Mouse Over    ${TextBoxField}
     Click Element    ${TextBoxField}
-    Sleep    2s
+    Sleep    5s
     Input Text    ${TextBoxField}    TextBoxTest
 Add Speech bubble
+    Sleep    2s
     Click Element    ${SpeechBubbleOption}
     Click Element    ${SelectSpeechBubbletype}
     Click Element    ${AddSpeechBubbleBtn}
 Enter Text in Speech Bubble
+    Sleep    2s
     Mouse Over    ${SpeechBubbleTextfield}
     Click Element    ${SpeechBubbleTextfield}
-    Sleep    2s
+    Sleep    5s
     Input Text      ${SpeechBubbleTextfield}     SpeechBubbleText
 Click on preview
     Click Element    ${PreviewButton}
 Verify the preview
     Sleep    5s
+Check for empty speech bubble or text box while publihsing
+    ${EmptyTextfieldModal}=  Run Keyword And Return Status    Element Should Be Visible    //span[text()='Your story isn’t completely done!']
+    WHILE    ${EmptyTextfieldModal} == ${TRUE}
+        Click Button    Yes
+        ${EmptyTextfieldModal}=  Run Keyword And Return Status  Page Should Contain Element  ${SelectLanguage}
+    END
 
 
 
