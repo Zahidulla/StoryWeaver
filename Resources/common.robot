@@ -3,7 +3,7 @@ Library     SeleniumLibrary
 Resource    ../Resources/Test_data.robot
 *** Variables ***
 ${ReaderNextButton} =    //a[@title='Next']
-${driver_path}      /usr/bin/chromedriver
+${driver_path}      drivers/chromedriver_linux64/chromedriver
 ${chrome_options}       add_argument("--headless=new"); add_argument("--no-sandbox")
 
 *** Keywords ***
