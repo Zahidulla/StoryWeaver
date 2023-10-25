@@ -3,7 +3,7 @@ Library     SeleniumLibrary
 Resource    ../Resources/Test_data.robot
 *** Variables ***
 ${ReaderNextButton} =    //a[@title='Next']
-${driver_path}      drivers/chromedriver_linux64/chromedriver
+
 
 *** Keywords ***
 Open_Web_browser
