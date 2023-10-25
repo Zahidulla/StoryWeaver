@@ -3,11 +3,11 @@ Library     SeleniumLibrary
 Resource    ../Resources/Test_data.robot
 *** Variables ***
 ${ReaderNextButton} =    //a[@title='Next']
-${CromeOptions}=        add_argument("--no-sandbox"); ("--disable-dev-shm-usage"); ("--headless=new")
+${CromeOptions}=        add_argument("--headless=new")
 *** Keywords ***
 Open_Web_browser
       [Arguments]   ${Url}
-      Open Browser         ${Url}         ${Browser_Name}       ${OPTIONS}=${CromeOptions}
+      Open Browser         ${None}         ${Browser_Name}       ${OPTIONS}=${CromeOptions}
       Set Window Size    1536	    864     #Setting the window size for headless mode
       Set Selenium Implicit Wait    20s
       maximize browser window
