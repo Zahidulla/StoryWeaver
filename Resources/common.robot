@@ -1,16 +1,16 @@
 *** Settings ***
 Library     SeleniumLibrary
 Resource    ../Resources/Test_data.robot
-Library     InstallWebdriver.py
+Library     Process
 *** Variables ***
 ${ReaderNextButton} =    //a[@title='Next']
 
 *** Keywords ***
 Open_Web_browser
+      Run Process    webdrivermanager    chrome
       [Arguments]   ${Url}
-
-      ${driver_path}=    InstallWebdriver.Get Driver Path With Browser   ${Browser_Name}
-      Open Browser         ${Url}         ${Browser_Name}       executable_path=${driver_path}
+      Run Process    webdrivermanager    chrome
+      Open Browser   ${browser_Name}      ${Url}
       Set Window Size    1536	    864     #Setting the window size for headless mode
       Set Selenium Implicit Wait    20s
       maximize browser window
