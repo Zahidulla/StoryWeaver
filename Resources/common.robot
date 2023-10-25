@@ -8,7 +8,7 @@ ${ReaderNextButton} =    //a[@title='Next']
 Open_Web_browser
       [Arguments]   ${Url}
       Open Browser   ${browser_Name}
-      Go to      ${Url}
+      Go To      ${Url}
       Set Window Size    1536	    864     #Setting the window size for headless mode
       Set Selenium Implicit Wait    20s
       maximize browser window
