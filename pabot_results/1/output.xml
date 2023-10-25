@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.8.10 on linux)" generated="20231025 10:50:09.297" rpa="false" schemaversion="3">
+<suite id="s1" name="Test Suites" source="/home/my/PycharmProjects/StoryWeaver/Test_Suites">
+<suite id="s1-s1" name="Login Test" source="/home/my/PycharmProjects/StoryWeaver/Test_Suites/Login_Test.robot">
+<test id="s1-s1-t1" name="Login Test with valid crediantials" line="9">
+<kw name="Open_Web_browser" library="common" type="SETUP">
+<arg>${Url}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${Url}</arg>
+<arg>${browser_Name}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231025 10:50:09.533" level="INFO">Opening browser 'headlesschrome' to base url 'https://storyweaver.org.in/'.</msg>
+<status status="PASS" starttime="20231025 10:50:09.532" endtime="20231025 10:50:13.343"/>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<arg>1536</arg>
+<arg>864</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" starttime="20231025 10:50:13.344" endtime="20231025 10:50:13.600"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>20s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20231025 10:50:13.600" endtime="20231025 10:50:13.604"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231025 10:50:13.604" endtime="20231025 10:50:16.109"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>20s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231025 10:50:36.111" level="INFO">Slept 20 seconds</msg>
+<status status="PASS" starttime="20231025 10:50:16.109" endtime="20231025 10:50:36.112"/>
+</kw>
+<status status="PASS" starttime="20231025 10:50:09.531" endtime="20231025 10:50:36.112"/>
+</kw>
+<kw name="Click on Login/Signup button" library="LoginModalObjects">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231025 10:50:38.115" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231025 10:50:36.114" endtime="20231025 10:50:38.115"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SignupLoginbutton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231025 10:50:38.117" level="INFO">Clicking element '//*[text()="Sign Up/Log In"]'.</msg>
+<status status="PASS" starttime="20231025 10:50:38.116" endtime="20231025 10:50:41.855"/>
+</kw>
+<status status="PASS" starttime="20231025 10:50:36.113" endtime="20231025 10:50:41.856"/>
+</kw>
+<kw name="Click on email option" library="LoginModalObjects">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231025 10:50:43.859" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231025 10:50:41.858" endtime="20231025 10:50:43.859"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Emailbuttonmodal}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231025 10:50:43.860" level="INFO">Clicking element '//a[text()="Email"]'.</msg>
+<status status="PASS" starttime="20231025 10:50:43.860" endtime="20231025 10:50:44.061"/>
+</kw>
+<status status="PASS" starttime="20231025 10:50:41.858" endtime="20231025 10:50:44.061"/>
+</kw>
+<kw name="Enter email id" library="LoginModalObjects">
+<arg>zahid@yopmail.com</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231025 10:50:46.062" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231025 10:50:44.062" endtime="20231025 10:50:46.062"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${EmailInputField}</arg>
+<arg>${UserName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231025 10:50:46.064" level="INFO">Typing text 'zahid@yopmail.com' into text field '//input[@id='auth-modal-email']'.</msg>
+<status status="PASS" starttime="20231025 10:50:46.063" endtime="20231025 10:50:47.485"/>
+</kw>
+<status status="PASS" starttime="20231025 10:50:44.061" endtime="20231025 10:50:47.485"/>
+</kw>
+<kw name="Click on next button" library="LoginModalObjects">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${NextButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231025 10:50:47.487" level="INFO">Clicking button '//button[text()='Next']'.</msg>
+<status status="PASS" starttime="20231025 10:50:47.486" endtime="20231025 10:50:47.655"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231025 10:50:50.657" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231025 10:50:47.656" endtime="20231025 10:50:50.657"/>
+</kw>
+<status status="PASS" starttime="20231025 10:50:47.486" endtime="20231025 10:50:50.658"/>
+</kw>
+<kw name="Enter Vaild Password in password field" library="LoginModalObjects">
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${PasswordField}</arg>
+<arg>${Password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20231025 10:50:50.660" level="INFO">Typing password into text field '//input[@id='auth-modal-password']'.</msg>
+<msg timestamp="20231025 10:50:50.760" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231025 10:50:51.032" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231025 10:50:50.659" endtime="20231025 10:50:51.033"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231025 10:50:53.033" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231025 10:50:51.033" endtime="20231025 10:50:53.034"/>
+</kw>
+<status status="PASS" starttime="20231025 10:50:50.659" endtime="20231025 10:50:53.034"/>
+</kw>
+<kw name="Click login button after entering password" library="LoginModalObjects">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LoginButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231025 10:50:53.036" level="INFO">Clicking element '//button[text()='Log In']'.</msg>
+<status status="PASS" starttime="20231025 10:50:53.035" endtime="20231025 10:50:53.389"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231025 10:50:55.390" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231025 10:50:53.389" endtime="20231025 10:50:55.390"/>
+</kw>
+<status status="PASS" starttime="20231025 10:50:53.035" endtime="20231025 10:50:55.391"/>
+</kw>
+<kw name="Verify the notification for Successfully login" library="LoginModalObjects">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${GlobalSlimNotification}</arg>
+<arg>Login Successful</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20231025 10:50:55.392" level="INFO">Verifying element 'xpath=//div[@class="pb-slim-notification-container"]' contains exact text 'Login Successful'.</msg>
+<status status="PASS" starttime="20231025 10:50:55.391" endtime="20231025 10:50:55.499"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Login Successful</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231025 10:50:55.500" level="INFO">Login Successful</msg>
+<status status="PASS" starttime="20231025 10:50:55.499" endtime="20231025 10:50:55.500"/>
+</kw>
+<status status="PASS" starttime="20231025 10:50:55.391" endtime="20231025 10:50:55.500"/>
+</kw>
+<kw name="Close_the_browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231025 10:50:55.501" endtime="20231025 10:50:56.743"/>
+</kw>
+<status status="PASS" starttime="20231025 10:50:55.500" endtime="20231025 10:50:56.745"/>
+</kw>
+<doc>Testing Login with In-valid credentials</doc>
+<tag>Sanity</tag>
+<tag>TC001</tag>
+<status status="PASS" starttime="20231025 10:50:09.530" endtime="20231025 10:50:56.745"/>
+</test>
+<test id="s1-s1-t2" name="Login Test with invalid credentials" line="19">
+<kw name="Open_Web_browser" library="common" type="SETUP">
+<arg>${Url}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${Url}</arg>
+<arg>${browser_Name}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231025 10:50:56.754" level="INFO">Opening browser 'headlesschrome' to base url 'https://storyweaver.org.in/'.</msg>
+<status status="PASS" starttime="20231025 10:50:56.752" endtime="20231025 10:51:16.854"/>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<arg>1536</arg>
+<arg>864</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" starttime="20231025 10:51:16.855" endtime="20231025 10:51:18.426"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>20s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20231025 10:51:18.426" endtime="20231025 10:51:18.428"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231025 10:51:18.429" endtime="20231025 10:51:19.030"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>20s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231025 10:51:39.031" level="INFO">Slept 20 seconds</msg>
+<status status="PASS" starttime="20231025 10:51:19.030" endtime="20231025 10:51:39.031"/>
+</kw>
+<status status="PASS" starttime="20231025 10:50:56.750" endtime="20231025 10:51:39.032"/>
+</kw>
+<kw name="Click on Login/Signup button" library="LoginModalObjects">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231025 10:51:41.034" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231025 10:51:39.034" endtime="20231025 10:51:41.035"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SignupLoginbutton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231025 10:51:41.038" level="INFO">Clicking element '//*[text()="Sign Up/Log In"]'.</msg>
+<status status="PASS" starttime="20231025 10:51:41.036" endtime="20231025 10:51:42.180"/>
+</kw>
+<status status="PASS" starttime="20231025 10:51:39.033" endtime="20231025 10:51:42.180"/>
+</kw>
+<kw name="Click on email option" library="LoginModalObjects">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231025 10:51:44.182" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231025 10:51:42.181" endtime="20231025 10:51:44.182"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Emailbuttonmodal}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231025 10:51:44.182" level="INFO">Clicking element '//a[text()="Email"]'.</msg>
+<status status="PASS" starttime="20231025 10:51:44.182" endtime="20231025 10:51:44.284"/>
+</kw>
+<status status="PASS" starttime="20231025 10:51:42.180" endtime="20231025 10:51:44.284"/>
+</kw>
+<kw name="Enter email id" library="LoginModalObjects">
+<arg>zahid@yopmail.com</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231025 10:51:46.286" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231025 10:51:44.285" endtime="20231025 10:51:46.286"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${EmailInputField}</arg>
+<arg>${UserName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231025 10:51:46.287" level="INFO">Typing text 'zahid@yopmail.com' into text field '//input[@id='auth-modal-email']'.</msg>
+<status status="PASS" starttime="20231025 10:51:46.286" endtime="20231025 10:51:46.750"/>
+</kw>
+<status status="PASS" starttime="20231025 10:51:44.285" endtime="20231025 10:51:46.750"/>
+</kw>
+<kw name="Click on next button" library="LoginModalObjects">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${NextButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231025 10:51:46.752" level="INFO">Clicking button '//button[text()='Next']'.</msg>
+<status status="PASS" starttime="20231025 10:51:46.751" endtime="20231025 10:51:47.158"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231025 10:51:50.159" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231025 10:51:47.159" endtime="20231025 10:51:50.160"/>
+</kw>
+<status status="PASS" starttime="20231025 10:51:46.751" endtime="20231025 10:51:50.160"/>
+</kw>
+<kw name="Enter Invalid Password in password field" library="LoginModalObjects">
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${PasswordField}</arg>
+<arg>${Invalid_Password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20231025 10:51:50.162" level="INFO">Typing password into text field '//input[@id='auth-modal-password']'.</msg>
+<msg timestamp="20231025 10:51:50.230" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231025 10:51:50.380" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231025 10:51:50.162" endtime="20231025 10:51:50.380"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231025 10:51:52.381" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231025 10:51:50.380" endtime="20231025 10:51:52.381"/>
+</kw>
+<status status="PASS" starttime="20231025 10:51:50.161" endtime="20231025 10:51:52.382"/>
+</kw>
+<kw name="Click login button after entering password" library="LoginModalObjects">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LoginButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231025 10:51:52.383" level="INFO">Clicking element '//button[text()='Log In']'.</msg>
+<status status="PASS" starttime="20231025 10:51:52.382" endtime="20231025 10:51:52.606"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231025 10:51:54.608" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231025 10:51:52.606" endtime="20231025 10:51:54.608"/>
+</kw>
+<status status="PASS" starttime="20231025 10:51:52.382" endtime="20231025 10:51:54.608"/>
+</kw>
+<kw name="Invalid Email/Password slim notification" library="LoginModalObjects">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${GlobalSlimNotification}</arg>
+<arg>Invalid email or password.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20231025 10:51:54.609" level="INFO">Verifying element 'xpath=//div[@class="pb-slim-notification-container"]' contains exact text 'Invalid email or password.'.</msg>
+<status status="PASS" starttime="20231025 10:51:54.609" endtime="20231025 10:51:54.688"/>
+</kw>
+<status status="PASS" starttime="20231025 10:51:54.609" endtime="20231025 10:51:54.688"/>
+</kw>
+<kw name="Close_the_browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231025 10:51:54.689" endtime="20231025 10:51:54.781"/>
+</kw>
+<status status="PASS" starttime="20231025 10:51:54.689" endtime="20231025 10:51:54.781"/>
+</kw>
+<doc>Testing Login with valid credentials</doc>
+<tag>Sanity</tag>
+<tag>TC002</tag>
+<status status="PASS" starttime="20231025 10:50:56.748" endtime="20231025 10:51:54.781"/>
+</test>
+<test id="s1-s1-t3" name="Login Test with OTP" line="29">
+<kw name="Open_Web_browser" library="common" type="SETUP">
+<arg>${Url}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${Url}</arg>
+<arg>${browser_Name}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231025 10:51:54.783" level="INFO">Opening browser 'headlesschrome' to base url 'https://storyweaver.org.in/'.</msg>
+<status status="PASS" starttime="20231025 10:51:54.783" endtime="20231025 10:51:57.169"/>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<arg>1536</arg>
+<arg>864</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" starttime="20231025 10:51:57.170" endtime="20231025 10:51:58.131"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>20s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20231025 10:51:58.132" endtime="20231025 10:51:58.136"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231025 10:51:58.136" endtime="20231025 10:51:58.681"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>20s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231025 10:52:18.683" level="INFO">Slept 20 seconds</msg>
+<status status="PASS" starttime="20231025 10:51:58.682" endtime="20231025 10:52:18.683"/>
+</kw>
+<status status="PASS" starttime="20231025 10:51:54.783" endtime="20231025 10:52:18.684"/>
+</kw>
+<kw name="Click on Login/Signup button" library="LoginModalObjects">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231025 10:52:20.685" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231025 10:52:18.684" endtime="20231025 10:52:20.685"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SignupLoginbutton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231025 10:52:20.687" level="INFO">Clicking element '//*[text()="Sign Up/Log In"]'.</msg>
+<status status="PASS" starttime="20231025 10:52:20.686" endtime="20231025 10:52:22.209"/>
+</kw>
+<status status="PASS" starttime="20231025 10:52:18.684" endtime="20231025 10:52:22.209"/>
+</kw>
+<kw name="Click on Mobile Login Option" library="LoginModalObjects">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MobileButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231025 10:52:22.211" level="INFO">Clicking element '//a[text()="Mobile *"]'.</msg>
+<status status="PASS" starttime="20231025 10:52:22.210" endtime="20231025 10:52:22.488"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231025 10:52:24.489" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231025 10:52:22.488" endtime="20231025 10:52:24.489"/>
+</kw>
+<status status="PASS" starttime="20231025 10:52:22.210" endtime="20231025 10:52:24.490"/>
+</kw>
+<kw name="Enter Mobile number in mobile field" library="LoginModalObjects">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${MobileNumberField}</arg>
+<arg>${MobileNumber}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231025 10:52:24.491" level="INFO">Typing text '8088255301' into text field 'id=auth-modal-mobile-number'.</msg>
+<status status="PASS" starttime="20231025 10:52:24.491" endtime="20231025 10:52:24.708"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231025 10:52:26.709" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231025 10:52:24.708" endtime="20231025 10:52:26.709"/>
+</kw>
+<status status="PASS" starttime="20231025 10:52:24.490" endtime="20231025 10:52:26.710"/>
+</kw>
+<kw name="Click on next button" library="LoginModalObjects">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${NextButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231025 10:52:26.712" level="INFO">Clicking button '//button[text()='Next']'.</msg>
+<status status="PASS" starttime="20231025 10:52:26.711" endtime="20231025 10:52:27.081"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231025 10:52:30.082" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231025 10:52:27.082" endtime="20231025 10:52:30.083"/>
+</kw>
+<status status="PASS" starttime="20231025 10:52:26.710" endtime="20231025 10:52:30.083"/>
+</kw>
+<kw name="OTP notification should be visible" library="LoginModalObjects">
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${GlobalSlimNotification}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20231025 10:52:30.178" level="INFO">Element 'xpath=//div[@class="pb-slim-notification-container"]' is displayed.</msg>
+<status status="PASS" starttime="20231025 10:52:30.084" endtime="20231025 10:52:30.179"/>
+</kw>
+<status status="PASS" starttime="20231025 10:52:30.083" endtime="20231025 10:52:30.179"/>
+</kw>
+<kw name="Close_the_browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231025 10:52:30.180" endtime="20231025 10:52:30.472"/>
+</kw>
+<status status="PASS" starttime="20231025 10:52:30.180" endtime="20231025 10:52:30.473"/>
+</kw>
+<doc>Testing Login with valid credentials</doc>
+<tag>Sanity</tag>
+<tag>TC003</tag>
+<status status="PASS" starttime="20231025 10:51:54.782" endtime="20231025 10:52:30.473"/>
+</test>
+<test id="s1-s1-t4" name="Resend confirmation Test" line="37">
+<kw name="Open_Web_browser" library="common" type="SETUP">
+<arg>${Url}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${Url}</arg>
+<arg>${browser_Name}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231025 10:52:30.478" level="INFO">Opening browser 'headlesschrome' to base url 'https://storyweaver.org.in/'.</msg>
+<status status="PASS" starttime="20231025 10:52:30.478" endtime="20231025 10:52:34.233"/>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<arg>1536</arg>
+<arg>864</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" starttime="20231025 10:52:34.234" endtime="20231025 10:52:35.805"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>20s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20231025 10:52:35.805" endtime="20231025 10:52:35.808"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231025 10:52:35.808" endtime="20231025 10:52:36.424"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>20s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231025 10:52:56.426" level="INFO">Slept 20 seconds</msg>
+<status status="PASS" starttime="20231025 10:52:36.425" endtime="20231025 10:52:56.426"/>
+</kw>
+<status status="PASS" starttime="20231025 10:52:30.476" endtime="20231025 10:52:56.428"/>
+</kw>
+<kw name="Click on Login/Signup button" library="LoginModalObjects">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231025 10:52:58.437" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231025 10:52:56.434" endtime="20231025 10:52:58.437"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SignupLoginbutton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231025 10:52:58.438" level="INFO">Clicking element '//*[text()="Sign Up/Log In"]'.</msg>
+<status status="PASS" starttime="20231025 10:52:58.437" endtime="20231025 10:52:59.696"/>
+</kw>
+<status status="PASS" starttime="20231025 10:52:56.429" endtime="20231025 10:52:59.696"/>
+</kw>
+<kw name="Click on email option" library="LoginModalObjects">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231025 10:53:01.698" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231025 10:52:59.697" endtime="20231025 10:53:01.698"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Emailbuttonmodal}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231025 10:53:01.699" level="INFO">Clicking element '//a[text()="Email"]'.</msg>
+<status status="PASS" starttime="20231025 10:53:01.699" endtime="20231025 10:53:01.880"/>
+</kw>
+<status status="PASS" starttime="20231025 10:52:59.697" endtime="20231025 10:53:01.881"/>
+</kw>
+<kw name="Enter email id" library="LoginModalObjects">
+<arg>test41@yopmail.com</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231025 10:53:03.882" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231025 10:53:01.881" endtime="20231025 10:53:03.882"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${EmailInputField}</arg>
+<arg>${UserName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231025 10:53:03.883" level="INFO">Typing text 'test41@yopmail.com' into text field '//input[@id='auth-modal-email']'.</msg>
+<status status="PASS" starttime="20231025 10:53:03.883" endtime="20231025 10:53:04.215"/>
+</kw>
+<status status="PASS" starttime="20231025 10:53:01.881" endtime="20231025 10:53:04.216"/>
+</kw>
+<kw name="Click on Resend confirmation links" library="LoginModalObjects">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ConfirmationLink}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231025 10:53:04.217" level="INFO">Clicking element '//a[contains(text(),"Didn't receive confirmation instructions?")]'.</msg>
+<status status="PASS" starttime="20231025 10:53:04.217" endtime="20231025 10:53:04.442"/>
+</kw>
+<status status="PASS" starttime="20231025 10:53:04.216" endtime="20231025 10:53:04.443"/>
+</kw>
+<kw name="Click on Resend confirmation button" library="LoginModalObjects">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ConfirmationButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231025 10:53:04.444" level="INFO">Clicking element '//button[contains(text(),'Resend Confirmation Instructions')]'.</msg>
+<status status="PASS" starttime="20231025 10:53:04.444" endtime="20231025 10:53:04.611"/>
+</kw>
+<status status="PASS" starttime="20231025 10:53:04.443" endtime="20231025 10:53:04.611"/>
+</kw>
+<kw name="Confirmation mail should be visible" library="LoginModalObjects">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231025 10:53:06.612" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231025 10:53:04.612" endtime="20231025 10:53:06.613"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${GlobalSlimNotification}</arg>
+<arg>You will receive an email with instructions for how to confirm your email address in a few minutes.</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20231025 10:53:06.658" level="INFO">Element 'xpath=//div[@class="pb-slim-notification-container"]' contains text 'You will receive an email with instructions for how to confirm your email address in a few minutes.'.</msg>
+<status status="PASS" starttime="20231025 10:53:06.614" endtime="20231025 10:53:06.658"/>
+</kw>
+<status status="PASS" starttime="20231025 10:53:04.611" endtime="20231025 10:53:06.659"/>
+</kw>
+<kw name="Close_the_browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231025 10:53:06.660" endtime="20231025 10:53:06.755"/>
+</kw>
+<status status="PASS" starttime="20231025 10:53:06.659" endtime="20231025 10:53:06.755"/>
+</kw>
+<doc>Testing confirmtion mail</doc>
+<tag>Sanity</tag>
+<tag>TC004</tag>
+<status status="PASS" starttime="20231025 10:52:30.475" endtime="20231025 10:53:06.755"/>
+</test>
+<test id="s1-s1-t5" name="Forgot password Test" line="46">
+<kw name="Open_Web_browser" library="common" type="SETUP">
+<arg>${Url}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${Url}</arg>
+<arg>${browser_Name}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231025 10:53:06.758" level="INFO">Opening browser 'headlesschrome' to base url 'https://storyweaver.org.in/'.</msg>
+<status status="PASS" starttime="20231025 10:53:06.758" endtime="20231025 10:53:09.624"/>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<arg>1536</arg>
+<arg>864</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" starttime="20231025 10:53:09.625" endtime="20231025 10:53:11.000"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>20s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20231025 10:53:11.001" endtime="20231025 10:53:11.003"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231025 10:53:11.003" endtime="20231025 10:53:11.332"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>20s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231025 10:53:31.333" level="INFO">Slept 20 seconds</msg>
+<status status="PASS" starttime="20231025 10:53:11.332" endtime="20231025 10:53:31.333"/>
+</kw>
+<status status="PASS" starttime="20231025 10:53:06.757" endtime="20231025 10:53:31.334"/>
+</kw>
+<kw name="Click on Login/Signup button" library="LoginModalObjects">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231025 10:53:33.336" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231025 10:53:31.335" endtime="20231025 10:53:33.336"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SignupLoginbutton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231025 10:53:33.339" level="INFO">Clicking element '//*[text()="Sign Up/Log In"]'.</msg>
+<status status="PASS" starttime="20231025 10:53:33.337" endtime="20231025 10:53:34.604"/>
+</kw>
+<status status="PASS" starttime="20231025 10:53:31.334" endtime="20231025 10:53:34.605"/>
+</kw>
+<kw name="Click on email option" library="LoginModalObjects">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231025 10:53:36.607" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231025 10:53:34.606" endtime="20231025 10:53:36.607"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Emailbuttonmodal}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231025 10:53:36.608" level="INFO">Clicking element '//a[text()="Email"]'.</msg>
+<status status="PASS" starttime="20231025 10:53:36.607" endtime="20231025 10:53:36.731"/>
+</kw>
+<status status="PASS" starttime="20231025 10:53:34.605" endtime="20231025 10:53:36.732"/>
+</kw>
+<kw name="Enter email id" library="LoginModalObjects">
+<arg>zahid@yopmail.com</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231025 10:53:38.733" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231025 10:53:36.733" endtime="20231025 10:53:38.734"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${EmailInputField}</arg>
+<arg>${UserName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231025 10:53:38.735" level="INFO">Typing text 'zahid@yopmail.com' into text field '//input[@id='auth-modal-email']'.</msg>
+<status status="PASS" starttime="20231025 10:53:38.734" endtime="20231025 10:53:39.016"/>
+</kw>
+<status status="PASS" starttime="20231025 10:53:36.732" endtime="20231025 10:53:39.017"/>
+</kw>
+<kw name="Click on Forgot password link from the login popup" library="LoginModalObjects">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ForgotPasswordLink}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231025 10:53:39.018" level="INFO">Clicking element '//a[contains(text(),'Forgot Password?')]'.</msg>
+<status status="PASS" starttime="20231025 10:53:39.018" endtime="20231025 10:53:39.241"/>
+</kw>
+<status status="PASS" starttime="20231025 10:53:39.017" endtime="20231025 10:53:39.241"/>
+</kw>
+<kw name="Click on Forget password button from login popup" library="LoginModalObjects">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${ForgetPasswordButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231025 10:53:39.243" level="INFO">Clicking button '//button[contains(text(),'Send me Reset Password Instructions')]'.</msg>
+<status status="PASS" starttime="20231025 10:53:39.242" endtime="20231025 10:53:39.425"/>
+</kw>
+<status status="PASS" starttime="20231025 10:53:39.241" endtime="20231025 10:53:39.425"/>
+</kw>
+<kw name="Forgot password notification should be visible" library="LoginModalObjects">
+<arg>zahid@yopmail.com</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231025 10:53:42.427" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231025 10:53:39.426" endtime="20231025 10:53:42.427"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${GlobalSlimNotification}</arg>
+<arg>We have sent a password reset link to ${UserName}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20231025 10:53:42.483" level="INFO">Element 'xpath=//div[@class="pb-slim-notification-container"]' contains text 'We have sent a password reset link to zahid@yopmail.com'.</msg>
+<status status="PASS" starttime="20231025 10:53:42.427" endtime="20231025 10:53:42.484"/>
+</kw>
+<status status="PASS" starttime="20231025 10:53:39.426" endtime="20231025 10:53:42.484"/>
+</kw>
+<kw name="Close_the_browser" library="common" type="TEARDOWN">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231025 10:53:42.485" endtime="20231025 10:53:42.572"/>
+</kw>
+<status status="PASS" starttime="20231025 10:53:42.485" endtime="20231025 10:53:42.573"/>
+</kw>
+<doc>Testing forgot password mail</doc>
+<tag>Sanity</tag>
+<tag>TC005</tag>
+<status status="PASS" starttime="20231025 10:53:06.756" endtime="20231025 10:53:42.573"/>
+</test>
+<status status="PASS" starttime="20231025 10:50:09.322" endtime="20231025 10:53:42.574"/>
+</suite>
+<status status="PASS" starttime="20231025 10:50:09.303" endtime="20231025 10:53:42.577"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="5" fail="0" skip="0">Sanity</stat>
+<stat pass="1" fail="0" skip="0">TC001</stat>
+<stat pass="1" fail="0" skip="0">TC002</stat>
+<stat pass="1" fail="0" skip="0">TC003</stat>
+<stat pass="1" fail="0" skip="0">TC004</stat>
+<stat pass="1" fail="0" skip="0">TC005</stat>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="Test Suites">Test Suites</stat>
+<stat pass="5" fail="0" skip="0" id="s1-s1" name="Login Test">Test Suites.Login Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
