@@ -13,6 +13,7 @@ Open_Web_browser
       Call Method    ${chrome_options}    add_argument    --headless
       Call Method    ${chrome_options}    add_argument    --disable-gpu
       Call Method    ${chrome_options}    add_argument    --no-sandbox
+      Call Method    ${chrome_options}    add_agrument    --disable-dev-shm-usage
       [Arguments]   ${Url}
       Open Browser         ${Url}         ${Browser_Name}       ${OPTIONS}=${chrome_options}        #executable_path=  ${driver_path}
       Set Window Size    1536	    864     #Setting the window size for headless mode
