@@ -2,7 +2,7 @@
 *** Variables ***
 ${Url} =    https://feature1.pbees.party/en/
 ${ReadPage}=    https://feature1.pbees.party/en/stories?sort=Ratings
-${browser_Name}     headlesschrome
+${browser_Name}     edge
 ${UserName} =    zahid@yopmail.com
 ${Password} =    password
 ${LevelStory}=    Level 1:
