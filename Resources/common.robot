@@ -1,11 +1,13 @@
 *** Settings ***
 Library     SeleniumLibrary
 Resource    ../Resources/Test_data.robot
+Library     Process
 *** Variables ***
 ${ReaderNextButton} =    //a[@title='Next']
 
 *** Keywords ***
 Open_Web_browser
+      Run Process    webdrivermanager    chrome
       [Arguments]   ${Url}
       Open Browser   ${Url}    ${browser_Name}
       Set Window Size    1536	    864     #Setting the window size for headless mode
