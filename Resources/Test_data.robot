@@ -12,4 +12,4 @@ ${PTR_Close_Button}=    //*[@class="pb-ptrtooltip__tooltip-close"]
 ${Invalid_Password}=    12345678
 ${GlobalSlimNotification}    xpath=//*[@class="pb-slim-notification-container"]
 ${MobileNumber}     8088255301
-${IndividualImageURL}   https://feature1.pbees.party/en/illustrations/589
+${IndividualImageURL}   https://storyweaver.org.in/en/illustrations/589
