@@ -3,7 +3,7 @@ Library     SeleniumLibrary
 Resource    ../Resources/Test_data.robot
 *** Variables ***
 ${ReaderNextButton} =    //a[@title='Next']
-${CromeOptions}=        add_argument("--no-sandbox"); ("--disable-dev-shm-usage");
+${CromeOptions}=        add_argument("--no-sandbox"); ("--disable-dev-shm-usage"); ("--headless=new")
 *** Keywords ***
 Open_Web_browser
       [Arguments]   ${Url}
