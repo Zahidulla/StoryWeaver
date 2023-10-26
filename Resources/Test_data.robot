@@ -1,7 +1,7 @@
 
 *** Variables ***
-${Url} =    https://feature1.pbees.party/en/
-${ReadPage}=    https://feature1.pbees.party/en/stories?sort=Ratings
+${Url} =    https://storyweaver.org.in/en/
+${ReadPage}=    https://storyweaver.org.in/en/stories?sort=Ratings
 ${browser_Name}     headlesschrome
 ${UserName} =    zahid@yopmail.com
 ${Password} =    password
