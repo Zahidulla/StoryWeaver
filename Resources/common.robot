@@ -16,7 +16,8 @@ Open_Web_browser
       Call Method    ${chrome_options}    add_argument    --disable-dev-shm-usage
       [Arguments]   ${Url}
       Open Browser         ${Url}         ${Browser_Name}       ${OPTIONS}=${chrome_options}        #executable_path=  ${driver_path}
-      Set Window Size    1536	    864     #Setting the window size for headless mode
+      #Set Window Size    1536	    864     #Setting the window size for headless mode
+      Maximise Window
       Set Selenium Implicit Wait    20s
       maximize browser window
       Sleep    20s  #Giving this wait time to wait for service worker to get install
