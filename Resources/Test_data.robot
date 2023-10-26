@@ -2,7 +2,7 @@
 *** Variables ***
 ${Url} =    https://storyweaver.org.in/en/
 ${ReadPage}=    https://storyweaver.org.in/en/stories?sort=Ratings
-${browser_Name}     ie
+${browser_Name}     safari
 ${UserName} =    zahid@yopmail.com
 ${Password} =    password
 ${LevelStory}=    Level 1:
