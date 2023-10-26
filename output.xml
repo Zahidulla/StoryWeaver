@@ -1,0 +1,1310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.8.10 on linux)" generated="20231026 17:28:42.862" rpa="false" schemaversion="3">
+<suite id="s1" name="Create Story Test" source="/home/my/PycharmProjects/StoryWeaver/Test_Suites/Create_Story_Test.robot">
+<test id="s1-t1" name="Setup" line="8">
+<kw name="Open_Web_browser" library="common">
+<arg>${IndividualImageURL}</arg>
+<kw name="Evaluate" library="BuiltIn">
+<var>${chrome_options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20231026 17:28:43.868" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7ff1978e5910&gt;</msg>
+<status status="PASS" starttime="20231026 17:28:43.867" endtime="20231026 17:28:43.868"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>test-type</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20231026 17:28:43.868" endtime="20231026 17:28:43.869"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-extensions</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20231026 17:28:43.869" endtime="20231026 17:28:43.869"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20231026 17:28:43.869" endtime="20231026 17:28:43.870"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-gpu</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20231026 17:28:43.870" endtime="20231026 17:28:43.870"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--no-sandbox</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20231026 17:28:43.871" endtime="20231026 17:28:43.871"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-dev-shm-usage</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" starttime="20231026 17:28:43.871" endtime="20231026 17:28:43.872"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${Url}</arg>
+<arg>${Browser_Name}</arg>
+<arg>${OPTIONS}=${chrome_options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231026 17:28:43.873" level="INFO">Opening browser 'headlesschrome' to base url 'https://storyweaver.org.in/en/illustrations/589'.</msg>
+<status status="PASS" starttime="20231026 17:28:43.872" endtime="20231026 17:28:58.250"/>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<arg>1536</arg>
+<arg>864</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" starttime="20231026 17:28:58.251" endtime="20231026 17:28:58.363"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" library="SeleniumLibrary">
+<arg>20s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" starttime="20231026 17:28:58.363" endtime="20231026 17:28:58.365"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231026 17:28:58.365" endtime="20231026 17:28:58.470"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>20s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231026 17:29:18.471" level="INFO">Slept 20 seconds</msg>
+<status status="PASS" starttime="20231026 17:28:58.470" endtime="20231026 17:29:18.471"/>
+</kw>
+<status status="PASS" starttime="20231026 17:28:43.866" endtime="20231026 17:29:18.472"/>
+</kw>
+<status status="PASS" starttime="20231026 17:28:43.864" endtime="20231026 17:29:18.472"/>
+</test>
+<test id="s1-t2" name="Test for clicking on create option from main menu as an unsigned user" line="10">
+<kw name="Hover and click on create option from main menu" library="CreateFeatureObjects">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>${GlobalSlimNotification}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20231026 17:29:18.476" endtime="20231026 17:29:18.573"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231026 17:29:20.574" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231026 17:29:18.573" endtime="20231026 17:29:20.574"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${CreateMenu}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20231026 17:29:20.575" level="INFO">Simulating Mouse Over on element '//*[text()="Create"]'.</msg>
+<status status="PASS" starttime="20231026 17:29:20.574" endtime="20231026 17:29:20.891"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${DropdownCreate}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231026 17:29:20.892" level="INFO">Clicking element '(//span[@class="pb-site-nav-link__title"][text()='Create'])[2]'.</msg>
+<status status="PASS" starttime="20231026 17:29:20.891" endtime="20231026 17:29:22.164"/>
+</kw>
+<status status="PASS" starttime="20231026 17:29:18.475" endtime="20231026 17:29:22.164"/>
+</kw>
+<kw name="Verify the Login/signup modal should visible" library="LoginModalObjects">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231026 17:29:24.166" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231026 17:29:22.165" endtime="20231026 17:29:24.166"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${Login/SignupModal}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20231026 17:29:24.232" level="INFO">Element '//form[@class="pb-auth-modal__form-content"]' is displayed.</msg>
+<status status="PASS" starttime="20231026 17:29:24.166" endtime="20231026 17:29:24.232"/>
+</kw>
+<status status="PASS" starttime="20231026 17:29:22.165" endtime="20231026 17:29:24.232"/>
+</kw>
+<kw name="Close Login/Signup Modal" library="LoginModalObjects">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CloseButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231026 17:29:24.233" level="INFO">Clicking element '//div[@title="Close"]'.</msg>
+<status status="PASS" starttime="20231026 17:29:24.233" endtime="20231026 17:29:24.468"/>
+</kw>
+<status status="PASS" starttime="20231026 17:29:24.232" endtime="20231026 17:29:24.468"/>
+</kw>
+<tag>Sanity</tag>
+<tag>TC200</tag>
+<status status="PASS" starttime="20231026 17:29:18.473" endtime="20231026 17:29:24.469"/>
+</test>
+<test id="s1-t3" name="Test for clicking on create option from individual image page" line="15">
+<kw name="Accept GDPR" library="common">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//a[text()='Agree']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231026 17:29:24.475" level="INFO">Clicking element '//a[text()='Agree']'.</msg>
+<status status="PASS" starttime="20231026 17:29:24.473" endtime="20231026 17:29:24.881"/>
+</kw>
+<status status="PASS" starttime="20231026 17:29:24.472" endtime="20231026 17:29:24.881"/>
+</kw>
+<kw name="Click on create story button from individual image page" library="ImagePageObjects">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${CreateStoryButton}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20231026 17:29:24.882" endtime="20231026 17:29:25.183"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CreateStoryButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231026 17:29:25.184" level="INFO">Clicking element '//a[contains(text(),'Create Story')]'.</msg>
+<status status="PASS" starttime="20231026 17:29:25.184" endtime="20231026 17:29:25.303"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231026 17:29:27.304" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231026 17:29:25.304" endtime="20231026 17:29:27.305"/>
+</kw>
+<status status="PASS" starttime="20231026 17:29:24.881" endtime="20231026 17:29:27.305"/>
+</kw>
+<kw name="Click on Login/Signup button from generic login signup(Appear when clicked on action button)" library="LoginModalObjects">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231026 17:29:29.307" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231026 17:29:27.306" endtime="20231026 17:29:29.307"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LoginButtonSmallModal}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231026 17:29:29.308" level="INFO">Clicking element '//a[text()='Log In']'.</msg>
+<status status="PASS" starttime="20231026 17:29:29.307" endtime="20231026 17:29:29.560"/>
+</kw>
+<status status="PASS" starttime="20231026 17:29:27.305" endtime="20231026 17:29:29.560"/>
+</kw>
+<kw name="Verify the Login/signup modal should visible" library="LoginModalObjects">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231026 17:29:31.562" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231026 17:29:29.562" endtime="20231026 17:29:31.563"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${Login/SignupModal}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20231026 17:29:31.603" level="INFO">Element '//form[@class="pb-auth-modal__form-content"]' is displayed.</msg>
+<status status="PASS" starttime="20231026 17:29:31.563" endtime="20231026 17:29:31.604"/>
+</kw>
+<status status="PASS" starttime="20231026 17:29:29.561" endtime="20231026 17:29:31.606"/>
+</kw>
+<tag>Sanity</tag>
+<tag>TC201</tag>
+<status status="PASS" starttime="20231026 17:29:24.471" endtime="20231026 17:29:31.606"/>
+</test>
+<test id="s1-t4" name="Test for Login and opening create page" line="21">
+<kw name="Login" library="LoginModalObjects">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Emailbuttonmodal}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231026 17:29:31.609" level="INFO">Clicking element '//a[text()="Email"]'.</msg>
+<status status="PASS" starttime="20231026 17:29:31.609" endtime="20231026 17:29:31.840"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${EmailInputField}</arg>
+<arg>${UserName}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231026 17:29:31.841" level="INFO">Typing text 'zahid@yopmail.com' into text field '//input[@id='auth-modal-email']'.</msg>
+<status status="PASS" starttime="20231026 17:29:31.840" endtime="20231026 17:29:32.306"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${NextButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231026 17:29:32.306" level="INFO">Clicking button '//button[text()='Next']'.</msg>
+<status status="PASS" starttime="20231026 17:29:32.306" endtime="20231026 17:29:32.477"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${PasswordField}</arg>
+<arg>${Password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20231026 17:29:32.478" level="INFO">Typing password into text field '//input[@id='auth-modal-password']'.</msg>
+<msg timestamp="20231026 17:29:32.662" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20231026 17:29:32.865" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20231026 17:29:32.477" endtime="20231026 17:29:32.865"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${LoginButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231026 17:29:32.867" level="INFO">Clicking button '//button[text()='Log In']'.</msg>
+<status status="PASS" starttime="20231026 17:29:32.866" endtime="20231026 17:29:33.038"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231026 17:29:36.040" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231026 17:29:33.038" endtime="20231026 17:29:36.040"/>
+</kw>
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<arg>${GlobalSlimNotification}</arg>
+<arg>Login Successful</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20231026 17:29:36.041" level="INFO">Verifying element 'xpath=//*[@class="pb-slim-notification-container"]' contains exact text 'Login Successful'.</msg>
+<status status="PASS" starttime="20231026 17:29:36.040" endtime="20231026 17:29:36.111"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CloseButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231026 17:29:36.112" level="INFO">Clicking element '//div[@title="Close"]'.</msg>
+<status status="PASS" starttime="20231026 17:29:36.111" endtime="20231026 17:29:36.242"/>
+</kw>
+<status status="PASS" starttime="20231026 17:29:31.608" endtime="20231026 17:29:36.242"/>
+</kw>
+<kw name="Hover and click on create option from main menu" library="CreateFeatureObjects">
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<arg>${GlobalSlimNotification}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="PASS" starttime="20231026 17:29:36.244" endtime="20231026 17:29:36.292"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231026 17:29:38.293" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231026 17:29:36.292" endtime="20231026 17:29:38.293"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${CreateMenu}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20231026 17:29:38.294" level="INFO">Simulating Mouse Over on element '//*[text()="Create"]'.</msg>
+<status status="PASS" starttime="20231026 17:29:38.293" endtime="20231026 17:29:38.589"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${DropdownCreate}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231026 17:29:38.590" level="INFO">Clicking element '(//span[@class="pb-site-nav-link__title"][text()='Create'])[2]'.</msg>
+<status status="PASS" starttime="20231026 17:29:38.589" endtime="20231026 17:29:44.901"/>
+</kw>
+<status status="PASS" starttime="20231026 17:29:36.243" endtime="20231026 17:29:44.901"/>
+</kw>
+<kw name="Verify create page opened" library="CreateFeatureObjects">
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231026 17:29:49.903" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231026 17:29:44.902" endtime="20231026 17:29:49.903"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${PublishForm}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${SelectLanguage}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${SelectLanguage}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20231026 17:29:50.651" level="INFO">Element '//select[@id='story_language_id']' is displayed.</msg>
+<status status="PASS" starttime="20231026 17:29:49.904" endtime="20231026 17:29:50.651"/>
+</kw>
+<msg timestamp="20231026 17:29:50.651" level="INFO">${PublishForm} = True</msg>
+<status status="PASS" starttime="20231026 17:29:49.904" endtime="20231026 17:29:50.651"/>
+</kw>
+<while condition="${PublishForm} != ${TRUE}">
+<iter>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="NOT RUN" starttime="20231026 17:29:50.652" endtime="20231026 17:29:50.652"/>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${PublishForm}</var>
+<arg>Page Should Contain Element</arg>
+<arg>${SelectLanguage}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="NOT RUN" starttime="20231026 17:29:50.652" endtime="20231026 17:29:50.653"/>
+</kw>
+<status status="NOT RUN" starttime="20231026 17:29:50.652" endtime="20231026 17:29:50.653"/>
+</iter>
+<status status="NOT RUN" starttime="20231026 17:29:50.651" endtime="20231026 17:29:50.653"/>
+</while>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${SelectLanguage}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20231026 17:29:50.700" level="INFO">Element '//select[@id='story_language_id']' is displayed.</msg>
+<status status="PASS" starttime="20231026 17:29:50.653" endtime="20231026 17:29:50.700"/>
+</kw>
+<status status="PASS" starttime="20231026 17:29:44.902" endtime="20231026 17:29:50.700"/>
+</kw>
+<tag>Sanity</tag>
+<tag>TC202</tag>
+<status status="PASS" starttime="20231026 17:29:31.607" endtime="20231026 17:29:50.701"/>
+</test>
+<test id="s1-t5" name="Test for filling the publish form" line="26">
+<kw name="Select language of Story in Publish Form" library="CreateFeatureObjects">
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<arg>${SelectLanguage}</arg>
+<arg>4</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<msg timestamp="20231026 17:29:50.707" level="INFO">Selecting options from selection list '//select[@id='story_language_id']' by value 4.</msg>
+<status status="PASS" starttime="20231026 17:29:50.706" endtime="20231026 17:29:51.259"/>
+</kw>
+<status status="PASS" starttime="20231026 17:29:50.705" endtime="20231026 17:29:51.260"/>
+</kw>
+<kw name="Enter Story title in Publish Form" library="CreateFeatureObjects">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${StorytitleField}</arg>
+<arg>${StoryTitleText}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231026 17:29:51.262" level="INFO">Typing text 'हिंडिटेक्शत् Test' into text field '//input[@id='story_title']'.</msg>
+<status status="PASS" starttime="20231026 17:29:51.261" endtime="20231026 17:29:51.689"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231026 17:29:55.690" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20231026 17:29:51.689" endtime="20231026 17:29:55.690"/>
+</kw>
+<status status="PASS" starttime="20231026 17:29:51.260" endtime="20231026 17:29:55.690"/>
+</kw>
+<kw name="Select level of Story in Publsih Form" library="CreateFeatureObjects">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${StoryLevel}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231026 17:29:55.691" level="INFO">Clicking element '//strong[contains(text(),'Level 1:')]'.</msg>
+<status status="PASS" starttime="20231026 17:29:55.691" endtime="20231026 17:29:55.846"/>
+</kw>
+<status status="PASS" starttime="20231026 17:29:55.690" endtime="20231026 17:29:55.846"/>
+</kw>
+<kw name="Click on start with words button in Publish Form" library="CreateFeatureObjects">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${StartswithWordsButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231026 17:29:55.848" level="INFO">Clicking element '//input[@id="with_words"]'.</msg>
+<status status="PASS" starttime="20231026 17:29:55.847" endtime="20231026 17:29:56.621"/>
+</kw>
+<status status="PASS" starttime="20231026 17:29:55.847" endtime="20231026 17:29:56.621"/>
+</kw>
+<tag>Sanity</tag>
+<tag>TC203</tag>
+<status status="PASS" starttime="20231026 17:29:50.703" endtime="20231026 17:29:56.623"/>
+</test>
+<test id="s1-t6" name="Test for adding new page and add image and text in 3rd page" line="32">
+<kw name="Insert new page in the editor" library="CreateFeatureObjects">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231026 17:29:58.666" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231026 17:29:56.665" endtime="20231026 17:29:58.666"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${InsertPageButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231026 17:29:58.667" level="INFO">Clicking element '//span[@id='insert_pages']'.</msg>
+<status status="PASS" starttime="20231026 17:29:58.666" endtime="20231026 17:29:58.874"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${InsertOkaybutton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231026 17:29:58.875" level="INFO">Clicking element '(//span[@id='insert_page'])[1]'.</msg>
+<status status="PASS" starttime="20231026 17:29:58.874" endtime="20231026 17:29:59.589"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231026 17:30:01.590" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231026 17:29:59.589" endtime="20231026 17:30:01.590"/>
+</kw>
+<status status="PASS" starttime="20231026 17:29:56.662" endtime="20231026 17:30:01.591"/>
+</kw>
+<kw name="Add random image to reader" library="CreateFeatureObjects">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${AddImageButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231026 17:30:01.592" level="INFO">Clicking element '//span[text()='add an image']'.</msg>
+<status status="PASS" starttime="20231026 17:30:01.592" endtime="20231026 17:30:01.789"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Add the first image}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20231026 17:30:01.790" level="INFO">Simulating Mouse Over on element '(//a[@class="illustration_drawer_img"])[1]'.</msg>
+<status status="PASS" starttime="20231026 17:30:01.789" endtime="20231026 17:30:03.443"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Addimagetopage}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231026 17:30:03.444" level="INFO">Clicking element '(//*[text()="add to current page"])'.</msg>
+<status status="PASS" starttime="20231026 17:30:03.444" endtime="20231026 17:30:03.607"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231026 17:30:05.608" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231026 17:30:03.608" endtime="20231026 17:30:05.608"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SaveImagebutton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231026 17:30:05.609" level="INFO">Clicking element '//i[@class='cropControlSave']'.</msg>
+<status status="PASS" starttime="20231026 17:30:05.609" endtime="20231026 17:30:06.155"/>
+</kw>
+<status status="PASS" starttime="20231026 17:30:01.591" endtime="20231026 17:30:06.155"/>
+</kw>
+<kw name="Adding Text in Readers textbox" library="CreateFeatureObjects">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231026 17:30:08.157" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231026 17:30:06.157" endtime="20231026 17:30:08.158"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Editorsection}</arg>
+<arg>Testing Test for editor by automation.</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231026 17:30:08.159" level="INFO">Typing text 'Testing Test for editor by automation.' into text field '//div[@id='txtEditor']'.</msg>
+<status status="PASS" starttime="20231026 17:30:08.158" endtime="20231026 17:30:09.700"/>
+</kw>
+<status status="PASS" starttime="20231026 17:30:06.156" endtime="20231026 17:30:09.700"/>
+</kw>
+<kw name="Click on second page" library="CreateFeatureObjects">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ReadersSecondPage}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231026 17:30:09.702" level="INFO">Clicking element '(//div[@class="illustration_container"])[2]'.</msg>
+<status status="PASS" starttime="20231026 17:30:09.701" endtime="20231026 17:30:10.048"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231026 17:30:13.049" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231026 17:30:10.048" endtime="20231026 17:30:13.049"/>
+</kw>
+<status status="PASS" starttime="20231026 17:30:09.700" endtime="20231026 17:30:13.049"/>
+</kw>
+<tag>Sanity</tag>
+<tag>TC205</tag>
+<status status="PASS" starttime="20231026 17:29:56.645" endtime="20231026 17:30:13.049"/>
+</test>
+<test id="s1-t7" name="Test for selecting readers orientation" line="38">
+<kw name="Select some orientation for the reader" library="CreateFeatureObjects">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${OrientationDropdown}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231026 17:30:13.053" level="INFO">Clicking element '//span[text()='Orientation &amp; Layout']'.</msg>
+<msg timestamp="20231026 17:30:13.069" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.149)
+Stacktrace:
+#0 0x563bee5f0933 &lt;unknown&gt;
+#1 0x563bee2ca6f7 &lt;unknown&gt;
+#2 0x563bee2a3558 &lt;unknown&gt;
+#3 0x563bee33896f &lt;unknown&gt;
+#4 0x563bee34c3ab &lt;unknown&gt;
+#5 0x563bee3333d3 &lt;unknown&gt;
+#6 0x563bee305e64 &lt;unknown&gt;
+#7 0x563bee306c4e &lt;unknown&gt;
+#8 0x563bee5b6558 &lt;unknown&gt;
+#9 0x563bee5ba4a0 &lt;unknown&gt;
+#10 0x563bee5c497c &lt;unknown&gt;
+#11 0x563bee5bb0b8 &lt;unknown&gt;
+#12 0x563bee586cdf &lt;unknown&gt;
+#13 0x563bee5df048 &lt;unknown&gt;
+#14 0x563bee5df219 &lt;unknown&gt;
+#15 0x563bee5efac3 &lt;unknown&gt;
+#16 0x7fa6ada79609 start_thread
+</msg>
+<msg timestamp="20231026 17:30:13.072" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.149)
+Stacktrace:
+#0 0x563bee5f0933 &lt;unknown&gt;
+#1 0x563bee2ca6f7 &lt;unknown&gt;
+#2 0x563bee2a3558 &lt;unknown&gt;
+#3 0x563bee33896f &lt;unknown&gt;
+#4 0x563bee34c3ab &lt;unknown&gt;
+#5 0x563bee3333d3 &lt;unknown&gt;
+#6 0x563bee305e64 &lt;unknown&gt;
+#7 0x563bee306c4e &lt;unknown&gt;
+#8 0x563bee5b6558 &lt;unknown&gt;
+#9 0x563bee5ba4a0 &lt;unknown&gt;
+#10 0x563bee5c497c &lt;unknown&gt;
+#11 0x563bee5bb0b8 &lt;unknown&gt;
+#12 0x563bee586cdf &lt;unknown&gt;
+#13 0x563bee5df048 &lt;unknown&gt;
+#14 0x563bee5df219 &lt;unknown&gt;
+#15 0x563bee5efac3 &lt;unknown&gt;
+#16 0x7fa6ada79609 start_thread
+</msg>
+<status status="FAIL" starttime="20231026 17:30:13.052" endtime="20231026 17:30:13.909"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ReaderOrientation}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231026 17:30:13.910" endtime="20231026 17:30:13.910"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20231026 17:30:13.910" endtime="20231026 17:30:13.910"/>
+</kw>
+<status status="FAIL" starttime="20231026 17:30:13.052" endtime="20231026 17:30:13.911"/>
+</kw>
+<kw name="Add random image to reader" library="CreateFeatureObjects">
+<status status="NOT RUN" starttime="20231026 17:30:13.911" endtime="20231026 17:30:13.911"/>
+</kw>
+<tag>Sanity</tag>
+<tag>TC206</tag>
+<status status="FAIL" starttime="20231026 17:30:13.050" endtime="20231026 17:30:13.912">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.149)
+Stacktrace:
+#0 0x563bee5f0933 &lt;unknown&gt;
+#1 0x563bee2ca6f7 &lt;unknown&gt;
+#2 0x563bee2a3558 &lt;unknown&gt;
+#3 0x563bee33896f &lt;unknown&gt;
+#4 0x563bee34c3ab &lt;unknown&gt;
+#5 0x563bee3333d3 &lt;unknown&gt;
+#6 0x563bee305e64 &lt;unknown&gt;
+#7 0x563bee306c4e &lt;unknown&gt;
+#8 0x563bee5b6558 &lt;unknown&gt;
+#9 0x563bee5ba4a0 &lt;unknown&gt;
+#10 0x563bee5c497c &lt;unknown&gt;
+#11 0x563bee5bb0b8 &lt;unknown&gt;
+#12 0x563bee586cdf &lt;unknown&gt;
+#13 0x563bee5df048 &lt;unknown&gt;
+#14 0x563bee5df219 &lt;unknown&gt;
+#15 0x563bee5efac3 &lt;unknown&gt;
+#16 0x7fa6ada79609 start_thread
+</status>
+</test>
+<test id="s1-t8" name="Test for adding textbox and adding text in it" line="42">
+<kw name="Add text box in the reader" library="CreateFeatureObjects">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${InsertDropdown}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231026 17:30:13.919" level="INFO">Clicking element '//span[text()='Insert']'.</msg>
+<msg timestamp="20231026 17:30:13.935" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.149)
+Stacktrace:
+#0 0x563bee5f0933 &lt;unknown&gt;
+#1 0x563bee2ca6f7 &lt;unknown&gt;
+#2 0x563bee2a3558 &lt;unknown&gt;
+#3 0x563bee33896f &lt;unknown&gt;
+#4 0x563bee34c3ab &lt;unknown&gt;
+#5 0x563bee3333d3 &lt;unknown&gt;
+#6 0x563bee305e64 &lt;unknown&gt;
+#7 0x563bee306c4e &lt;unknown&gt;
+#8 0x563bee5b6558 &lt;unknown&gt;
+#9 0x563bee5ba4a0 &lt;unknown&gt;
+#10 0x563bee5c497c &lt;unknown&gt;
+#11 0x563bee5bb0b8 &lt;unknown&gt;
+#12 0x563bee586cdf &lt;unknown&gt;
+#13 0x563bee5df048 &lt;unknown&gt;
+#14 0x563bee5df219 &lt;unknown&gt;
+#15 0x563bee5efac3 &lt;unknown&gt;
+#16 0x7fa6ada79609 start_thread
+</msg>
+<msg timestamp="20231026 17:30:13.935" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.149)
+Stacktrace:
+#0 0x563bee5f0933 &lt;unknown&gt;
+#1 0x563bee2ca6f7 &lt;unknown&gt;
+#2 0x563bee2a3558 &lt;unknown&gt;
+#3 0x563bee33896f &lt;unknown&gt;
+#4 0x563bee34c3ab &lt;unknown&gt;
+#5 0x563bee3333d3 &lt;unknown&gt;
+#6 0x563bee305e64 &lt;unknown&gt;
+#7 0x563bee306c4e &lt;unknown&gt;
+#8 0x563bee5b6558 &lt;unknown&gt;
+#9 0x563bee5ba4a0 &lt;unknown&gt;
+#10 0x563bee5c497c &lt;unknown&gt;
+#11 0x563bee5bb0b8 &lt;unknown&gt;
+#12 0x563bee586cdf &lt;unknown&gt;
+#13 0x563bee5df048 &lt;unknown&gt;
+#14 0x563bee5df219 &lt;unknown&gt;
+#15 0x563bee5efac3 &lt;unknown&gt;
+#16 0x7fa6ada79609 start_thread
+</msg>
+<status status="FAIL" starttime="20231026 17:30:13.919" endtime="20231026 17:30:13.936"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${AddTextBoxButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231026 17:30:13.936" endtime="20231026 17:30:13.937"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${TextBox}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="NOT RUN" starttime="20231026 17:30:13.937" endtime="20231026 17:30:13.937"/>
+</kw>
+<kw name="Drag And Drop By Offset" library="SeleniumLibrary">
+<arg>${TextBox}</arg>
+<arg>180</arg>
+<arg>100</arg>
+<doc>Drags the element identified with ``locator`` by ``xoffset/yoffset``.</doc>
+<status status="NOT RUN" starttime="20231026 17:30:13.937" endtime="20231026 17:30:13.937"/>
+</kw>
+<status status="FAIL" starttime="20231026 17:30:13.914" endtime="20231026 17:30:13.938"/>
+</kw>
+<kw name="Enter Text in the text box" library="CreateFeatureObjects">
+<status status="NOT RUN" starttime="20231026 17:30:13.939" endtime="20231026 17:30:13.939"/>
+</kw>
+<tag>Sanity</tag>
+<tag>TC207</tag>
+<status status="FAIL" starttime="20231026 17:30:13.913" endtime="20231026 17:30:13.940">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.149)
+Stacktrace:
+#0 0x563bee5f0933 &lt;unknown&gt;
+#1 0x563bee2ca6f7 &lt;unknown&gt;
+#2 0x563bee2a3558 &lt;unknown&gt;
+#3 0x563bee33896f &lt;unknown&gt;
+#4 0x563bee34c3ab &lt;unknown&gt;
+#5 0x563bee3333d3 &lt;unknown&gt;
+#6 0x563bee305e64 &lt;unknown&gt;
+#7 0x563bee306c4e &lt;unknown&gt;
+#8 0x563bee5b6558 &lt;unknown&gt;
+#9 0x563bee5ba4a0 &lt;unknown&gt;
+#10 0x563bee5c497c &lt;unknown&gt;
+#11 0x563bee5bb0b8 &lt;unknown&gt;
+#12 0x563bee586cdf &lt;unknown&gt;
+#13 0x563bee5df048 &lt;unknown&gt;
+#14 0x563bee5df219 &lt;unknown&gt;
+#15 0x563bee5efac3 &lt;unknown&gt;
+#16 0x7fa6ada79609 start_thread
+</status>
+</test>
+<test id="s1-t9" name="Test for adding Speech bubble and adding text in it" line="46">
+<kw name="Add Speech bubble" library="CreateFeatureObjects">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231026 17:30:15.945" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231026 17:30:13.944" endtime="20231026 17:30:15.945"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SpeechBubbleOption}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231026 17:30:15.946" level="INFO">Clicking element '//div[@id="create-speech-bubble"]'.</msg>
+<msg timestamp="20231026 17:30:15.962" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.149)
+Stacktrace:
+#0 0x563bee5f0933 &lt;unknown&gt;
+#1 0x563bee2ca6f7 &lt;unknown&gt;
+#2 0x563bee2a3558 &lt;unknown&gt;
+#3 0x563bee33896f &lt;unknown&gt;
+#4 0x563bee34c3ab &lt;unknown&gt;
+#5 0x563bee3333d3 &lt;unknown&gt;
+#6 0x563bee305e64 &lt;unknown&gt;
+#7 0x563bee306c4e &lt;unknown&gt;
+#8 0x563bee5b6558 &lt;unknown&gt;
+#9 0x563bee5ba4a0 &lt;unknown&gt;
+#10 0x563bee5c497c &lt;unknown&gt;
+#11 0x563bee5bb0b8 &lt;unknown&gt;
+#12 0x563bee586cdf &lt;unknown&gt;
+#13 0x563bee5df048 &lt;unknown&gt;
+#14 0x563bee5df219 &lt;unknown&gt;
+#15 0x563bee5efac3 &lt;unknown&gt;
+#16 0x7fa6ada79609 start_thread
+</msg>
+<msg timestamp="20231026 17:30:15.963" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.149)
+Stacktrace:
+#0 0x563bee5f0933 &lt;unknown&gt;
+#1 0x563bee2ca6f7 &lt;unknown&gt;
+#2 0x563bee2a3558 &lt;unknown&gt;
+#3 0x563bee33896f &lt;unknown&gt;
+#4 0x563bee34c3ab &lt;unknown&gt;
+#5 0x563bee3333d3 &lt;unknown&gt;
+#6 0x563bee305e64 &lt;unknown&gt;
+#7 0x563bee306c4e &lt;unknown&gt;
+#8 0x563bee5b6558 &lt;unknown&gt;
+#9 0x563bee5ba4a0 &lt;unknown&gt;
+#10 0x563bee5c497c &lt;unknown&gt;
+#11 0x563bee5bb0b8 &lt;unknown&gt;
+#12 0x563bee586cdf &lt;unknown&gt;
+#13 0x563bee5df048 &lt;unknown&gt;
+#14 0x563bee5df219 &lt;unknown&gt;
+#15 0x563bee5efac3 &lt;unknown&gt;
+#16 0x7fa6ada79609 start_thread
+</msg>
+<status status="FAIL" starttime="20231026 17:30:15.945" endtime="20231026 17:30:15.963"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SelectSpeechBubbletype}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231026 17:30:15.964" endtime="20231026 17:30:15.964"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${AddSpeechBubbleBtn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231026 17:30:15.964" endtime="20231026 17:30:15.964"/>
+</kw>
+<status status="FAIL" starttime="20231026 17:30:13.944" endtime="20231026 17:30:15.966"/>
+</kw>
+<kw name="Enter Text in Speech Bubble" library="CreateFeatureObjects">
+<status status="NOT RUN" starttime="20231026 17:30:15.966" endtime="20231026 17:30:15.966"/>
+</kw>
+<tag>Sanity</tag>
+<tag>TC208</tag>
+<status status="FAIL" starttime="20231026 17:30:13.942" endtime="20231026 17:30:15.967">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.149)
+Stacktrace:
+#0 0x563bee5f0933 &lt;unknown&gt;
+#1 0x563bee2ca6f7 &lt;unknown&gt;
+#2 0x563bee2a3558 &lt;unknown&gt;
+#3 0x563bee33896f &lt;unknown&gt;
+#4 0x563bee34c3ab &lt;unknown&gt;
+#5 0x563bee3333d3 &lt;unknown&gt;
+#6 0x563bee305e64 &lt;unknown&gt;
+#7 0x563bee306c4e &lt;unknown&gt;
+#8 0x563bee5b6558 &lt;unknown&gt;
+#9 0x563bee5ba4a0 &lt;unknown&gt;
+#10 0x563bee5c497c &lt;unknown&gt;
+#11 0x563bee5bb0b8 &lt;unknown&gt;
+#12 0x563bee586cdf &lt;unknown&gt;
+#13 0x563bee5df048 &lt;unknown&gt;
+#14 0x563bee5df219 &lt;unknown&gt;
+#15 0x563bee5efac3 &lt;unknown&gt;
+#16 0x7fa6ada79609 start_thread
+</status>
+</test>
+<test id="s1-t10" name="Test for adding image in front cover page" line="50">
+<kw name="Click on Front cover page" library="CreateFeatureObjects">
+<kw name="Mouse Up" library="SeleniumLibrary">
+<arg>${FrontCoverPage}</arg>
+<doc>Simulates releasing the left mouse button on the element ``locator``.</doc>
+<msg timestamp="20231026 17:30:15.973" level="INFO">Simulating Mouse Up on element '//a[@class="page_thumbnail FrontCoverPage"]'.</msg>
+<msg timestamp="20231026 17:30:15.987" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.149)
+Stacktrace:
+#0 0x563bee5f0933 &lt;unknown&gt;
+#1 0x563bee2ca6f7 &lt;unknown&gt;
+#2 0x563bee2a3558 &lt;unknown&gt;
+#3 0x563bee33896f &lt;unknown&gt;
+#4 0x563bee34c3ab &lt;unknown&gt;
+#5 0x563bee3333d3 &lt;unknown&gt;
+#6 0x563bee305e64 &lt;unknown&gt;
+#7 0x563bee306c4e &lt;unknown&gt;
+#8 0x563bee5b6558 &lt;unknown&gt;
+#9 0x563bee5ba4a0 &lt;unknown&gt;
+#10 0x563bee5c497c &lt;unknown&gt;
+#11 0x563bee5bb0b8 &lt;unknown&gt;
+#12 0x563bee586cdf &lt;unknown&gt;
+#13 0x563bee5df048 &lt;unknown&gt;
+#14 0x563bee5df219 &lt;unknown&gt;
+#15 0x563bee5efac3 &lt;unknown&gt;
+#16 0x7fa6ada79609 start_thread
+</msg>
+<msg timestamp="20231026 17:30:15.988" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.149)
+Stacktrace:
+#0 0x563bee5f0933 &lt;unknown&gt;
+#1 0x563bee2ca6f7 &lt;unknown&gt;
+#2 0x563bee2a3558 &lt;unknown&gt;
+#3 0x563bee33896f &lt;unknown&gt;
+#4 0x563bee34c3ab &lt;unknown&gt;
+#5 0x563bee3333d3 &lt;unknown&gt;
+#6 0x563bee305e64 &lt;unknown&gt;
+#7 0x563bee306c4e &lt;unknown&gt;
+#8 0x563bee5b6558 &lt;unknown&gt;
+#9 0x563bee5ba4a0 &lt;unknown&gt;
+#10 0x563bee5c497c &lt;unknown&gt;
+#11 0x563bee5bb0b8 &lt;unknown&gt;
+#12 0x563bee586cdf &lt;unknown&gt;
+#13 0x563bee5df048 &lt;unknown&gt;
+#14 0x563bee5df219 &lt;unknown&gt;
+#15 0x563bee5efac3 &lt;unknown&gt;
+#16 0x7fa6ada79609 start_thread
+</msg>
+<status status="FAIL" starttime="20231026 17:30:15.972" endtime="20231026 17:30:15.989"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${FrontCoverPage}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231026 17:30:15.989" endtime="20231026 17:30:15.990"/>
+</kw>
+<status status="FAIL" starttime="20231026 17:30:15.971" endtime="20231026 17:30:15.990"/>
+</kw>
+<kw name="Add random image to reader" library="CreateFeatureObjects">
+<status status="NOT RUN" starttime="20231026 17:30:15.991" endtime="20231026 17:30:15.991"/>
+</kw>
+<tag>Sanity</tag>
+<tag>TC209</tag>
+<status status="FAIL" starttime="20231026 17:30:15.969" endtime="20231026 17:30:15.992">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.149)
+Stacktrace:
+#0 0x563bee5f0933 &lt;unknown&gt;
+#1 0x563bee2ca6f7 &lt;unknown&gt;
+#2 0x563bee2a3558 &lt;unknown&gt;
+#3 0x563bee33896f &lt;unknown&gt;
+#4 0x563bee34c3ab &lt;unknown&gt;
+#5 0x563bee3333d3 &lt;unknown&gt;
+#6 0x563bee305e64 &lt;unknown&gt;
+#7 0x563bee306c4e &lt;unknown&gt;
+#8 0x563bee5b6558 &lt;unknown&gt;
+#9 0x563bee5ba4a0 &lt;unknown&gt;
+#10 0x563bee5c497c &lt;unknown&gt;
+#11 0x563bee5bb0b8 &lt;unknown&gt;
+#12 0x563bee586cdf &lt;unknown&gt;
+#13 0x563bee5df048 &lt;unknown&gt;
+#14 0x563bee5df219 &lt;unknown&gt;
+#15 0x563bee5efac3 &lt;unknown&gt;
+#16 0x7fa6ada79609 start_thread
+</status>
+</test>
+<test id="s1-t11" name="Test for filling final publish form" line="54">
+<kw name="Close the PTR page if visible" library="common">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${present}</var>
+<arg>Element Should Be Visible</arg>
+<arg>${PTR_Image}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${PTR_Image}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20231026 17:30:16.010" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.149)
+Stacktrace:
+#0 0x563bee5f0933 &lt;unknown&gt;
+#1 0x563bee2ca6f7 &lt;unknown&gt;
+#2 0x563bee2a3558 &lt;unknown&gt;
+#3 0x563bee33896f &lt;unknown&gt;
+#4 0x563bee34c3ab &lt;unknown&gt;
+#5 0x563bee3333d3 &lt;unknown&gt;
+#6 0x563bee305e64 &lt;unknown&gt;
+#7 0x563bee306c4e &lt;unknown&gt;
+#8 0x563bee5b6558 &lt;unknown&gt;
+#9 0x563bee5ba4a0 &lt;unknown&gt;
+#10 0x563bee5c497c &lt;unknown&gt;
+#11 0x563bee5bb0b8 &lt;unknown&gt;
+#12 0x563bee586cdf &lt;unknown&gt;
+#13 0x563bee5df048 &lt;unknown&gt;
+#14 0x563bee5df219 &lt;unknown&gt;
+#15 0x563bee5efac3 &lt;unknown&gt;
+#16 0x7fa6ada79609 start_thread
+</msg>
+<msg timestamp="20231026 17:30:16.012" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.149)
+Stacktrace:
+#0 0x563bee5f0933 &lt;unknown&gt;
+#1 0x563bee2ca6f7 &lt;unknown&gt;
+#2 0x563bee2a3558 &lt;unknown&gt;
+#3 0x563bee33896f &lt;unknown&gt;
+#4 0x563bee34c3ab &lt;unknown&gt;
+#5 0x563bee3333d3 &lt;unknown&gt;
+#6 0x563bee305e64 &lt;unknown&gt;
+#7 0x563bee306c4e &lt;unknown&gt;
+#8 0x563bee5b6558 &lt;unknown&gt;
+#9 0x563bee5ba4a0 &lt;unknown&gt;
+#10 0x563bee5c497c &lt;unknown&gt;
+#11 0x563bee5bb0b8 &lt;unknown&gt;
+#12 0x563bee586cdf &lt;unknown&gt;
+#13 0x563bee5df048 &lt;unknown&gt;
+#14 0x563bee5df219 &lt;unknown&gt;
+#15 0x563bee5efac3 &lt;unknown&gt;
+#16 0x7fa6ada79609 start_thread
+</msg>
+<status status="FAIL" starttime="20231026 17:30:15.995" endtime="20231026 17:30:16.013"/>
+</kw>
+<msg timestamp="20231026 17:30:16.014" level="INFO">${present} = False</msg>
+<status status="PASS" starttime="20231026 17:30:15.995" endtime="20231026 17:30:16.014"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${present}</arg>
+<arg>Click Element</arg>
+<arg>${PTR_Close_Button}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20231026 17:30:16.014" endtime="20231026 17:30:16.015"/>
+</kw>
+<status status="PASS" starttime="20231026 17:30:15.994" endtime="20231026 17:30:16.015"/>
+</kw>
+<kw name="Click on Publish button from editor" library="CreateFeatureObjects">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231026 17:30:18.017" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231026 17:30:16.016" endtime="20231026 17:30:18.017"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${PublishButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231026 17:30:18.018" level="INFO">Clicking element '(//a[@class="btn btn-app btn-brand-1 font-sm"])[3]'.</msg>
+<msg timestamp="20231026 17:30:18.033" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.149)
+Stacktrace:
+#0 0x563bee5f0933 &lt;unknown&gt;
+#1 0x563bee2ca6f7 &lt;unknown&gt;
+#2 0x563bee2a3558 &lt;unknown&gt;
+#3 0x563bee33896f &lt;unknown&gt;
+#4 0x563bee34c3ab &lt;unknown&gt;
+#5 0x563bee3333d3 &lt;unknown&gt;
+#6 0x563bee305e64 &lt;unknown&gt;
+#7 0x563bee306c4e &lt;unknown&gt;
+#8 0x563bee5b6558 &lt;unknown&gt;
+#9 0x563bee5ba4a0 &lt;unknown&gt;
+#10 0x563bee5c497c &lt;unknown&gt;
+#11 0x563bee5bb0b8 &lt;unknown&gt;
+#12 0x563bee586cdf &lt;unknown&gt;
+#13 0x563bee5df048 &lt;unknown&gt;
+#14 0x563bee5df219 &lt;unknown&gt;
+#15 0x563bee5efac3 &lt;unknown&gt;
+#16 0x7fa6ada79609 start_thread
+</msg>
+<msg timestamp="20231026 17:30:18.036" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.149)
+Stacktrace:
+#0 0x563bee5f0933 &lt;unknown&gt;
+#1 0x563bee2ca6f7 &lt;unknown&gt;
+#2 0x563bee2a3558 &lt;unknown&gt;
+#3 0x563bee33896f &lt;unknown&gt;
+#4 0x563bee34c3ab &lt;unknown&gt;
+#5 0x563bee3333d3 &lt;unknown&gt;
+#6 0x563bee305e64 &lt;unknown&gt;
+#7 0x563bee306c4e &lt;unknown&gt;
+#8 0x563bee5b6558 &lt;unknown&gt;
+#9 0x563bee5ba4a0 &lt;unknown&gt;
+#10 0x563bee5c497c &lt;unknown&gt;
+#11 0x563bee5bb0b8 &lt;unknown&gt;
+#12 0x563bee586cdf &lt;unknown&gt;
+#13 0x563bee5df048 &lt;unknown&gt;
+#14 0x563bee5df219 &lt;unknown&gt;
+#15 0x563bee5efac3 &lt;unknown&gt;
+#16 0x7fa6ada79609 start_thread
+</msg>
+<status status="FAIL" starttime="20231026 17:30:18.017" endtime="20231026 17:30:18.036"/>
+</kw>
+<status status="FAIL" starttime="20231026 17:30:16.015" endtime="20231026 17:30:18.038"/>
+</kw>
+<kw name="Check for empty speech bubble or text box while publihsing" library="CreateFeatureObjects">
+<status status="NOT RUN" starttime="20231026 17:30:18.039" endtime="20231026 17:30:18.040"/>
+</kw>
+<kw name="CLick on Done button" library="CreateFeatureObjects">
+<status status="NOT RUN" starttime="20231026 17:30:18.040" endtime="20231026 17:30:18.040"/>
+</kw>
+<kw name="Enter synopsis in final Publish form" library="CreateFeatureObjects">
+<status status="NOT RUN" starttime="20231026 17:30:18.040" endtime="20231026 17:30:18.040"/>
+</kw>
+<kw name="Select category from final Publish form" library="CreateFeatureObjects">
+<status status="NOT RUN" starttime="20231026 17:30:18.041" endtime="20231026 17:30:18.041"/>
+</kw>
+<kw name="Enter English story title in final Publsih form" library="CreateFeatureObjects">
+<status status="NOT RUN" starttime="20231026 17:30:18.041" endtime="20231026 17:30:18.041"/>
+</kw>
+<kw name="Click on publish button from final publish form" library="CreateFeatureObjects">
+<status status="NOT RUN" starttime="20231026 17:30:18.042" endtime="20231026 17:30:18.042"/>
+</kw>
+<tag>Sanity</tag>
+<tag>TC210</tag>
+<status status="FAIL" starttime="20231026 17:30:15.993" endtime="20231026 17:30:18.043">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.149)
+Stacktrace:
+#0 0x563bee5f0933 &lt;unknown&gt;
+#1 0x563bee2ca6f7 &lt;unknown&gt;
+#2 0x563bee2a3558 &lt;unknown&gt;
+#3 0x563bee33896f &lt;unknown&gt;
+#4 0x563bee34c3ab &lt;unknown&gt;
+#5 0x563bee3333d3 &lt;unknown&gt;
+#6 0x563bee305e64 &lt;unknown&gt;
+#7 0x563bee306c4e &lt;unknown&gt;
+#8 0x563bee5b6558 &lt;unknown&gt;
+#9 0x563bee5ba4a0 &lt;unknown&gt;
+#10 0x563bee5c497c &lt;unknown&gt;
+#11 0x563bee5bb0b8 &lt;unknown&gt;
+#12 0x563bee586cdf &lt;unknown&gt;
+#13 0x563bee5df048 &lt;unknown&gt;
+#14 0x563bee5df219 &lt;unknown&gt;
+#15 0x563bee5efac3 &lt;unknown&gt;
+#16 0x7fa6ada79609 start_thread
+</status>
+</test>
+<test id="s1-t12" name="Verify the UGC published Notification" line="64">
+<kw name="Verify the UGC slim notification after publishing" library="CreateFeatureObjects">
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231026 17:30:23.049" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231026 17:30:18.049" endtime="20231026 17:30:23.050"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${GlobalSlimNotification}</arg>
+<arg>Yay! Your story is published and will appear under 'My Published Stories' soon</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20231026 17:30:23.074" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.149)
+Stacktrace:
+#0 0x563bee5f0933 &lt;unknown&gt;
+#1 0x563bee2ca6f7 &lt;unknown&gt;
+#2 0x563bee2a3558 &lt;unknown&gt;
+#3 0x563bee33896f &lt;unknown&gt;
+#4 0x563bee34c3ab &lt;unknown&gt;
+#5 0x563bee3333d3 &lt;unknown&gt;
+#6 0x563bee305e64 &lt;unknown&gt;
+#7 0x563bee306c4e &lt;unknown&gt;
+#8 0x563bee5b6558 &lt;unknown&gt;
+#9 0x563bee5ba4a0 &lt;unknown&gt;
+#10 0x563bee5c497c &lt;unknown&gt;
+#11 0x563bee5bb0b8 &lt;unknown&gt;
+#12 0x563bee586cdf &lt;unknown&gt;
+#13 0x563bee5df048 &lt;unknown&gt;
+#14 0x563bee5df219 &lt;unknown&gt;
+#15 0x563bee5efac3 &lt;unknown&gt;
+#16 0x7fa6ada79609 start_thread
+</msg>
+<msg timestamp="20231026 17:30:23.078" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.149)
+Stacktrace:
+#0 0x563bee5f0933 &lt;unknown&gt;
+#1 0x563bee2ca6f7 &lt;unknown&gt;
+#2 0x563bee2a3558 &lt;unknown&gt;
+#3 0x563bee33896f &lt;unknown&gt;
+#4 0x563bee34c3ab &lt;unknown&gt;
+#5 0x563bee3333d3 &lt;unknown&gt;
+#6 0x563bee305e64 &lt;unknown&gt;
+#7 0x563bee306c4e &lt;unknown&gt;
+#8 0x563bee5b6558 &lt;unknown&gt;
+#9 0x563bee5ba4a0 &lt;unknown&gt;
+#10 0x563bee5c497c &lt;unknown&gt;
+#11 0x563bee5bb0b8 &lt;unknown&gt;
+#12 0x563bee586cdf &lt;unknown&gt;
+#13 0x563bee5df048 &lt;unknown&gt;
+#14 0x563bee5df219 &lt;unknown&gt;
+#15 0x563bee5efac3 &lt;unknown&gt;
+#16 0x7fa6ada79609 start_thread
+</msg>
+<status status="FAIL" starttime="20231026 17:30:23.050" endtime="20231026 17:30:23.078"/>
+</kw>
+<status status="FAIL" starttime="20231026 17:30:18.048" endtime="20231026 17:30:23.079"/>
+</kw>
+<tag>Sanity</tag>
+<tag>TC211</tag>
+<status status="FAIL" starttime="20231026 17:30:18.045" endtime="20231026 17:30:23.080">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.149)
+Stacktrace:
+#0 0x563bee5f0933 &lt;unknown&gt;
+#1 0x563bee2ca6f7 &lt;unknown&gt;
+#2 0x563bee2a3558 &lt;unknown&gt;
+#3 0x563bee33896f &lt;unknown&gt;
+#4 0x563bee34c3ab &lt;unknown&gt;
+#5 0x563bee3333d3 &lt;unknown&gt;
+#6 0x563bee305e64 &lt;unknown&gt;
+#7 0x563bee306c4e &lt;unknown&gt;
+#8 0x563bee5b6558 &lt;unknown&gt;
+#9 0x563bee5ba4a0 &lt;unknown&gt;
+#10 0x563bee5c497c &lt;unknown&gt;
+#11 0x563bee5bb0b8 &lt;unknown&gt;
+#12 0x563bee586cdf &lt;unknown&gt;
+#13 0x563bee5df048 &lt;unknown&gt;
+#14 0x563bee5df219 &lt;unknown&gt;
+#15 0x563bee5efac3 &lt;unknown&gt;
+#16 0x7fa6ada79609 start_thread
+</status>
+</test>
+<test id="s1-t13" name="Tear Down" line="67">
+<kw name="Close_the_browser" library="common">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231026 17:30:23.082" endtime="20231026 17:30:23.166"/>
+</kw>
+<status status="PASS" starttime="20231026 17:30:23.081" endtime="20231026 17:30:23.167"/>
+</kw>
+<status status="PASS" starttime="20231026 17:30:23.080" endtime="20231026 17:30:23.167"/>
+</test>
+<status status="FAIL" starttime="20231026 17:28:42.864" endtime="20231026 17:30:23.169"/>
+</suite>
+<statistics>
+<total>
+<stat pass="7" fail="6" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="5" fail="6" skip="0">Sanity</stat>
+<stat pass="1" fail="0" skip="0">TC200</stat>
+<stat pass="1" fail="0" skip="0">TC201</stat>
+<stat pass="1" fail="0" skip="0">TC202</stat>
+<stat pass="1" fail="0" skip="0">TC203</stat>
+<stat pass="1" fail="0" skip="0">TC205</stat>
+<stat pass="0" fail="1" skip="0">TC206</stat>
+<stat pass="0" fail="1" skip="0">TC207</stat>
+<stat pass="0" fail="1" skip="0">TC208</stat>
+<stat pass="0" fail="1" skip="0">TC209</stat>
+<stat pass="0" fail="1" skip="0">TC210</stat>
+<stat pass="0" fail="1" skip="0">TC211</stat>
+</tag>
+<suite>
+<stat pass="7" fail="6" skip="0" id="s1" name="Create Story Test">Create Story Test</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231026 17:30:13.069" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.149)
+Stacktrace:
+#0 0x563bee5f0933 &lt;unknown&gt;
+#1 0x563bee2ca6f7 &lt;unknown&gt;
+#2 0x563bee2a3558 &lt;unknown&gt;
+#3 0x563bee33896f &lt;unknown&gt;
+#4 0x563bee34c3ab &lt;unknown&gt;
+#5 0x563bee3333d3 &lt;unknown&gt;
+#6 0x563bee305e64 &lt;unknown&gt;
+#7 0x563bee306c4e &lt;unknown&gt;
+#8 0x563bee5b6558 &lt;unknown&gt;
+#9 0x563bee5ba4a0 &lt;unknown&gt;
+#10 0x563bee5c497c &lt;unknown&gt;
+#11 0x563bee5bb0b8 &lt;unknown&gt;
+#12 0x563bee586cdf &lt;unknown&gt;
+#13 0x563bee5df048 &lt;unknown&gt;
+#14 0x563bee5df219 &lt;unknown&gt;
+#15 0x563bee5efac3 &lt;unknown&gt;
+#16 0x7fa6ada79609 start_thread
+</msg>
+<msg timestamp="20231026 17:30:13.935" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.149)
+Stacktrace:
+#0 0x563bee5f0933 &lt;unknown&gt;
+#1 0x563bee2ca6f7 &lt;unknown&gt;
+#2 0x563bee2a3558 &lt;unknown&gt;
+#3 0x563bee33896f &lt;unknown&gt;
+#4 0x563bee34c3ab &lt;unknown&gt;
+#5 0x563bee3333d3 &lt;unknown&gt;
+#6 0x563bee305e64 &lt;unknown&gt;
+#7 0x563bee306c4e &lt;unknown&gt;
+#8 0x563bee5b6558 &lt;unknown&gt;
+#9 0x563bee5ba4a0 &lt;unknown&gt;
+#10 0x563bee5c497c &lt;unknown&gt;
+#11 0x563bee5bb0b8 &lt;unknown&gt;
+#12 0x563bee586cdf &lt;unknown&gt;
+#13 0x563bee5df048 &lt;unknown&gt;
+#14 0x563bee5df219 &lt;unknown&gt;
+#15 0x563bee5efac3 &lt;unknown&gt;
+#16 0x7fa6ada79609 start_thread
+</msg>
+<msg timestamp="20231026 17:30:15.962" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.149)
+Stacktrace:
+#0 0x563bee5f0933 &lt;unknown&gt;
+#1 0x563bee2ca6f7 &lt;unknown&gt;
+#2 0x563bee2a3558 &lt;unknown&gt;
+#3 0x563bee33896f &lt;unknown&gt;
+#4 0x563bee34c3ab &lt;unknown&gt;
+#5 0x563bee3333d3 &lt;unknown&gt;
+#6 0x563bee305e64 &lt;unknown&gt;
+#7 0x563bee306c4e &lt;unknown&gt;
+#8 0x563bee5b6558 &lt;unknown&gt;
+#9 0x563bee5ba4a0 &lt;unknown&gt;
+#10 0x563bee5c497c &lt;unknown&gt;
+#11 0x563bee5bb0b8 &lt;unknown&gt;
+#12 0x563bee586cdf &lt;unknown&gt;
+#13 0x563bee5df048 &lt;unknown&gt;
+#14 0x563bee5df219 &lt;unknown&gt;
+#15 0x563bee5efac3 &lt;unknown&gt;
+#16 0x7fa6ada79609 start_thread
+</msg>
+<msg timestamp="20231026 17:30:15.987" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.149)
+Stacktrace:
+#0 0x563bee5f0933 &lt;unknown&gt;
+#1 0x563bee2ca6f7 &lt;unknown&gt;
+#2 0x563bee2a3558 &lt;unknown&gt;
+#3 0x563bee33896f &lt;unknown&gt;
+#4 0x563bee34c3ab &lt;unknown&gt;
+#5 0x563bee3333d3 &lt;unknown&gt;
+#6 0x563bee305e64 &lt;unknown&gt;
+#7 0x563bee306c4e &lt;unknown&gt;
+#8 0x563bee5b6558 &lt;unknown&gt;
+#9 0x563bee5ba4a0 &lt;unknown&gt;
+#10 0x563bee5c497c &lt;unknown&gt;
+#11 0x563bee5bb0b8 &lt;unknown&gt;
+#12 0x563bee586cdf &lt;unknown&gt;
+#13 0x563bee5df048 &lt;unknown&gt;
+#14 0x563bee5df219 &lt;unknown&gt;
+#15 0x563bee5efac3 &lt;unknown&gt;
+#16 0x7fa6ada79609 start_thread
+</msg>
+<msg timestamp="20231026 17:30:16.010" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.149)
+Stacktrace:
+#0 0x563bee5f0933 &lt;unknown&gt;
+#1 0x563bee2ca6f7 &lt;unknown&gt;
+#2 0x563bee2a3558 &lt;unknown&gt;
+#3 0x563bee33896f &lt;unknown&gt;
+#4 0x563bee34c3ab &lt;unknown&gt;
+#5 0x563bee3333d3 &lt;unknown&gt;
+#6 0x563bee305e64 &lt;unknown&gt;
+#7 0x563bee306c4e &lt;unknown&gt;
+#8 0x563bee5b6558 &lt;unknown&gt;
+#9 0x563bee5ba4a0 &lt;unknown&gt;
+#10 0x563bee5c497c &lt;unknown&gt;
+#11 0x563bee5bb0b8 &lt;unknown&gt;
+#12 0x563bee586cdf &lt;unknown&gt;
+#13 0x563bee5df048 &lt;unknown&gt;
+#14 0x563bee5df219 &lt;unknown&gt;
+#15 0x563bee5efac3 &lt;unknown&gt;
+#16 0x7fa6ada79609 start_thread
+</msg>
+<msg timestamp="20231026 17:30:18.033" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.149)
+Stacktrace:
+#0 0x563bee5f0933 &lt;unknown&gt;
+#1 0x563bee2ca6f7 &lt;unknown&gt;
+#2 0x563bee2a3558 &lt;unknown&gt;
+#3 0x563bee33896f &lt;unknown&gt;
+#4 0x563bee34c3ab &lt;unknown&gt;
+#5 0x563bee3333d3 &lt;unknown&gt;
+#6 0x563bee305e64 &lt;unknown&gt;
+#7 0x563bee306c4e &lt;unknown&gt;
+#8 0x563bee5b6558 &lt;unknown&gt;
+#9 0x563bee5ba4a0 &lt;unknown&gt;
+#10 0x563bee5c497c &lt;unknown&gt;
+#11 0x563bee5bb0b8 &lt;unknown&gt;
+#12 0x563bee586cdf &lt;unknown&gt;
+#13 0x563bee5df048 &lt;unknown&gt;
+#14 0x563bee5df219 &lt;unknown&gt;
+#15 0x563bee5efac3 &lt;unknown&gt;
+#16 0x7fa6ada79609 start_thread
+</msg>
+<msg timestamp="20231026 17:30:23.074" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=117.0.5938.149)
+Stacktrace:
+#0 0x563bee5f0933 &lt;unknown&gt;
+#1 0x563bee2ca6f7 &lt;unknown&gt;
+#2 0x563bee2a3558 &lt;unknown&gt;
+#3 0x563bee33896f &lt;unknown&gt;
+#4 0x563bee34c3ab &lt;unknown&gt;
+#5 0x563bee3333d3 &lt;unknown&gt;
+#6 0x563bee305e64 &lt;unknown&gt;
+#7 0x563bee306c4e &lt;unknown&gt;
+#8 0x563bee5b6558 &lt;unknown&gt;
+#9 0x563bee5ba4a0 &lt;unknown&gt;
+#10 0x563bee5c497c &lt;unknown&gt;
+#11 0x563bee5bb0b8 &lt;unknown&gt;
+#12 0x563bee586cdf &lt;unknown&gt;
+#13 0x563bee5df048 &lt;unknown&gt;
+#14 0x563bee5df219 &lt;unknown&gt;
+#15 0x563bee5efac3 &lt;unknown&gt;
+#16 0x7fa6ada79609 start_thread
+</msg>
+</errors>
+</robot>
