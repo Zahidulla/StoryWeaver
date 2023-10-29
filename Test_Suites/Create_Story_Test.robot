@@ -3,6 +3,9 @@ Resource    ../Resources/Test_data.robot
 Resource    ../PO & Keywords/CreateFeatureObjects.robot
 Resource    ../PO & Keywords/LoginModalObjects.robot
 Resource    ../PO & Keywords/ImagePageObjects.robot
+Resource    ../PO & Keywords/DashbordObjects.robot
+Resource    ../PO & Keywords/StoryDetailsPageObjects.robot
+Resource    ../PO & Keywords/UserDropdownMenu.robot
 
 *** Test Cases ***
 Setup
@@ -51,9 +54,14 @@ Test for adding image in front cover page
     [Tags]      TC209       Sanity
     Click on Front cover page
     Add random image to reader
-Test for filling final publish form
+Test for previewing story
     [Tags]      TC210       Sanity
     Close the PTR page if visible       #Ensures to close the popup to avoid interception error
+    Click on preview button
+    Verify the preview
+    Close preview
+Test for filling final publish form
+    [Tags]      TC211       Sanity
     Click on Publish button from editor
     Check for empty speech bubble or text box while publihsing  #To ensure continuity if any stale element error occurs while adding speech bubble and text box
     CLick on Done button
@@ -62,8 +70,23 @@ Test for filling final publish form
     Enter English story title in final Publsih form
     Click on publish button from final publish form
 Verify the UGC published Notification
-    [Tags]      TC211       Sanity
+    [Tags]      TC212       Sanity
     Verify the UGC slim notification after publishing
+Verify publsihed story should appear in My Publsihed dashboard
+    [Tags]      TC213       Sanity
+    Click on UserName
+    Click on Dashboard option from user name dropdown
+    My published story tab should be visible
+    Verify the publsihed story should appear in My publsihed tab      ${StoryTitleText}
+Test for editing Publsihed story from story details page
+    [Tags]      TC214       Sanity
+    Click on Story title link from My published tab
+    Sleep    3s
+    Edit story from story details page
+    Click on save button
+Verify publsihed under edit notfication should appear
+    [Tags]      TC215       Sanity
+    Verify publsihed under edit notification
 Tear Down
     Close_the_browser
 

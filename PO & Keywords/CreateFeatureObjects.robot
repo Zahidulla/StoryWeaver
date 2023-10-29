@@ -16,6 +16,7 @@ ${Addimagetopage}    (//*[text()="add to current page"])
 ${Editorsection}   //div[@id='txtEditor']
 ${SaveImagebutton}    //i[@class='cropControlSave']
 ${FrontCoverPage}    //a[@class="page_thumbnail FrontCoverPage"]
+${SaveButton}    //a[@id="save"]
 ${PublishButton}    (//a[@class="btn btn-app btn-brand-1 font-sm"])[3]
 ${DoneButton}    //button[@id="storycard-img-edit-done"]
 ${PublishBookButton}    //button[@id="publish-book"]
@@ -39,7 +40,9 @@ ${SpeechBubbleOption}       //div[@id="create-speech-bubble"]
 ${SelectSpeechBubbletype}       (//a[@class="speech-bubble-type vertical"])[1]
 ${AddSpeechBubbleBtn}       //button[@class="btn add-speech-bubble"]
 ${SpeechBubbleTextfield}        //div[@title="click to write into speech bubble"]
-
+${PreviewTitle}     (//div[@class="cover-text" ])[3]
+${PreviewCloseButton}      //button[@id="close-button"]
+${LevelbandInReader}        (//div[@class="logo-level"])[3]
 *** Keywords ***
 Hover and click on create option from main menu
     Wait Until Element Is Not Visible    ${GlobalSlimNotification}    timeout=10s
@@ -104,7 +107,9 @@ Click on publish button from final publish form
     Click Button    ${FinalPublishStoryBtn}
 Verify the UGC slim notification after publishing
     Sleep    5s
+    Wait Until Element Is Visible    ${GlobalSlimNotification}
     Element Should Contain    ${GlobalSlimNotification}    Yay! Your story is published and will appear under 'My Published Stories' soon
+    Click Element    ${CloseButton}
 Insert new page in the editor
     Sleep    2s
     Click Element    ${InsertPageButton}
@@ -138,16 +143,27 @@ Enter Text in Speech Bubble
     Click Element    ${SpeechBubbleTextfield}
     Sleep    5s
     Input Text      ${SpeechBubbleTextfield}     SpeechBubbleText
-Click on preview
+Click on preview button
     Click Element    ${PreviewButton}
 Verify the preview
     Sleep    5s
+    Wait Until Element Is Visible    ${PreviewTitle}
+    Element Should Be Visible    ${LevelBandInReader}
+Close preview
+    Click Element    ${PreviewCloseButton}
+    
 Check for empty speech bubble or text box while publihsing
     ${EmptyTextfieldModal}=  Run Keyword And Return Status    Element Should Be Visible    //span[text()='Your story isn’t completely done!']
     WHILE    ${EmptyTextfieldModal} == ${TRUE}
         Click Button    Yes
         ${EmptyTextfieldModal}=  Run Keyword And Return Status  Page Should Contain Element  ${SelectLanguage}
     END
+Click on save button
+    Sleep    5s
+    Click Element    ${SaveButton}
+Verify publsihed under edit notification
+    Wait Until Element Is Visible    ${GlobalSlimNotification}      timeout=10s
+    Element Should Contain    ${GlobalSlimNotification}    Your story has been saved as a draft. You can edit, complete and publish your story by clicking on 'My Drafts' on your Dashboard.
 
 
 
