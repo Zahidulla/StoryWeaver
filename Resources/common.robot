@@ -14,7 +14,7 @@ Open_Web_browser
       Call Method    ${chrome_options}    add_argument    --no-sandbox
       Call Method    ${chrome_options}    add_argument    --disable-dev-shm-usage
       [Arguments]   ${Url}
-      Open Browser         ${Url}         ${Browser_Name}       #options=${chrome_options}
+      Open Browser         ${Url}         ${Browser_Name}       options=${chrome_options}
       Set Window Size    1536	    864     #Setting the window size for headless mode
       Maximize Browser Window
       Set Selenium Implicit Wait    20s
