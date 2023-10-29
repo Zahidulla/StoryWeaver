@@ -3,7 +3,7 @@ from selenium.webdriver.chrome.options import Options
 
 
 def chromedriver(Url):
-    browser_path = '/usr/bin/google-chrome'
+    browser_path = '/usr/bin/google-chrome-stable'
     options = webdriver.ChromeOptions()
     options.binary_location = browser_path
     options.add_argument('headless')
