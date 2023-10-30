@@ -51,12 +51,12 @@ Hover and click on create option from main menu
     Click Element    ${DropdownCreate}
 Verify create page opened
     Sleep    5s
-     ${PublishForm}=  Run Keyword And Return Status  Element Should Be Visible  ${SelectLanguage}
-    WHILE    ${PublishForm} != ${TRUE}
-        Reload Page
-        ${PublishForm}=  Run Keyword And Return Status  Page Should Contain Element  ${SelectLanguage}
-    END
-    Element Should Be Visible    ${SelectLanguage}      
+#     ${PublishForm}=  Run Keyword And Return Status  Element Should Be Visible  ${SelectLanguage}
+#    WHILE    ${PublishForm} != ${TRUE}
+#        Reload Page
+#        ${PublishForm}=  Run Keyword And Return Status  Page Should Contain Element  ${SelectLanguage}
+#    END
+    Wait Until Element Is Visible    ${SelectLanguage}          timeout=15s
 Select language of Story in Publish Form
     Select From List By Value    ${SelectLanguage}   4
 Enter Story title in Publish Form

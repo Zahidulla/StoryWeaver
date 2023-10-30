@@ -17,4 +17,6 @@ Click on Story title link from My published tab
     Click Element    ${StoryTitle link}
     Sleep    2s
     Switch Window         NEW
+    Set Window Size    1536	    864     #Setting the window size for headless mode
+    Maximize Browser Window
 

@@ -17,9 +17,9 @@ Test for Manadatory login/signup after 3 reads
             ${CloseButtonstatus}=   run keyword and return status    element should be visible    ${CloseButton}
             Run Keyword If    ${CloseButtonstatus}      Close the reader
     END
+    Wait Until Element Is Visible    ${Emailbuttonmodal}    timeout=10s
 User should be able to login from the manadtory Login/Signup modal
     [Tags]      TC101       Sanity
-    Wait Until Element Is Visible    ${Emailbuttonmodal}    timeout=10s
     Click on email option
     Enter email id    ${UserName}
     Click on next button
