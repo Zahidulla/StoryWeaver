@@ -156,7 +156,7 @@ Check for empty speech bubble or text box while publihsing
     ${EmptyTextfieldModal}=  Run Keyword And Return Status    Element Should Be Visible    //span[text()='Your story isn’t completely done!']
     WHILE    ${EmptyTextfieldModal} == ${TRUE}
         Click Button    Yes
-        ${EmptyTextfieldModal}=  Run Keyword And Return Status  Page Should Contain Element  ${SelectLanguage}
+        ${EmptyTextfieldModal}=  Run Keyword And Return Status  Page Should Contain Element  ${EmptyTextfieldModal}
     END
 Click on save button
     Sleep    5s
