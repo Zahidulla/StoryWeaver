@@ -14,3 +14,4 @@ ${GlobalSlimNotification}    xpath=//*[@class="pb-slim-notification-container"]
 ${MobileNumber}     8088255301
 ${IndividualImageURL}   https://storyweaver.org.in/en/illustrations/589
 ${CloseButton}    //div[@title="Close"]
+${StorydetailURL}       https://storyweaver.org.in/en/stories/2-smile-please

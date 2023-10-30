@@ -10,16 +10,16 @@ Resource    ../PO & Keywords/UserDropdownMenu.robot
 *** Test Cases ***
 Setup
         Open_Web_browser    ${IndividualImageURL}
-Test for clicking on create option from main menu as an unsigned user
-    [Tags]      TC200       Sanity
-    Hover and click on create option from main menu
-    Verify the Login/signup modal should visible
-    Close Login/Signup Modal
 Test for clicking on create option from individual image page
-    [Tags]      TC201       Sanity
+    [Tags]      TC200       Sanity
     Accept GDPR
     Click on create story button from individual image page
     Click on Login/Signup button from generic login signup(Appear when clicked on action button)
+    Verify the Login/signup modal should visible
+    Close Login/Signup Modal
+Test for clicking on create option from main menu as an unsigned user
+    [Tags]      TC201       Sanity
+    Hover and click on create option from main menu
     Verify the Login/signup modal should visible
 Test for Login and opening create page
     [Tags]      TC202       Sanity
