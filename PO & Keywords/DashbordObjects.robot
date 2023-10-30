@@ -12,6 +12,7 @@ My published story tab should be visible
     Wait Until Element Is Visible    ${MyPublishedStoryTab}
 Verify the publsihed story should appear in My publsihed tab
     [Arguments]     ${StoryTitle}
+    Wait Until Element Is Visible    ${PublishedStoryTitle}
     Element Should Contain    ${PublishedStoryTitle}    ${StoryTitle}
 Click on Story title link from My published tab
     Click Element    ${StoryTitle link}

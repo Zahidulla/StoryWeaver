@@ -5,7 +5,7 @@ Resource    ../Resources/Test_data.robot
 ${MoreDropdown}     (//div[@title="More"])[1]
 ${EditStoryButton}      //div[text()="Edit"]
 ${YesButton}        //a[text()='Yes']
-${BookCrad}     //a[text()='Read Story']
+${BookCrad}     (//div[@class="pb-book-card__wrapper"])[1]
 *** Keywords ***
 Edit story from story details page
     Click Element    ${MoreDropdown}
