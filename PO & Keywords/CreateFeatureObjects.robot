@@ -153,6 +153,7 @@ Close preview
     Click Element    ${PreviewCloseButton}
     
 Check for empty speech bubble or text box while publihsing
+    Sleep    5s
     ${EmptyTextfieldModal}=  Run Keyword And Return Status    Element Should Be Visible    //span[text()='Your story isn’t completely done!']
     WHILE    ${EmptyTextfieldModal} == ${TRUE}
         Click Button    Yes
