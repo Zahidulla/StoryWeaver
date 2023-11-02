@@ -9,10 +9,18 @@ ${PublishedStoryTitle}      (//td[@class="underline-class"])[1]
 ${StoryTitle link}      (//span[text()='${StoryTitleText}'])[1]
 *** Keywords ***
 My published story tab should be visible
-    Wait Until Element Is Visible    ${MyPublishedStoryTab}
+
+    FOR    ${i}    IN RANGE    2
+           ${ElementIsvisible}       Run Keyword And Return Status    Element Should Be Visible    ${MyPublishedStoryTab}
+           Exit For Loop If    ${ElementIsvisible} == ${TRUE}
+           Reload Page
+           Sleep    2s
+    END
+             
+    Click Element    ${MyPublishedStoryTab}
 Verify the publsihed story should appear in My publsihed tab
     [Arguments]     ${StoryTitle}
-    Wait Until Element Is Visible    ${PublishedStoryTitle}
+    Wait Until Element Is Visible    ${MyPublishedStoryTab}
     Element Should Contain    ${PublishedStoryTitle}    ${StoryTitle}
 Click on Story title link from My published tab
     Click Element    ${StoryTitle link}

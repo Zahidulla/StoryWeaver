@@ -37,9 +37,9 @@ Test for adding new page and add image and text in 3rd page
     Insert new page in the editor
     Add random image to reader
     Adding Text in Readers textbox
-    Click on second page
 Test for selecting readers orientation
     [Tags]      TC206       Sanity
+    Click on second page
     Select some orientation for the reader
     Add random image to reader
 Test for adding textbox and adding text in it

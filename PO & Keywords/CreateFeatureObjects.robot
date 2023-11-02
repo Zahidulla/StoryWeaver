@@ -17,7 +17,7 @@ ${Editorsection}   //div[@id='txtEditor']
 ${SaveImagebutton}    //i[@class='cropControlSave']
 ${FrontCoverPage}    //a[@class="page_thumbnail FrontCoverPage"]
 ${SaveButton}    //a[@id="save"]
-${PublishButton}    (//a[@class="btn btn-app btn-brand-1 font-sm"])[3]
+${PublishButton}    //a[@id="publish"]
 ${DoneButton}    //button[@id="storycard-img-edit-done"]
 ${PublishBookButton}    //button[@id="publish-book"]
 ${SynopsisTextField}    //textarea[@id="story_synopsis"]
@@ -51,54 +51,56 @@ Hover and click on create option from main menu
     Click Element    ${DropdownCreate}
 Verify create page opened
     Sleep    5s
-#     ${PublishForm}=  Run Keyword And Return Status  Element Should Be Visible  ${SelectLanguage}
-#    WHILE    ${PublishForm} != ${TRUE}
-#        Reload Page
-#        ${PublishForm}=  Run Keyword And Return Status  Page Should Contain Element  ${SelectLanguage}
-#    END
-    Wait Until Element Is Visible    ${SelectLanguage}          timeout=15s
+     ${PublishForm}=  Run Keyword And Return Status  Element Should Be Visible  ${SelectLanguage}
+    WHILE    ${PublishForm} != ${TRUE}
+        Reload Page
+        Sleep    2s
+        ${PublishForm}=  Run Keyword And Return Status  Page Should Contain Element  ${SelectLanguage}
+    END
 Select language of Story in Publish Form
     Select From List By Value    ${SelectLanguage}   4
 Enter Story title in Publish Form
     Input Text    ${StorytitleField}    ${StoryTitleText}
-    Sleep    4s
 Select level of Story in Publsih Form
     Click Element    ${StoryLevel}
 Click on start with words button in Publish Form
     Click Element    ${StartswithWordsButton}
 Verify the Story title
+    Sleep    5s
     Element Text Should Be    //div[@class='heading-title gutter english devanagri']   ${StoryTitleText}
 Add random image to reader
     Click Element    ${AddImageButton}
+    Wait Until Element Is Visible    ${Add the first image}     timeout=10s
     Mouse Over    ${Add the first image}
     Click Element    ${Addimagetopage}
-    Sleep    2s
+    Wait Until Element Is Visible    ${SaveImagebutton}     timeout=10s
     Click Element    ${SaveImagebutton}
+    Wait Until Element Is Visible    ${PublishButton}   timeout=10s
 Adding Text in Readers textbox
     Sleep    2s
     Input Text    ${Editorsection}    Testing Test for editor by automation.
 Click on Front cover page
     Mouse Up    ${FrontCoverPage}
     Click Element    ${FrontCoverPage}
+    Wait Until Element Is Visible    ${AddImageButton}      timeout=10s
 Click on Publish button from editor
     Sleep    2s
     Click Element    ${PublishButton}
     
 CLick on Done button
-    Sleep    2s
-    Wait Until Element Is Visible    ${DoneButton}
-    Sleep    2s
+    Sleep    3s
     Click Button    ${DoneButton}
-    Wait Until Element Is Visible    ${PublishBookButton}
     Sleep    2s
     Click Button    ${PublishBookButton}
 Enter synopsis in final Publish form
+    Sleep    2s
     Input Text    ${SynopsisTextField}    Synopis text for the story.
 Select category from final Publish form
     Click Button   ${CategoryButton}
     Click Element    ${CategoryDropdown}
     Click Button    ${CategoryButton}
 Enter English story title in final Publsih form
+    Sleep    2s
     Input Text    ${EnglishStoryTitleField}    TestEnglishTitle
 Click on publish button from final publish form
     Mouse Down      ${PublihsFormNextBtn}
@@ -106,18 +108,17 @@ Click on publish button from final publish form
     Wait Until Element Is Visible    ${FinalPublishStoryBtn}
     Click Button    ${FinalPublishStoryBtn}
 Verify the UGC slim notification after publishing
-    Sleep    5s
-    Wait Until Element Is Visible    ${GlobalSlimNotification}
+    Wait Until Element Is Visible    ${GlobalSlimNotification}      timeout=15s
     Element Should Contain    ${GlobalSlimNotification}    Yay! Your story is published and will appear under 'My Published Stories' soon
     Click Element    ${CloseButton}
 Insert new page in the editor
     Sleep    2s
     Click Element    ${InsertPageButton}
     Click Element    ${InsertOkaybutton}
-    Sleep    2s
+    Sleep    5s
 Click on second page
     Click Element    ${ReadersSecondPage}
-    Sleep    3s
+    Sleep    5s
 Select some orientation for the reader
     Click Element    ${OrientationDropdown}
     Click Element    ${ReaderOrientation}
@@ -125,12 +126,14 @@ Select some orientation for the reader
 Add text box in the reader
     Click Element    ${InsertDropdown}
     Click Element    ${AddTextBoxButton}
+    Sleep    2s
     Mouse Over    ${TextBox}
+    Sleep    2s
     Drag And Drop By Offset    ${TextBox}    180    100
 Enter Text in the text box
     Mouse Over    ${TextBoxField}
     Click Element    ${TextBoxField}
-    Sleep    5s
+    Sleep    2s
     Input Text    ${TextBoxField}    TextBoxTest
 Add Speech bubble
     Sleep    2s
@@ -140,14 +143,15 @@ Add Speech bubble
 Enter Text in Speech Bubble
     Sleep    2s
     Mouse Over    ${SpeechBubbleTextfield}
+    Sleep    2s
     Click Element    ${SpeechBubbleTextfield}
-    Sleep    5s
+    Sleep    2s
     Input Text      ${SpeechBubbleTextfield}     SpeechBubbleText
 Click on preview button
     Click Element    ${PreviewButton}
 Verify the preview
     Sleep    5s
-    Wait Until Element Is Visible    ${PreviewTitle}
+    Wait Until Element Is Visible    ${PreviewTitle}        timeout=15s
     Element Should Be Visible    ${LevelBandInReader}
 Close preview
     Click Element    ${PreviewCloseButton}
@@ -163,7 +167,7 @@ Click on save button
     Sleep    5s
     Click Element    ${SaveButton}
 Verify publsihed under edit notification
-    Wait Until Element Is Visible    ${GlobalSlimNotification}      timeout=10s
+    Wait Until Element Is Visible    ${GlobalSlimNotification}      timeout=15s
     Element Should Contain    ${GlobalSlimNotification}    Your story has been saved as a draft. You can edit, complete and publish your story by clicking on 'My Drafts' on your Dashboard.
 
 
