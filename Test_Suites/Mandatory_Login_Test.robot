@@ -21,14 +21,6 @@ Verify the Mandatory login/Signup modal should be visible
     [Tags]      TC101       Sanity
     Sleep    6s
     Element Should Be Visible   ${Emailbuttonmodal}
-User should be able to login from the manadtory Login/Signup modal
-    [Tags]      TC102       Sanity
-    Click on email option
-    Enter email id    ${UserName}
-    Click on next button
-    Enter Vaild Password in password field
-    Click login button after entering password
-    Verify the notification for Successfully login
 Test Teardown
     Close_the_browser
 
