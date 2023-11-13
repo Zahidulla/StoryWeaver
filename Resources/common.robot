@@ -14,14 +14,14 @@ Open_Web_browser
       Call Method    ${chrome_options}    add_argument    --no-sandbox
       Call Method    ${chrome_options}    add_argument    --disable-dev-shm-usage
       [Arguments]   ${Url}
-      Open Browser         ${Url}         ${Browser_Name}       options=${chrome_options}
+      Open Browser         ${Url}         ${Browser_Name}       #options=${chrome_options}
       Set Window Size    1536	    864     #Setting the window size for headless mode
       Set Selenium Implicit Wait    10s
       Sleep    20s  #Giving this wait time to wait for service worker to get install
 Close_the_browser
     close browser
     
-Close the PTR page if visible
+Close the PTR Notification if visible
     ${present}=  Run Keyword And Return Status    Element Should Be Visible   ${PTR_Image}
     Run Keyword If    ${present}    Click Element    ${PTR_Close_Button}
 
@@ -33,4 +33,7 @@ Read full story
         ${BUTTON} =    run keyword and return status    element should be visible    ${ReaderNextButton}
     END
 Accept GDPR
-    Click Element    //a[text()='Agree']
+    ${GDPRPresent}=  Run Keyword And Return Status    Element Should Be Visible   //a[text()='Agree']
+    Run Keyword If    ${GDPRPresent}    Click Element    //a[text()='Agree']
+Click close button
+    Click Element    ${CloseButton}

@@ -6,6 +6,7 @@ Resource    ../Resources/Test_data.robot
 ${BookCard}     (//div[@class="pb-book-card__container"])[1]
 ${3DotMenu}     (//*[@class="pb-svg-icon pb-svg-icon--type-dots"])[1]
 ${ReadStoryin3dotsmenu}    //div[text()='Read Story']
+${FirstSelectedFilter}      //span[@class="pb-pill__label"]
 
 
 *** Keywords ***
@@ -19,7 +20,8 @@ Click on read story from 3 dot menu
     Click Element    ${ReadStoryin3dotsmenu}
 Close the reader
     Click Element    ${CloseButton}
-
+Filter should be visible
+    Element Should Contain    ${FirstSelectedFilter}    TELUGU
 
 
 

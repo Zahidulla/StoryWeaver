@@ -21,9 +21,10 @@ Test for clicking on create option from main menu as an unsigned user
     [Tags]      TC201       Sanity
     Hover and click on create option from main menu
     Verify the Login/signup modal should visible
+    Close Login/Signup Modal
 Test for Login and opening create page
     [Tags]      TC202       Sanity
-    Login
+    Login   ${UserName}
     Hover and click on create option from main menu
     Verify create page opened
 Test for filling the publish form
@@ -56,7 +57,7 @@ Test for adding image in front cover page
     Add random image to reader
 Test for previewing story
     [Tags]      TC210       Sanity
-    Close the PTR page if visible       #Ensures to close the popup to avoid interception error
+    Close the PTR Notification if visible       #Ensures to close the popup to avoid interception error
     Click on preview button
     Verify the preview
     Close preview

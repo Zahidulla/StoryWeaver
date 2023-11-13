@@ -20,9 +20,10 @@ ${ForgetPasswordButton}    //button[contains(text(),'Send me Reset Password Inst
 ${MandatoryLoaderScreen}    //div[@class="pb-auth-modal__content--mandatory-login-desc"]
 *** Keywords ***
 Login
-#    Click Element   ${SignupLoginbutton}
+    [Arguments]     ${UserID}
+    Click Element   ${SignupLoginbutton}
     Click Element    ${Emailbuttonmodal}
-    input text    ${EmailInputField}   ${UserName}
+    input text    ${EmailInputField}   ${UserID}
     Click Button   ${NextButton}
     input password    ${PasswordField}   ${Password}
     click button    ${LoginButton}

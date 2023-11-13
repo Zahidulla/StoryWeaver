@@ -2,28 +2,28 @@
 Resource    LoginModalObjects.robot
 Resource    StoryFinder.robot
 Resource    SmileyRatingObjects.robot
+
 *** Variables ***
-${StoryFinderBanner} =    .pb-hero-carousel__container .slick-current [alt='banner-0']
-${StoryFinderModal} =    .pb-modal__content-wrapper
-${LanguageDropdwon} =    language
-${LevelDropdown} =    level
-${ThemeDropdown} =    theme
-${FindABookButton} =    Find a Book
-${StoryFinderCarousel} =    .pb-center-mode-carousal
+${StoryFinderBanner}        (//img[@class="pb-img__img"])[3]
+${StoryFinderModal} =    //div[@class="pb-modal__content"]
+${LanguageDropdwon} =    //button[@id="language"]
+${LevelDropdown} =    //button[@id="level"]
+${ThemeDropdown} =    //button[@id="theme"]
+${FindABookButton} =    //a[text()="Find a Book"]
+${StoryFinderCarousel} =    //div[@class="pb-center-mode-carousal"]
 ${StoryFinderTitle} =    //h1[@class='pb-center-mode-carousal__title']
 ${ReaderModalTitle} =    //p[@class='cover_title english ']
 ${StoryTitleOnCarousel} =    //div[@class='pb-center-mode-carousal__card-title']
 ${CarouselReadButton} =    //a[.='Read Story']
 *** Keywords ***
 StoryFinder Banner should be visible for an unsigned user
-    wait until element is visible    css=${StoryFinderBanner}
-    LOG    StoryFinder Banner is visible
+    ${StoryFinderBannerLink}    Get Element Attribute    ${StoryFinderBanner}    src
+    IF    "${StoryFinderBannerLink}" != "https://static.storyweaver.org.in/user_gateways/images/SW_Homepage_Banner.png"
+         Fail
+    END
 StoryFinder Modal should appear when clicked on StoryFinder banner
-    
-    wait until element is visible    css=${StoryFinderBanner}
-    click element    css=${StoryFinderBanner}
+    click element    ${StoryFinderBanner}
     element should be visible    css=.pb-modal__content-wrapper
-    log    StoryFinder Search Modal is visble
 Default values should appear in filters of StoryFinder modal
     element should contain  ${languagedropdwon}    English
     element should contain    ${LevelDropdown}    Level 1
@@ -31,7 +31,7 @@ Default values should appear in filters of StoryFinder modal
     sleep    2s
     log    All the default values are as expected
 Stories carousel should appear when clicked on Find A Book button with default values
-    click link    ${FindABookButton}
+    Click Element    ${FindABookButton}
     sleep    4s
     element should contain    ${StoryFinderTitle}    The StoryFinder has selected these books for you…
     log    StoryFinder carousel is opened
