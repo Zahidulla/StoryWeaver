@@ -28,14 +28,14 @@ StoryFinder Banner should be visible for an Student user
          Fail
     END
 Verify looking for books tabs for Student user
-    Mouse Down    ${LookingForBooksCarousel}
+     Scroll Element Into View    ${LookingForBooksCarousel}
      Element Should Be Visible    ${FeaturedBooksTab}
      Element Should Be Visible    ${NewArrivalsTab}
 Verify trending this week title for student usergateway
-    Mouse Down    ${TrendingthisweekStory}
+    Scroll Element Into View    ${TrendingthisweekStory}
     Element Should Contain    ${TrendingTitle}    Trending Stories
 Verify Spotlight cards section should be visible in Student gateway
-    Mouse Down    ${SpotLightCards}
+    Scroll Element Into View    ${SpotLightCards}
     Element Should Contain    ${StudentsSpotlightTitle}    In the spotlight
     Element Should Be Visible    ${SpotLightCards}
 Verify Popular Langauges section should be visible from Student gateway

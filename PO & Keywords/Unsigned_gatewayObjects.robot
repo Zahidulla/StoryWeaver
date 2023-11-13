@@ -55,16 +55,16 @@ Select second banner
     Sleep    1S
     Click Element    ${Secondbannerdot}
 Verify trending this week title for Unsigned usergateway
-    Mouse Down    ${TrendingthisweekStory}
+    Scroll Element Into View    ${TrendingthisweekStory}
     Element Should Contain    ${TrendingTitle}    Trending this week
 Books in Trending this week should be visible
     Element Should Be Visible    ${TrendingthisweekStory}
 Verify level section should be visible
-    Mouse Down    ${Levelcards}
+    Scroll Element Into View    ${Levelcards}
     Element Should Contain    ${LevelSectionTitle}    Our storybooks are based on reading proficiency rather than age. Our books are categorised across four Reading Levels:
     Element Should Be Visible    ${Levelcards}
 Verify Looking for books section Title
-    Mouse Down    ${LookingForBooksCarousel}
+    Scroll Element Into View    ${LookingForBooksCarousel}
     Element Should Contain    ${LookingForBooksCarouselTitle}    Looking for a book to read? Pick one of these!
 Verify looking for books tabs for unsigned user
      Element Should Be Visible    ${FeaturedBooksTab}
@@ -73,21 +73,21 @@ Verify looking for books tabs for unsigned user
 Verify the books should be visible in Looking for books section
     Element Should Be Visible    ${LookingForBooksCarousel}
 Verify Popular Langauges section should be visible
-    Mouse Down    ${PopularLanguagecards}
+    Scroll Element Into View    ${PopularLanguagecards}
     Element Should Contain    ${PopularLanguageTitle}    Popular languages this week
     Element Should Be Visible    ${PopularLanguagecards}
 Verify Spotlight cards section should be visible
-    Mouse Down    ${SpotLightCards}
+    Scroll Element Into View    ${SpotLightCards}
     Element Should Contain    ${SpotlightTitle}    In the spotlight
     Element Should Be Visible    ${SpotLightCards}
 Verify StoryWeaver & you section should be visible
-    Mouse Down    ${ForEducatorCard}
+    Scroll Element Into View    ${ForEducatorCard}
     Element Should Contain    ${StoryWeaver&YouTitle}    StoryWeaver and You
     Element Should Be Visible    ${ForParentsCard}
     Element Should Be Visible    ${ForStudentCard}
     Element Should Be Visible    ${ForEducatorCard}
 Verify the resource carousel in homepage
-    Mouse Down    ${ResorceNextButton}
+    Scroll Element Into View    ${ResorceNextButton}
     Element Should Contain    ${ResourcecarouselTitle}    StoryWeaver-crafted reading programmes for your child
     Element Should Contain    ${STEMresourceTitle}      STEM Literacy Programme
     Click Element    ${ResorceNextButton}
@@ -100,7 +100,7 @@ Verify the resource carousel in homepage
     Sleep    2S
     Element Should Contain    ${ThemeListResourceTitle}     Themed Book Lists
 Veify blogs section should be visible
-    Mouse Down    ${BlogsectionTitle}
+    Scroll Element Into View    ${BlogsectionTitle}
     Element Should Contain    ${BlogsectionTitle}    Read our blog
     Element Should Be Visible    ${BlogCards}
 Verify Social icons should be visible
