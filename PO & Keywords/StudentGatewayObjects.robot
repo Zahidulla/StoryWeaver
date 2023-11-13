@@ -32,8 +32,10 @@ Verify looking for books tabs for Student user
      Element Should Be Visible    ${FeaturedBooksTab}
      Element Should Be Visible    ${NewArrivalsTab}
 Verify trending this week title for student usergateway
-    Scroll Element Into View    ${TrendingthisweekStory}
+    Scroll Element Into View    ${TrendingTitle}
+    Sleep    2s
     Element Should Contain    ${TrendingTitle}    Trending Stories
+    Scroll Element Into View    ${TrendingthisweekStory}
 Verify Spotlight cards section should be visible in Student gateway
     Scroll Element Into View    ${SpotLightCards}
     Element Should Contain    ${StudentsSpotlightTitle}    In the spotlight
