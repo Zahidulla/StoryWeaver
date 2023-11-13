@@ -8,7 +8,7 @@ Test Teardown       Close_the_browser
 *** Test Cases ***
 Login Test with valid crediantials
     [Documentation]     Testing Login with In-valid credentials
-    [Tags]      TC001       Sanity
+    [Tags]      TC01-001       Sanity
     Click on Login/Signup button
     Click on email option
     Enter email id      zahid@yopmail.com
@@ -18,7 +18,7 @@ Login Test with valid crediantials
     Verify the notification for Successfully login
 Login Test with invalid credentials
     [Documentation]     Testing Login with valid credentials
-    [Tags]      TC002       Sanity
+    [Tags]      TC01-002       Sanity
     Click on Login/Signup button
     click on email option
     Enter email id      zahid@yopmail.com
@@ -28,7 +28,7 @@ Login Test with invalid credentials
     Invalid Email/Password slim notification
 Login Test with OTP
     [Documentation]     Testing Login with valid credentials
-    [Tags]      TC003       Sanity
+    [Tags]      TC01-003       Sanity
     Click on Login/Signup button
     Click on Mobile Login Option
     Enter Mobile number in mobile field
@@ -36,7 +36,7 @@ Login Test with OTP
     OTP notification should be visible
 Resend confirmation Test
     [Documentation]     Testing confirmtion mail
-    [Tags]      TC004       Sanity
+    [Tags]      TC01-004       Sanity
     Click on Login/Signup button
     Click on email option
     Enter email id      test41@yopmail.com
@@ -45,7 +45,7 @@ Resend confirmation Test
     Confirmation mail should be visible
 Forgot password Test
     [Documentation]     Testing forgot password mail
-    [Tags]      TC005       Sanity
+    [Tags]      TC01-005       Sanity
     Click on Login/Signup button
     Click on email option
     Enter email id    zahid@yopmail.com

@@ -4,6 +4,10 @@ ${Url} =    https://storyweaver.org.in/en/
 ${ReadPage}=    https://storyweaver.org.in/en/stories?sort=Ratings
 ${browser_Name}     headlesschrome
 ${UserName} =    zahid@yopmail.com
+${StudentUserName}  1@yopmail.com
+${TeachersUserName}     2@yopmail.com
+${ParentUserName}       3@yopmail.com
+${UnknownUserName}      4@yopmail.com
 ${Password} =    password
 ${LevelStory}=    Level 1:
 ${StoryTitleText}=    हिन्द टाइटल
