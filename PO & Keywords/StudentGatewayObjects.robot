@@ -53,6 +53,7 @@ Verify all the options from SideBar should be visible
     Element Should Be Visible    ${SidebarReadingProgramOption}
     Element Should Be Visible    ${SidebarReadingListOption}
 Verify the engagement content should be visible
+    Scroll Element Into View    ${EngagementContentInSidebar}
     Element Should Be Visible    ${EngagementContentInSidebar}
 Verify that read option is highlighted when the user is on Read page
     Element Should Contain    ${HighlightedText}    All Books
