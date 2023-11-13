@@ -3,7 +3,7 @@ Resource    ../Resources/common.robot
 Resource    ../Resources/Test_data.robot
 Resource    ReadPageObjects.robot
 *** Variables ***
-${SignupLoginbutton}    //*[text()="Sign Up/Log In"]
+${SignupLoginbutton}    //span[text()="Sign Up/Log In"]
 ${LoginButtonSmallModal}    //a[text()='Log In']
 ${Login/SignupModal}    //form[@class="pb-auth-modal__form-content"]
 ${Emailbuttonmodal}    //a[text()="Email"] 

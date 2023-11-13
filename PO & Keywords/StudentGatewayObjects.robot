@@ -18,7 +18,7 @@ ${SidebarAllBookOptions}   //h3[text()='All Books']
 ${SidebarReadalongOption}  //h3[text()='Readalongs']
 ${SidebarReadingProgramOption}     //h3[text()='Reading Programme']
 ${SidebarReadingListOption}      //h3[text()='Reading Lists']
-${EngagementContentInSidebar}       //div[@class="pb-engagement-image__container"]
+${EngagementContentInSidebar}       //div[@class="pb-toggle-sidebar__engagement"]
 ${HighlightedText}      //h3[@class="pb-toggle-sidebar__nav-section-title--focus pb-toggle-sidebar__nav-section-title"]
 *** Keywords ***
 StoryFinder Banner should be visible for an Student user
