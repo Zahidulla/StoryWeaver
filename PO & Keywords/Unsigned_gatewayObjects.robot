@@ -52,7 +52,7 @@ Banners link should be present
          Fail
     END
 Select second banner 
-    Sleep    1S
+    Sleep    2S
     Click Element    ${Secondbannerdot}
 Verify trending this week title for Unsigned usergateway
     Scroll Element Into View    ${TrendingthisweekStory}
@@ -91,13 +91,13 @@ Verify the resource carousel in homepage
     Element Should Contain    ${ResourcecarouselTitle}    StoryWeaver-crafted reading programmes for your child
     Element Should Contain    ${STEMresourceTitle}      STEM Literacy Programme
     Click Element    ${ResorceNextButton}
-    Sleep    2S
+    Sleep    1S
     Element Should Contain    ${ReadingProgramResourceTitle}        Reading Programme
     Click Element    ${ResorceNextButton}
-    Sleep    2S
+    Sleep    1S
     Element Should Contain    ${FLPResourceTitle}       Foundational Literacy Programme  
     Click Element    ${ResorceNextButton}
-    Sleep    2S
+    Sleep    1S
     Element Should Contain    ${ThemeListResourceTitle}     Themed Book Lists
 Veify blogs section should be visible
     Scroll Element Into View    ${BlogsectionTitle}
@@ -113,7 +113,7 @@ Enter text in langauge serach field
     Scroll Element Into View    ${LanguageSearchField}
     Input Text    ${LanguageSearchField}    Telu
 Suggestions should be visible upon text input
-    Sleep    2s
+    Sleep    1s
     Element Should Be Visible    ${LanguageSuggestion}
 Searching language from the suggestions
     Click Element    ${LanguageSuggestion}
