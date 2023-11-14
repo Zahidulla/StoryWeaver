@@ -7,14 +7,14 @@ ${ReaderNextButton} =    //a[@title='Next']
 
 *** Keywords ***
 Open_Web_browser
-      ${chrome_options}=  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
-      Call Method    ${chrome_options}    add_argument    --disable-extensions
-      Call Method    ${chrome_options}    add_argument    --headless
-      Call Method    ${chrome_options}    add_argument    --disable-gpu
-      Call Method    ${chrome_options}    add_argument    --no-sandbox
-      Call Method    ${chrome_options}    add_argument    --disable-dev-shm-usage
+#      ${chrome_options}=  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
+#      Call Method    ${chrome_options}    add_argument    --disable-extensions
+#      Call Method    ${chrome_options}    add_argument    --headless
+#      Call Method    ${chrome_options}    add_argument    --disable-gpu
+#      Call Method    ${chrome_options}    add_argument    --no-sandbox
+#      Call Method    ${chrome_options}    add_argument    --disable-dev-shm-usage
       [Arguments]   ${Url}
-      Open Browser         ${Url}         ${Browser_Name}       options=${chrome_options}
+      Open Browser         ${Url}         ${Browser_Name}       #options=${chrome_options}
       Set Window Size    1536	    864     #Setting the window size for headless mode
       Maximize Browser Window
       Set Selenium Implicit Wait    10s
