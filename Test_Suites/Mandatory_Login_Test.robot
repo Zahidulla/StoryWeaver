@@ -20,7 +20,7 @@ Test for Manadatory login/signup after 3 reads
     END
 Verify the Mandatory login/Signup modal should be visible
     [Tags]      TC03-002       Sanity
-    Sleep    6s
+    Wait Until Element Is Visible    ${Emailbuttonmodal}    timeout=10s
     Element Should Be Visible   ${Emailbuttonmodal}
 Test Teardown
     Close_the_browser
