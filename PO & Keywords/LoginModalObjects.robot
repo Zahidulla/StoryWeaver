@@ -27,8 +27,7 @@ Login
     Click Button   ${NextButton}
     input password    ${PasswordField}   ${Password}
     click button    ${LoginButton}
-    Wait Until Element Is Visible    ${CloseButton}
-    Click Element    ${CloseButton}
+    Sleep    3s
 Click on Login/Signup button
     Sleep    2s
     click Element   ${SignupLoginbutton}
@@ -95,6 +94,7 @@ Forgot password notification should be visible
 Manadatory login loader screen should appear
     Element Should Be Visible    //div[@class="pb-loader pb-loader--m"]
 Close Login/Signup Modal
+    Element Should Be Visible    ${CloseButton}
     Click Element    ${CloseButton}
 
 
