@@ -27,8 +27,7 @@ Login
     Click Button   ${NextButton}
     input password    ${PasswordField}   ${Password}
     click button    ${LoginButton}
-    sleep    3s
-    element text should be    ${GlobalSlimNotification}      Login Successful
+    Wait Until Element Is Visible    ${CloseButton}
     Click Element    ${CloseButton}
 Click on Login/Signup button
     Sleep    2s
@@ -62,6 +61,7 @@ Click login button after entering password
     Click Element    ${LoginButton}
     sleep    2s
 Verify the notification for Successfully login
+    Sleep    2s
     element text should be    ${GlobalSlimNotification}      Login Successful
     Log     Login Successful
 Enter Invalid Password in password field
