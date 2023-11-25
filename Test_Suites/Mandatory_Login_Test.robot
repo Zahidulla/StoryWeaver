@@ -15,6 +15,7 @@ Test for Manadatory login/signup after 3 reads
             Cick on book card to read the story
             ${CloseButtonstatus}=   run keyword and return status    element should be visible    ${CloseButton}
             Run Keyword If    ${CloseButtonstatus}      Close the reader
+            Sleep    2s
     END
 Verify the Mandatory login/Signup modal should be visible
     [Tags]      TC03-002       Sanity
