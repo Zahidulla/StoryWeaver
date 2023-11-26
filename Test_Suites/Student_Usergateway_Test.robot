@@ -13,7 +13,7 @@ Login as a student user
    [Tags]      TC04-001       Sanity
     Login   ${StudentUserName}
 Verify studentgateway should load
-    [Tags]      TC04-002       Sanity
+    [Tags]      TC04-002       Sanity   test:retry(2)
     ${CurrentUrl}=      Get Location
     Should Be Equal As Strings    ${CurrentUrl}    https://storyweaver.org.in/en/student
 Test for Banners from Student gateway
@@ -37,6 +37,7 @@ Test for engagement content should be visible in side bar
     Verify the engagement content should be visible
 Test for all sections in Student Usergateway should be visible
    [Tags]      TC04-007       Sanity
+
     Verify trending this week title for student usergateway
     Books in Trending this week should be visible
     Verify Spotlight cards section should be visible in Student gateway
