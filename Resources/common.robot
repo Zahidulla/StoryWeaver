@@ -22,6 +22,7 @@ Open_Web_browser
       Set Window Size    1536	    864     #Setting the window size for headless mode
       Maximize Browser Window
       Set Selenium Implicit Wait    5s
+      Accept GDPR
       Sleep    20s  #Giving this wait time to wait for service worker to get installed
 Close_the_browser
     close browser
