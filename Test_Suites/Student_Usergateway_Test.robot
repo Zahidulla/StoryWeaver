@@ -17,6 +17,7 @@ Verify studentgateway should load
     ${CurrentUrl}=      Get Location
     IF    "${CurrentUrl}" != "https://storyweaver.org.in/en/student"
         Reload Page
+        Sleep    2s
     ELSE
          Log    Student gateway loaded
     END
