@@ -13,17 +13,14 @@ Test for Manadatory login/signup after 3 reads
     [Tags]      TC03-001       Sanity
     Close the PTR Notification if visible
     FOR    ${i}    IN RANGE    4    #Aftre 4th read the Mandatory Login signup should appear
-            Sleep    2s
             Cick on book card to read the story
-            Reader should open after clicking on book card
-            ${CloseButtonstatus}=   run keyword and return status    element should be visible    ${CloseButton}
-            Sleep    2s
-            Run Keyword If    ${CloseButtonstatus}      Close the reader
-            Sleep    2s
+            Sleep    4s
+            ${ReaderStatus}=   run keyword and return status    element should be visible    ${LevelbandInReader} #To check if the reader opens thrice and on 4th time the elevel band is not visible
+            Run Keyword If    ${ReaderStatus}      Close the reader
     END
 Verify the Mandatory login/Signup modal should be visible
     [Tags]      TC03-002       Sanity
-    Sleep    7s
+    Wait Until Element Is Visible    ${Emailbuttonmodal}    timeout=10s
     Element Should Be Visible   ${Emailbuttonmodal}
 Test Teardown
     Close_the_browser

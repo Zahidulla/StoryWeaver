@@ -6,6 +6,7 @@ ${MoreDropdown}     (//div[@title="More"])[1]
 ${EditStoryButton}      //div[text()="Edit"]
 ${YesButton}        //a[text()='Yes']
 ${BookCrad}     (//div[@class="pb-book-card__wrapper"])[1]
+${LevelbandInReader}        //div[@class="logo-level"]
 *** Keywords ***
 Edit story from story details page
     Click Element    ${MoreDropdown}
@@ -27,3 +28,5 @@ Edit story from story details page
 
 Cick on book card to read the story
     Click Element    ${BookCrad}
+Reader should open after clicking on book card
+    Wait Until Element Is Visible    ${LevelbandInReader}   timeout=10s
