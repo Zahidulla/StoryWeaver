@@ -19,6 +19,8 @@ Click on 3 dot icon
 Click on read story from 3 dot menu
     Click Element    ${ReadStoryin3dotsmenu}
 Close the reader
+    Mouse Over    ${CloseButton}
+    Sleep    1s
     Click Element    ${CloseButton}
 Filter should be visible
     Element Should Contain    ${FirstSelectedFilter}    TELUGU
