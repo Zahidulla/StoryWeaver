@@ -51,8 +51,7 @@ Banners link should be present
          Log    The banner is not present
          Fail
     END
-Select second banner 
-    Sleep    2S
+Select second banner
     Click Element    ${Secondbannerdot}
 Verify trending this week title for Unsigned usergateway
     Scroll Element Into View    ${TrendingthisweekStory}
