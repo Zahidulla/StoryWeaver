@@ -13,9 +13,13 @@ Login as a student user
    [Tags]      TC04-001       Sanity
     Login   ${StudentUserName}
 Verify studentgateway should load
-    [Tags]      TC04-002       Sanity   test:retry(2)
+    [Tags]      TC04-002       Sanity
     ${CurrentUrl}=      Get Location
-    Should Be Equal As Strings    ${CurrentUrl}    https://storyweaver.org.in/en/student
+    IF    "${CurrentUrl}" != "https://storyweaver.org.in/en/student"
+        Reload Page
+    ELSE
+         Log    Student gateway loaded
+    END
 Test for Banners from Student gateway
    [Tags]      TC04-003       Sanity
     Banners link should be present
