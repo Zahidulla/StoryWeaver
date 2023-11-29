@@ -15,16 +15,10 @@ Login as a student user
 Verify studentgateway should load
     [Tags]      TC04-002       Sanity
     ${CurrentUrl}=      Get Location
-    IF    "${CurrentUrl}" != "https://storyweaver.org.in/en/student"
-        Reload Page
-        Sleep    2s
-    ELSE
-         Log    Student gateway loaded
-    END
+    Should Be Equal As Strings    "${CurrentUrl}"    "https://storyweaver.org.in/en/student"
 Test for Banners from Student gateway
    [Tags]      TC04-003       Sanity
     Banners link should be present
-    Select second banner
     StoryFinder Banner should be visible for an Student user
 Test for StoryFinder banner from Student Gateway
    [Tags]      TC04-004       Sanity

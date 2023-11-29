@@ -22,11 +22,10 @@ ${EngagementContentInSidebar}       //div[@class="pb-toggle-sidebar__engagement"
 ${HighlightedText}      //h3[@class="pb-toggle-sidebar__nav-section-title--focus pb-toggle-sidebar__nav-section-title"]
 *** Keywords ***
 StoryFinder Banner should be visible for an Student user
-    sleep   2s
+    Select second banner
     ${StoryFinderBannerLink}    Get Element Attribute    ${StoryFinderBanner}    src
-    IF    "${StoryFinderBannerLink}" != "https://static.storyweaver.org.in/user_gateways/images/Student-Gateway-Banner-Desktop.jpg"
-         Fail
-    END
+    Should Be Equal As Strings  ${StoryFinderBannerLink}   "https://static.storyweaver.org.in/user_gateways/images/Student-Gateway-Banner-Desktop.jpg"
+
 Verify looking for books tabs for Student user
      Scroll Element Into View    ${LookingForBooksCarousel}
      Element Should Be Visible    ${FeaturedBooksTab}
