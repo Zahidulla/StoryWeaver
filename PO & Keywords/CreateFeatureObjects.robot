@@ -108,7 +108,7 @@ Click on publish button from final publish form
     Wait Until Element Is Visible    ${FinalPublishStoryBtn}
     Click Button    ${FinalPublishStoryBtn}
 Verify the UGC slim notification after publishing
-    Wait Until Element Is Visible    ${GlobalSlimNotification}      timeout=15s
+    Wait Until Element Is Visible    ${GlobalSlimNotification}
     Element Should Contain    ${GlobalSlimNotification}    Yay! Your story is published and will appear under 'My Published Stories' soon
     Click Element    ${CloseButton}
 Insert new page in the editor

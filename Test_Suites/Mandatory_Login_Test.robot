@@ -15,7 +15,7 @@ Test for Manadatory login/signup after 3 reads
     FOR    ${i}    IN RANGE    4    #Aftre 4th read the Mandatory Login signup should appear
             Sleep    2s
             Cick on book card to read the story
-            Sleep    2s
+            Reader should open after clicking on book card
             ${CloseButtonstatus}=   run keyword and return status    element should be visible    ${CloseButton}
             Sleep    2s
             Run Keyword If    ${CloseButtonstatus}      Close the reader
