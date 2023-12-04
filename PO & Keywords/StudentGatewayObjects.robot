@@ -22,6 +22,7 @@ ${EngagementContentInSidebar}       //div[@class="pb-toggle-sidebar__engagement"
 ${HighlightedText}      //h3[@class="pb-toggle-sidebar__nav-section-title--focus pb-toggle-sidebar__nav-section-title"]
 *** Keywords ***
 StoryFinder Banner should be visible for an Student user
+    Sleep    2s
     Select second banner
     ${StoryFinderBannerLink}    Get Element Attribute    ${StoryFinderBanner}    src
     Should Be Equal As Strings  ${StoryFinderBannerLink}   "https://static.storyweaver.org.in/user_gateways/images/Student-Gateway-Banner-Desktop.jpg"
