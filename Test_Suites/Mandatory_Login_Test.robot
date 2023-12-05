@@ -16,8 +16,6 @@ Test for Manadatory login/signup after 3 reads
             Sleep    4s
             Cick on book card to read the story
             Close the reader
-#            ${ReaderStatus}=   run keyword and return status    element should be visible    ${CloseButton} #To check if the reader opens thrice and on 4th time the elevel band is not visible
-#            Run Keyword If    ${ReaderStatus}      Close the reader
     END
     Cick on book card to read the story
 Verify the Mandatory login/Signup modal should be visible
