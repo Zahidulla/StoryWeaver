@@ -8,7 +8,7 @@ Resource    ../PO & Keywords/StoryFinder.robot
 Test Setup
     Open_Web_browser    ${URL}
 Test for Banners
-   [Tags]      TC05-001       Sanity    test:retry(2)
+   [Tags]      TC05-001       Sanity
     Close the PTR Notification if visible
     Banners link should be present
     Select second banner
@@ -20,7 +20,7 @@ Test for StoryFinder banner
     Stories carousel should appear when clicked on Find A Book button with default values
     Click close button
 Test for all sections in Unsigned Usergateway should be visible
-   [Tags]      TC05-003       Sanity    test:retry(2)
+   [Tags]      TC05-003       Sanity
 
     Verify trending this week title for Unsigned usergateway
     Books in Trending this week should be visible

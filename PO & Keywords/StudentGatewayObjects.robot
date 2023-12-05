@@ -25,7 +25,7 @@ StoryFinder Banner should be visible for an Student user
     Sleep    2s
     Select second banner
     ${StoryFinderBannerLink}    Get Element Attribute    ${StoryFinderBanner}    src
-    Should Be Equal As Strings  ${StoryFinderBannerLink}   "https://static.storyweaver.org.in/user_gateways/images/Student-Gateway-Banner-Desktop.jpg"
+    Should Be Equal As Strings  ${StoryFinderBannerLink}   https://static.storyweaver.org.in/user_gateways/images/Student-Gateway-Banner-Desktop.jpg
 
 Verify looking for books tabs for Student user
      Scroll Element Into View    ${LookingForBooksCarousel}
