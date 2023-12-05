@@ -68,6 +68,7 @@ Enter Invalid Password in password field
     sleep    2s
 Invalid Email/Password slim notification
     element text should be    ${GlobalSlimNotification}     Invalid email or password.
+    Click close button
 Click on Mobile Login Option
     Click Element    ${MobileButton}
     Sleep    2s
@@ -76,6 +77,7 @@ Enter Mobile number in mobile field
     Sleep    2s
 OTP notification should be visible
     Element Should Be Visible    ${GlobalSlimNotification}
+    Click close button
 Click on Resend confirmation links
     Click Element    ${ConfirmationLink}
 Click on Resend confirmation button
