@@ -49,7 +49,6 @@ Banners link should be present
     ${image_src}  Get Element Attribute  ${FirstBannerLink}  src
     IF    "${image_src}" == "None"
          Log    The banner is not present
-         Fail
     END
 Select second banner
     Click Element    ${Secondbannerdot}
@@ -63,6 +62,7 @@ Verify level section should be visible
     Element Should Contain    ${LevelSectionTitle}    Our storybooks are based on reading proficiency rather than age. Our books are categorised across four Reading Levels:
     Element Should Be Visible    ${Levelcards}
 Verify Looking for books section Title
+    Scroll Element Into View    ${LookingForBooksCarouselTitle}
     Scroll Element Into View    ${LookingForBooksCarousel}
     Element Should Contain    ${LookingForBooksCarouselTitle}    Looking for a book to read? Pick one of these!
 Verify looking for books tabs for unsigned user
