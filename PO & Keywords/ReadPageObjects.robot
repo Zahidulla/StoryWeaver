@@ -23,6 +23,7 @@ Close the reader
     Sleep    1s
     Click Element    ${CloseButton}
 Filter should be visible
+    Sleep    4s
     Element Should Contain    ${FirstSelectedFilter}    TELUGU
 
 
