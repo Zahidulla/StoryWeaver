@@ -60,7 +60,6 @@ Click login button after entering password
     Click Element    ${LoginButton}
     sleep    2s
 Verify the notification for Successfully login
-    Sleep    2s
     element text should be    ${GlobalSlimNotification}      Login Successful
     Log     Login Successful
 Enter Invalid Password in password field

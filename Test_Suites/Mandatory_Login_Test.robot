@@ -15,6 +15,7 @@ Test for Manadatory login/signup after 3 reads
     FOR    ${i}    IN RANGE    3    #Aftre 4th read the Mandatory Login signup should appear
             Sleep    4s
             Cick on book card to read the story
+            Sleep    2s
             Close the reader
     END
     Cick on book card to read the story
