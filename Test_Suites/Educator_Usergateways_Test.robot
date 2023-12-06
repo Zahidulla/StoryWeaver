@@ -37,6 +37,8 @@ Test for all sections in Educator Usergateway should be visible
     Verify the language section should be visible
     Enter text in langauge serach field
     Suggestions should be visible upon text input
+Teardown
+    Close_the_browser
 
 
 

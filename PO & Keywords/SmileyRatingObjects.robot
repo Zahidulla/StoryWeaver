@@ -2,11 +2,12 @@
 Resource    ../Resources/common.robot
 
 *** Variables ***
-${SmileyRatingModal} =    //*[@id="root"]/div/div[7]/div[2]/div/div
-${SmileyRatingNextLink} =    Next Story
+${SmileyRatingModalTitle} =    //h2[@class="pb-smiley-rating-modal__title"]
+${SmileyRatingNextLink} =    (//a[@class="pb-link pb-link--default pb-smiley-rating-modal__link"])[3]
 
 *** Keywords ***
 Smiley rating window should appear after reading a book
-    element should be visible    ${SmileyRatingModal}
+    Wait Until Element Is Visible    ${SmileyRatingModalTitle}      timeout=15s
+    element should be visible    ${SmileyRatingModalTitle}
 
 

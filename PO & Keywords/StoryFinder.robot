@@ -41,10 +41,12 @@ User should be able read a book from Storyfinder carousel
     sleep    4s
     Read full story
     sleep    2s
-The Next read window should be of Storyfinder carousel itself
-    click link    ${SmileyRatingNextLink}
+The Next read window should be visible
+    Wait Until Element Is Visible    ${SmileyRatingNextLink}    timeout=10s
+    Click Element    ${SmileyRatingNextLink}
     log    smiley rating window is visible
-    sleep   2s
-    element should contain    ${StoryFinderTitle}    The StoryFinder has selected these books for you…
-    log    The next read suggestion window is of the StoryFinder itself
+The next read suggestion should appear
+    Wait Until Element Is Visible    ${StoryFinderTitle}    timeout=15s
+    Element Should Be Visible   ${StoryFinderTitle}
+    Element Should Be Visible    ${StoryFinderTitle}        Pick your next story!
 

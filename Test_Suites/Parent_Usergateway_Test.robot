@@ -38,3 +38,5 @@ Test for all sections in Parent Usergateway should be visible
     Enter text in langauge serach field
     Suggestions should be visible upon text input
     Verify Parents page story section
+Teardown
+    Close_the_browser
