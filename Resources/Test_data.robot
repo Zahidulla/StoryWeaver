@@ -5,7 +5,7 @@ ${ReadPage}=    https://storyweaver.org.in/en/stories?sort=Ratings
 ${browser_Name}    headlesschrome
 ${UserName} =    2@yopmail.com
 ${StudentUserName}  1@yopmail.com
-${TeachersUserName}     3@yopmail.com
+${TeachersUserName}     zahid_3@yopmail.com
 ${ParentUserName}       2@yopmail.com
 ${UnknownUserName}      4@yopmail.com
 ${Password} =    password
