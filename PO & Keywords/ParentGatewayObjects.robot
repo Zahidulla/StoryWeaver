@@ -31,6 +31,11 @@ Verify explore Books section should be visible
     Scroll Element Into View    ${ExploreBooksCards-3&4}
     Element Should Contain    ${ExlporeBooksLevel-3&4}    Explore Level 3 & Level 4 books by theme
     Element Should Be Visible    ${ExploreBooksCards-3&4}
+Verify trending this week title for Parent usergateway
+    Scroll Element Into View    ${TrendingTitle}
+    Sleep    2s
+    Element Should Contain    ${TrendingTitle}    Trending Stories for Parents
+    Scroll Element Into View    ${TrendingthisweekStory}
 Verify the videos section should be visible
     Scroll Element Into View    ${VideoSectionParentGateway}
     Element Should Be Visible    ${VideoSectionParentGateway}

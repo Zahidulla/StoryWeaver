@@ -22,7 +22,7 @@ Test for Banners from Parent gateway
     Banners link should be present
 Test for all sections in Parent Usergateway should be visible
    [Tags]      TC06-004       Sanity
-    Verify trending this week title for student usergateway     #Re-Using the composnents
+    Verify trending this week title for Parent usergateway     #Re-Using the composnents
     Books in Trending this week should be visible
     Verify Spotlight cards section should be visible in Student gateway
     Verify Looking for books section Title
