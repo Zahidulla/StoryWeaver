@@ -3,7 +3,7 @@
 ${Url} =    https://storyweaver.org.in/en/
 ${ReadPage}=    https://storyweaver.org.in/en/stories?sort=Ratings
 ${browser_Name}    headlesschrome
-${UserName} =    zahid@yopmail.com
+${UserName} =    2@yopmail.com
 ${StudentUserName}  1@yopmail.com
 ${TeachersUserName}     3@yopmail.com
 ${ParentUserName}       2@yopmail.com
