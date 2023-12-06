@@ -41,5 +41,11 @@ Test for deleting the story from My Bookshelf
     [Tags]      TC09-006       Sanity
     Click on remove from bookshelf button
     Verify slim notification after deleting to Bookshelf
+Test for the similar books section should be visible
+    [Tags]      TC09-007       Sanity
+    Verify you may also like section should be visible
+Test for tags section should be visible
+    [Tags]      TC09-008       Sanity
+    Verify tags should be visible
 Teardown
     Close_the_browser

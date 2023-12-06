@@ -14,6 +14,9 @@ ${Bookshelfbutton}      (//a[@class="pb-link"])[1]
 ${BookshelfModal}       //div[@class="pb-modal__content-wrapper"]
 ${BookshelfListoption}      (//div[@class="pb-select-bookshelf__bookshelf-el"])[1]
 ${DeleteBookshelfButton}        (//a[@class="pb-link pb-link--danger"])[1]
+${YouMayAlsoLikeTitle}      //div[@class="pb-section-block__header"]
+${SimilarStoryCarusel}      //div[@class="pb-cards-carousel"]
+${TagsSection}      (//ul[@class="pb-list pb-list--inline"])[4]
 *** Keywords ***
 Edit story from story details page
     Click Element    ${MoreDropdown}
@@ -41,6 +44,8 @@ Reader should open after clicking on book card
 Click on Read button
     Click Element    ${Readbutton}
 Click on save to offline library
+    Sleep    2s
+    Mouse Over    ${OfflineLibraryOption}
     Click Element    ${OfflineLibraryOption}
 
 Verify slim notification for book saved in offline library
@@ -75,7 +80,12 @@ Click on remove from bookshelf button
 Verify slim notification after deleting to Bookshelf
     Wait Until Element Is Visible    ${GlobalSlimNotification}      timeout=15s
     Element Should Contain    ${GlobalSlimNotification}         This story has been removed from your bookshelf.
-
+    Sleep    2s
+Verify you may also like section should be visible
+    Execute JavaScript    window.scrollBy(0, 700)
+    Element Should Contain    ${YouMayAlsoLikeTitle}    You may also like
+Verify tags should be visible
+    Element Should Be Visible    ${TagsSection}
 
 
 
