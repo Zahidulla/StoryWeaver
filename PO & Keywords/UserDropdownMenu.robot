@@ -6,7 +6,7 @@ ${UserNameDropdown}     (//span[@class="pb-site-nav-link__title"])[2]
 ${DashboardOption}      //a[text()='Dashboard']
 *** Keywords ***
 Click on UserName
-    Sleep    2s
+    Sleep    4s
     Click Element    ${UserNameDropdown}
 Click on Dashboard option from user name dropdown
     Click Element    ${DashboardOption}

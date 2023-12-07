@@ -28,15 +28,15 @@ Login Test with invalid credentials
     Click login button after entering password
     Invalid Email/Password slim notification
     Close Login/Signup Modal
-Login Test with OTP
-    [Documentation]     Testing Login with valid credentials
-    [Tags]      TC01-003       Sanity
-    Click on Login/Signup button
-    Click on Mobile Login Option
-    Enter Mobile number in mobile field
-    Click on next button
-    OTP notification should be visible
-    Close Login/Signup Modal
+#Login Test with OTP   --- Removing this as the all the mobile number has reached the Maximum limit
+#    [Documentation]     Testing Login with valid credentials
+#    [Tags]      TC01-003       Sanity
+#    Click on Login/Signup button
+#    Click on Mobile Login Option
+#    Enter Mobile number in mobile field
+#    Click on next button
+#    OTP notification should be visible
+#    Close Login/Signup Modal
 Resend confirmation Test
     [Documentation]     Testing confirmtion mail
     [Tags]      TC01-004       Sanity

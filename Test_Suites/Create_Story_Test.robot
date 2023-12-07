@@ -71,7 +71,7 @@ Test for filling final publish form
     Enter English story title in final Publsih form
     Click on publish button from final publish form
 Verify the UGC published Notification
-    [Tags]      TC02-212       Sanity
+    [Tags]      TC02-012       Sanity
     Verify the UGC slim notification after publishing
 Verify publsihed story should appear in My Publsihed dashboard
     [Tags]      TC02-013       Sanity
