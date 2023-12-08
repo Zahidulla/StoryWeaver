@@ -28,3 +28,5 @@ Test for editing Publsihed story from story details page
 Verify publsihed under edit notfication should appear
     [Tags]      TC02-004       Sanity
     Verify publsihed under edit notification
+Teardown
+    Close_the_browser

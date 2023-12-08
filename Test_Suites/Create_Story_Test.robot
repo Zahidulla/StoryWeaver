@@ -73,21 +73,21 @@ Test for filling final publish form
 Verify the UGC published Notification
     [Tags]      TC02-012       Sanity
     Verify the UGC slim notification after publishing
-Verify publsihed story should appear in My Publsihed dashboard
-    [Tags]      TC02-013       Sanity
-    Click on UserName
-    Click on Dashboard option from user name dropdown
-    My published story tab should be visible
-    Verify the publsihed story should appear in My publsihed tab      ${StoryTitleText}
-Test for editing Publsihed story from story details page
-    [Tags]      TC02-014       Sanity
-    Click on Story title link from My published tab
-    Sleep    3s
-    Edit story from story details page
-    Click on save button
-Verify publsihed under edit notfication should appear
-    [Tags]      TC02-015       Sanity
-    Verify publsihed under edit notification
+#Verify publsihed story should appear in My Publsihed dashboard ---Made a different suite as the published story will take time to appear in My published story
+#    [Tags]      TC02-013       Sanity
+#    Click on UserName
+#    Click on Dashboard option from user name dropdown
+#    My published story tab should be visible
+#    Verify the publsihed story should appear in My publsihed tab      ${StoryTitleText}
+#Test for editing Publsihed story from story details page
+#    [Tags]      TC02-014       Sanity
+#    Click on Story title link from My published tab
+#    Sleep    3s
+#    Edit story from story details page
+#    Click on save button
+#Verify publsihed under edit notfication should appear
+#    [Tags]      TC02-015       Sanity
+#    Verify publsihed under edit notification
 Tear Down
     Close_the_browser
 
