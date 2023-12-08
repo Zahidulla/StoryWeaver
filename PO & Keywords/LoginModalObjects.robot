@@ -27,7 +27,7 @@ Login
     Click Button   ${NextButton}
     input password    ${PasswordField}   ${Password}
     click button    ${LoginButton}
-    Sleep    3s
+    Sleep    5s
 Click on Login/Signup button
     Sleep    2s
     click Element   ${SignupLoginbutton}

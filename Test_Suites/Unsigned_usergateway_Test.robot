@@ -35,7 +35,7 @@ Test for all sections in Unsigned Usergateway should be visible
     Veify blogs section should be visible
     Verify Social icons should be visible
     Verify langauge search section should be visible
-Test for language search from Student user gateway
+Test for language search from unsigned user gateway
    [Tags]      TC05-004       Sanity
     Enter text in langauge serach field
     Suggestions should be visible upon text input

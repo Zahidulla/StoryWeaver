@@ -24,7 +24,7 @@ Test for reading the story by clicking on Readbutton
     The Next read window should be visible
     The next read suggestion should appear
     Click close button
-Test for adding the story to effline library
+Test for adding the story to offline library
     [Tags]      TC09-003       Sanity
     Click on save to offline library
     Verify slim notification for book saved in offline library
