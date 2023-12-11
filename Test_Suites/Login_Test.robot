@@ -22,7 +22,7 @@ Login Test with invalid credentials
     [Tags]      TC01-002       Sanity
     Click on Login/Signup button
     click on email option
-    Enter email id      invalid@yopmail.com
+    Enter email id      zahid@yopmail.com
     Click on next button
     Enter Invalid Password in password field
     Click login button after entering password
@@ -42,7 +42,7 @@ Resend confirmation Test
     [Tags]      TC01-004       Sanity
     Click on Login/Signup button
     Click on email option
-    Enter email id      test41@yopmail.com
+    Enter email id      invalid@yopmail.com
     Click on Resend confirmation links
     Click on Resend confirmation button
     Confirmation mail should be visible
