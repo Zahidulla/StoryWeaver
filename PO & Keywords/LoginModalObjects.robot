@@ -82,14 +82,14 @@ Click on Resend confirmation links
 Click on Resend confirmation button
     Click Element       ${ConfirmationButton}
 Confirmation mail should be visible
-    Sleep    2s
+    Wait Until Element Is Visible    ${GlobalSlimNotification}      timeout=15s
     Element Should Contain    ${GlobalSlimNotification}    You will receive an email with instructions for how to confirm your email address in a few minutes.
 Click on Forgot password link from the login popup
     Click Element       ${ForgotPasswordLink}
 Click on Forget password button from login popup
     Click Button    ${ForgetPasswordButton}
 Forgot password notification should be visible
-    Sleep    3s
+    Wait Until Element Is Visible    ${GlobalSlimNotification}      timeout=15s
     [Arguments]     ${UserName}
     Element Should Contain    ${GlobalSlimNotification}    We have sent a password reset link to ${UserName}
 Manadatory login loader screen should appear

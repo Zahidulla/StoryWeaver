@@ -51,36 +51,30 @@ Click on save to offline library
 Verify slim notification for book saved in offline library
     Wait Until Element Is Visible    ${GlobalSlimNotification}      timeout=15s
     Element Should Contain    ${GlobalSlimNotification}    This story has been added to your offline library.
-    Sleep    2s
-    Click close button
+    Wait Until Element Is Not Visible    ${GlobalSlimNotification}      timeout=10s
 Click on delete from offline library button
-    Sleep    5s
     Click Element    ${OfflineLibraryOption}
     Click Element    ${ClickOnDelete}
 Verify slim notification after deleteting book from offline library
-    Sleep    3s
+    Wait Until Element Is Visible    ${GlobalSlimNotification}      timeout=15s
     Element Should Contain    ${GlobalSlimNotification}     The Read and Readalong versions of this story have been removed from your offline library.
-    Sleep    2s
-    Click close button
+    Wait Until Element Is Not Visible    ${GlobalSlimNotification}      timeout=10s
 Click on bookshelf from story details page
-    Sleep    3s
     Click Element    ${Bookshelfbutton}
     Element Should Be Visible    ${BookshelfModal}
 Select the bookshelf list to save the book
     Wait Until Element Is Visible    ${BookshelfListoption}     timeout=10s
     Click Element    ${BookshelfListoption}
 Verify slim notification after adding to Bookshelf
-    Sleep    5s
+    Wait Until Element Is Visible    ${GlobalSlimNotification}      timeout=15s
     Element Should Contain    ${GlobalSlimNotification}         Yay! This book has been added to your bookshelf!
-    Sleep    2s
-    Click close button
+    Wait Until Element Is Not Visible    ${GlobalSlimNotification}      timeout=10s
 Click on remove from bookshelf button
-    Sleep    3s
     Click Element    ${DeleteBookshelfButton}
 Verify slim notification after deleting to Bookshelf
     Wait Until Element Is Visible    ${GlobalSlimNotification}      timeout=15s
     Element Should Contain    ${GlobalSlimNotification}         This story has been removed from your bookshelf.
-    Sleep    2s
+    Wait Until Element Is Not Visible    ${GlobalSlimNotification}      timeout=10
 Verify you may also like section should be visible
     Execute JavaScript    window.scrollBy(0, 700)
     Element Should Contain    ${YouMayAlsoLikeTitle}    You may also like

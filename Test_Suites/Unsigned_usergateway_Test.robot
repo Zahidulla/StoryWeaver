@@ -21,7 +21,6 @@ Test for StoryFinder banner
     Click close button
 Test for all sections in Unsigned Usergateway should be visible
    [Tags]      TC05-003       Sanity
-
     Verify trending this week title for Unsigned usergateway
     Books in Trending this week should be visible
     Verify level section should be visible
