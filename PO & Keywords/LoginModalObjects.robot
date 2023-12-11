@@ -52,7 +52,7 @@ Click on captcha button
     Click Element    //*[@class='recaptcha-checkbox-border']
 Click on next button
     Click Button   ${NextButton}
-    Sleep    3s
+    Wait Until Element Is Visible    ${PasswordField}       timeout=15s
 Enter Vaild Password in password field
     input password    ${PasswordField}   ${Password}
     sleep    2s

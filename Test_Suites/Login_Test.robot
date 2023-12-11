@@ -22,7 +22,7 @@ Login Test with invalid credentials
     [Tags]      TC01-002       Sanity
     Click on Login/Signup button
     click on email option
-    Enter email id      zahid@yopmail.com
+    Enter email id      invalid@yopmail.com
     Click on next button
     Enter Invalid Password in password field
     Click login button after entering password
