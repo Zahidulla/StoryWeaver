@@ -11,7 +11,6 @@ Test Setup
 Test for Manadatory login/signup after 3 reads
     [Documentation]     Testing Mandatory if login/signup appears after 3 reads as an unsigned user
     [Tags]      TC03-001       Sanity
-    Close the PTR Notification if visible
     Cick on book card to read the story
     ${ReaderOpenStatus}     Run Keyword And Return Status    Wait Until Element Is Visible    ${CloseButton}
         WHILE   ${ReaderOpenStatus}
