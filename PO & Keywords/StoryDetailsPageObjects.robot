@@ -17,6 +17,7 @@ ${DeleteBookshelfButton}        (//a[@class="pb-link pb-link--danger"])[1]
 ${YouMayAlsoLikeTitle}      //div[@class="pb-section-block__header"]
 ${SimilarStoryCarusel}      //div[@class="pb-cards-carousel"]
 ${TagsSection}      (//ul[@class="pb-list pb-list--inline"])[4]
+${YouMayAlsoLikeStoryCard}      (//div[@class="pb-book-card__container"])[2]
 *** Keywords ***
 Edit story from story details page
     Click Element    ${MoreDropdown}
@@ -80,6 +81,9 @@ Verify you may also like section should be visible
     Element Should Contain    ${YouMayAlsoLikeTitle}    You may also like
 Verify tags should be visible
     Element Should Be Visible    ${TagsSection}
+Click story card from You may also like section
+    Execute JavaScript    window.scrollBy(0, 700)
+    Click Element    ${YouMayAlsoLikeStoryCard}
 
 
 
