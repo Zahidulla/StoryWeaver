@@ -18,6 +18,7 @@ ${YouMayAlsoLikeTitle}      //div[@class="pb-section-block__header"]
 ${SimilarStoryCarusel}      //div[@class="pb-cards-carousel"]
 ${TagsSection}      (//ul[@class="pb-list pb-list--inline"])[4]
 ${YouMayAlsoLikeStoryCard}      (//div[@class="pb-book-card__meta-wrapper"])[2]
+${DeleteOfflineLibraryOption}    //a[@class="pb-link pb-link--danger"]
 *** Keywords ***
 Edit story from story details page
     Click Element    ${MoreDropdown}
@@ -58,7 +59,7 @@ Verify slim notification for book saved in offline library
         Log    Readalong version have been saved with notification ${ReadOfflineNotification}
     END
 Click on delete from offline library button
-    Click Element    ${OfflineLibraryOption}
+    Click Element    ${DeleteOfflineLibraryOption}
     Click Element    ${ClickOnDelete}
 Verify slim notification after deleteting book from offline library
     Wait Until Element Contains    ${GlobalSlimNotification}     The Read and Readalong versions of this story have been removed from your offline library.
