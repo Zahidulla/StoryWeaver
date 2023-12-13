@@ -3,8 +3,10 @@ Library     SeleniumLibrary
 Resource    ../Resources/Test_data.robot
 *** Variables ***
 ${ReaderNextButton} =    //a[@title='Next']
-
-
+${GlobalSlimNotification}    xpath=//*[@class="pb-slim-notification-container"]
+${PTR_Image}=   //*[@class="pb-ptrtooltip__tooltip-img"]
+${PTR_Close_Button}=    //*[@class="pb-ptrtooltip__tooltip-close"]
+${CloseButton}    //div[@title="Close"]
 *** Keywords ***
 Open_Web_browser
       ${chrome_options}=  Evaluate  sys.modules['selenium.webdriver'].ChromeOptions()  sys, selenium.webdriver
