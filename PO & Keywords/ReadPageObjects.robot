@@ -37,6 +37,7 @@ Click on 3 dot icon
 Click on read story from 3 dot menu
     Click Element    ${ReadStoryin3dotsmenu}
 Close the reader
+    Wait Until Element Is Visible    ${CloseButton}     timeout=10s
     Mouse Over    ${CloseButton}
     Sleep    1s
     Click Element    ${CloseButton}

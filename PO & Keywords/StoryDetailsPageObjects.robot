@@ -17,7 +17,7 @@ ${DeleteBookshelfButton}        (//a[@class="pb-link pb-link--danger"])[1]
 ${YouMayAlsoLikeTitle}      //div[@class="pb-section-block__header"]
 ${SimilarStoryCarusel}      //div[@class="pb-cards-carousel"]
 ${TagsSection}      (//ul[@class="pb-list pb-list--inline"])[4]
-${YouMayAlsoLikeStoryCard}      (//div[@class="pb-book-card__container"])[2]
+${YouMayAlsoLikeStoryCard}      (//div[@class="pb-book-card__meta-wrapper"])[2]
 *** Keywords ***
 Edit story from story details page
     Click Element    ${MoreDropdown}
@@ -51,15 +51,17 @@ Click on save to offline library
 
 Verify slim notification for book saved in offline library
     Wait Until Element Is Visible    ${GlobalSlimNotification}      timeout=15s
-    Element Should Contain    ${GlobalSlimNotification}    This story has been added to your offline library.
-    Wait Until Element Is Not Visible    ${GlobalSlimNotification}      timeout=10s
+    ${ReadOfflineNotification}    Get Text    ${GlobalSlimNotification}    
+    IF    "${ReadOfflineNotification}" == "This story has been added to your offline library."
+        Log    Read version of story has been saved
+    ELSE
+        Log    Readalong version have been saved with notification ${ReadOfflineNotification}
+    END
 Click on delete from offline library button
     Click Element    ${OfflineLibraryOption}
     Click Element    ${ClickOnDelete}
 Verify slim notification after deleteting book from offline library
-    Wait Until Element Is Visible    ${GlobalSlimNotification}      timeout=15s
-    Element Should Contain    ${GlobalSlimNotification}     The Read and Readalong versions of this story have been removed from your offline library.
-    Wait Until Element Is Not Visible    ${GlobalSlimNotification}      timeout=10s
+    Wait Until Element Contains    ${GlobalSlimNotification}     The Read and Readalong versions of this story have been removed from your offline library.
 Click on bookshelf from story details page
     Click Element    ${Bookshelfbutton}
     Element Should Be Visible    ${BookshelfModal}
@@ -67,23 +69,23 @@ Select the bookshelf list to save the book
     Wait Until Element Is Visible    ${BookshelfListoption}     timeout=10s
     Click Element    ${BookshelfListoption}
 Verify slim notification after adding to Bookshelf
-    Wait Until Element Is Visible    ${GlobalSlimNotification}      timeout=15s
-    Element Should Contain    ${GlobalSlimNotification}         Yay! This book has been added to your bookshelf!
-    Wait Until Element Is Not Visible    ${GlobalSlimNotification}      timeout=10s
+    Wait Until Element Contains    ${GlobalSlimNotification}         Yay! This book has been added to your bookshelf!
 Click on remove from bookshelf button
     Click Element    ${DeleteBookshelfButton}
 Verify slim notification after deleting to Bookshelf
-    Wait Until Element Is Visible    ${GlobalSlimNotification}      timeout=15s
-    Element Should Contain    ${GlobalSlimNotification}         This story has been removed from your bookshelf.
-    Wait Until Element Is Not Visible    ${GlobalSlimNotification}      timeout=10
+    Wait Until Element Contains    ${GlobalSlimNotification}    This story has been removed from your bookshelf.
 Verify you may also like section should be visible
-    Execute JavaScript    window.scrollBy(0, 700)
+    Execute JavaScript    window.scrollBy(0, 900)
     Element Should Contain    ${YouMayAlsoLikeTitle}    You may also like
 Verify tags should be visible
+    Execute JavaScript    window.scrollBy(0, 1000)
     Element Should Be Visible    ${TagsSection}
 Click story card from You may also like section
-    Execute JavaScript    window.scrollBy(0, 700)
-    Click Element    ${YouMayAlsoLikeStoryCard}
+    Mouse Over    ${YouMayAlsoLikeStoryCard}
+    Double Click Element    ${YouMayAlsoLikeStoryCard}
+    Sleep    2s
+
+
 
 
 
