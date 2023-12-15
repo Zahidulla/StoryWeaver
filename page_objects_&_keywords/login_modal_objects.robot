@@ -25,6 +25,7 @@ Login
     Click Element    ${Emailbuttonmodal}
     input text    ${EmailInputField}   ${UserID}
     Click Button   ${NextButton}
+    Sleep    2s
     input password    ${PasswordField}   ${Password}
     click button    ${LoginButton}
     Sleep    5s
