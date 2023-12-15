@@ -26,24 +26,25 @@ Test for reading the story by clicking on Readbutton
 Test for the similar books section should be visible
     [Tags]      TC09-003       Sanity
     Verify you may also like section should be visible
-Test for adding the story to offline library
-    [Tags]      TC09-004       Sanity
     Click story card from You may also like section
-    Click on save to offline library
-    Verify slim notification for book saved in offline library
-Test for deleting the story from offline library
-    [Tags]      TC09-005       Sanity
-    Click on delete from offline library button
-    Verify slim notification after deleteting book from offline library
 Test for adding the story to My bookshelf
-    [Tags]      TC09-006       Sanity
+    [Tags]      TC09-004       Sanity
     Click on bookshelf from story details page
     Select the bookshelf list to save the book
     Verify slim notification after adding to Bookshelf
 Test for deleting the story from My Bookshelf
-    [Tags]      TC09-007       Sanity
+    [Tags]      TC09-005      Sanity
     Click on remove from bookshelf button
     Verify slim notification after deleting to Bookshelf
+Test for adding the story to offline library
+    [Tags]      TC09-006       Sanity
+    Click on save to offline library
+    Verify slim notification for book saved in offline library
+Test for deleting the story from offline library
+    [Tags]      TC09-007       Sanity
+    Click on delete from offline library button
+    Verify slim notification after deleteting book from offline library
+
 Test for tags section should be visible
     [Tags]      TC09-008       Sanity
     Verify tags should be visible

@@ -54,6 +54,7 @@ Verify read page should open
     ${ReadpageUrl}   Get Location
     Should Be Equal As Strings    ${ReadpageUrl}    https://storyweaver.org.in/en/stories?sort=Ratings
 Apply language filter from read page
+    Sleep       2s
     Click Element    ${ReadpageLanguageFilter}
     Sleep    2s
     Click Element    ${FilterInputField}
