@@ -1,10 +1,10 @@
 *** Settings ***
-Resource    ../Resources/Test_data.robot
-Resource    ../PO & Keywords/CreateFeatureObjects.robot
-Resource    ../PO & Keywords/LoginModalObjects.robot
-Resource    ../PO & Keywords/DashbordObjects.robot
-Resource    ../PO & Keywords/StoryDetailsPageObjects.robot
-Resource    ../PO & Keywords/TranslatePageObjects.robot
+Resource    ../resources/test_data.robot
+Resource    ../page_objects_&_keywords/create_feature_objects.robot
+Resource    ../page_objects_&_keywords/login_modal_objects.robot
+Resource    ../page_objects_&_keywords/dashboard_objects.robot
+Resource    ../page_objects_&_keywords/story_details_page_objects.robot
+Resource    ../page_objects_&_keywords/translate_page_objects.robot
 
 
 *** Test Cases ***

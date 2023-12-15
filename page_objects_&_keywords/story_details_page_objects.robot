@@ -1,6 +1,6 @@
 *** Settings ***
-Resource    ../Resources/common.robot
-Resource    ../Resources/Test_data.robot
+Resource    ../resources/common.robot
+Resource    ../resources/test_data.robot
 *** Variables ***
 ${MoreDropdown}     (//div[@title="More"])[1]
 ${EditStoryButton}      //div[text()="Edit"]
@@ -49,7 +49,6 @@ Click on save to offline library
     Sleep    2s
     Mouse Over    ${OfflineLibraryOption}
     Click Element    ${OfflineLibraryOption}
-
 Verify slim notification for book saved in offline library
     Wait Until Element Is Visible    ${GlobalSlimNotification}      timeout=15s
     ${ReadOfflineNotification}    Get Text    ${GlobalSlimNotification}    

@@ -1,9 +1,9 @@
 *** Settings ***
-Resource    ../Resources/common.robot
-Resource    ../Resources/Test_data.robot
-Resource    LoginModalObjects.robot
-Resource    Unsigned_gatewayObjects.robot
-Resource    ParentGatewayObjects.robot
+Resource    ../resources/common.robot
+Resource    ../resources/test_data.robot
+Resource    login_modal_objects.robot
+Resource    unsigned_gateway_objects.robot
+Resource    parent_gateway_objects.robot
 
 *** Variables ***
 ${5GreatThingsTitle}        //h3[@class="pb-home__title pb-home__edu-title"]

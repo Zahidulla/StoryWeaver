@@ -1,8 +1,8 @@
 *** Settings ***
-Resource    ../Resources/Test_data.robot
-Resource    ../PO & Keywords/ReadPageObjects.robot
-Resource    ../PO & Keywords/Unsigned_gatewayObjects.robot
-Resource    ../PO & Keywords/StoryFinder.robot
+Resource    ../resources/test_data.robot
+Resource    ../page_objects_&_keywords/read_page_objects.robot
+Resource    ../page_objects_&_keywords/unsigned_gateway_objects.robot
+Resource    ../page_objects_&_keywords/storyfinder_objects.robot
 
 *** Test Cases ***
 Test Setup

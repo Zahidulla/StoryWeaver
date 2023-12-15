@@ -41,7 +41,7 @@ StoryWeaver/
 │   ├── HomePage. robot        # Page object for the home page & Element locators for the login page
 │   │   └── Homepage_Locators.robot      # Actions or methods specific to the home page
 │   └── ...
-├── Resources/
+├── resources/
 │   ├── test_data.robot         # Test data will be stored in it
 │   ├── configuration. robot
 │   └── webdriver.py             # Installing webdriver with webdriver manager
@@ -80,7 +80,7 @@ pip install robotframework-pabot
 1. Clone this repository to your local machine.
 2. Set up a virtual environment in the `venv` directory.
 3. Install required dependencies using `pip install -r requirements.txt`.
-4. Update configuration files in the `Resources` directory as needed.
+4. Update configuration files in the `resources` directory as needed.
 5. Define page locators in the `Locators` directory.
 6. Create Page Object classes in the `Pages_objects_&_Keywords` directory.
 7. Organize test data in the `TestData` directory.

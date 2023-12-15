@@ -1,10 +1,10 @@
 *** Settings ***
-Resource    ../Resources/common.robot
-Resource    ../Resources/Test_data.robot
-Resource    LoginModalObjects.robot
-Resource    StoryFinder.robot
-Resource    SmileyRatingObjects.robot
-Resource    Unsigned_gatewayObjects.robot
+Resource    ../resources/common.robot
+Resource    ../resources/test_data.robot
+Resource    login_modal_objects.robot
+Resource    storyfinder_objects.robot
+Resource    smiley_rating_objects.robot
+Resource    unsigned_gateway_objects.robot
 *** Variables ***
 ${StudentsSpotlightTitle}   (//div[@class="pb-home__title"])[2]
 ${StudentPopularLanguageTitle}     (//div[@class="pb-home__title"])[3]

@@ -1,17 +1,16 @@
 *** Settings ***
-Resource    ../Resources/Test_data.robot
-Resource    ../PO & Keywords/CreateFeatureObjects.robot
-Resource    ../PO & Keywords/LoginModalObjects.robot
-Resource    ../PO & Keywords/ImagePageObjects.robot
-Resource    ../PO & Keywords/DashbordObjects.robot
-Resource    ../PO & Keywords/StoryDetailsPageObjects.robot
-Resource    ../PO & Keywords/UserDropdownMenu.robot
+Resource    ../resources/test_data.robot
+Resource    ../page_objects_&_keywords/create_feature_objects.robot
+Resource    ../page_objects_&_keywords/login_modal_objects.robot
+Resource    ../page_objects_&_keywords/image_page_objects.robot
+Resource    ../page_objects_&_keywords/dashboard_objects.robot
+Resource    ../page_objects_&_keywords/story_details_page_objects.robot
+Resource    ../page_objects_&_keywords/user_dropdown_menu_objects.robot
 
 *** Test Cases ***
 Setup
         Open_Web_browser    ${IndividualImageURL}
 Test for clicking on create option from individual image page
-    [Tags]      TC02-001       Sanity
     Accept GDPR
     Click on create story button from individual image page
     Click on Login/Signup button from generic login signup(Appear when clicked on action button)

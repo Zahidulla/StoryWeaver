@@ -1,9 +1,9 @@
 *** Settings ***
-Resource    ../PO & Keywords/StoryDetailsPageObjects.robot
-Resource    ../PO & Keywords/ReadPageObjects.robot
-Resource    ../PO & Keywords/SmileyRatingObjects.robot
-Resource    ../PO & Keywords/LoginModalObjects.robot
-Resource    ../PO & Keywords/StoryFinder.robot
+Resource    ../page_objects_&_keywords/story_details_page_objects.robot
+Resource    ../page_objects_&_keywords/read_page_objects.robot
+Resource    ../page_objects_&_keywords/smiley_rating_objects.robot
+Resource    ../page_objects_&_keywords/login_modal_objects.robot
+Resource    ../page_objects_&_keywords/storyfinder_objects.robot
 
 *** Test Cases ***
 Test Setup

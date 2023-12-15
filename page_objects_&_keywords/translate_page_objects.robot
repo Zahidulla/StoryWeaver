@@ -1,8 +1,8 @@
 *** Settings ***
-Resource    ../Resources/common.robot
+Resource    ../resources/common.robot
 Library    SeleniumLibrary
-Resource     ReadPageObjects.robot
-Resource        CreateFeatureObjects.robot
+Resource     read_page_objects.robot
+Resource        create_feature_objects.robot
 
 
 *** Variables ***

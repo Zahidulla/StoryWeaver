@@ -1,11 +1,11 @@
 *** Settings ***
-Resource    ../Resources/Test_data.robot
-Resource    ../PO & Keywords/ReadPageObjects.robot
-Resource    ../PO & Keywords/Unsigned_gatewayObjects.robot
-Resource    ../PO & Keywords/StoryFinder.robot
-Resource    ../PO & Keywords/LoginModalObjects.robot
-Resource    ../PO & Keywords/StudentGatewayObjects.robot
-Resource    ../PO & Keywords/ParentGatewayObjects.robot
+Resource    ../resources/test_data.robot
+Resource    ../page_objects_&_keywords/read_page_objects.robot
+Resource    ../page_objects_&_keywords/unsigned_gateway_objects.robot
+Resource    ../page_objects_&_keywords/storyfinder_objects.robot
+Resource    ../page_objects_&_keywords/login_modal_objects.robot
+Resource    ../page_objects_&_keywords/student_gateway_objects.robot
+Resource    ../page_objects_&_keywords/parent_gateway_objects.robot
 
 *** Test Cases ***
 Test Setup

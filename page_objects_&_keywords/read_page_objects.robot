@@ -1,6 +1,6 @@
 *** Settings ***
-Resource    ../Resources/common.robot
-Resource    ../Resources/Test_data.robot
+Resource    ../resources/common.robot
+Resource    ../resources/test_data.robot
 
 *** Variables ***
 ${BookCard}     (//div[@class="pb-book-card__container"])[1]

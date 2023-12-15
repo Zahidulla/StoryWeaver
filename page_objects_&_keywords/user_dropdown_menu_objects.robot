@@ -1,8 +1,8 @@
 *** Settings ***
-Resource    ../Resources/common.robot
-Resource    ../Resources/Test_data.robot
+Resource    ../resources/common.robot
+Resource    ../resources/test_data.robot
 *** Variables ***
-${UserNameDropdown}     (//span[@class="pb-site-nav-link__title"])[2]
+${UserNameDropdown}     //span[contains(text(),'Zahid_nu')]
 ${DashboardOption}      //a[text()='Dashboard']
 *** Keywords ***
 Click on UserName

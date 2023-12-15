@@ -1,6 +1,6 @@
 *** Settings ***
-Resource    ../Resources/Test_data.robot
-Resource    ../PO & Keywords/LoginModalObjects.robot
+Resource    ../resources/test_data.robot
+Resource    ../page_objects_&_keywords/login_modal_objects.robot
 
 
 *** Test Cases ***
