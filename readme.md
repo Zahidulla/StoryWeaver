@@ -73,11 +73,8 @@ pip install robotframework-selenium2library
 ```
 ### Install Robotframework SeleniumLibrary
 ```sh
-pip install robotframework-pabot 
+pip install robotframework-pabot
 ```
-```
-```
-
 ## Getting Started
 
 1. Clone this repository to your local machine.
