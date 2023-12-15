@@ -4,7 +4,7 @@ ${Url} =    https://storyweaver.org.in/en/
 ${ReadPage}=    https://storyweaver.org.in/en/stories?sort=Ratings
 ${IndividualImageURL}   https://storyweaver.org.in/en/illustrations/589
 ${StorydetailURL}       https://storyweaver.org.in/en/stories/586567-testing-586487
-${browser_Name}    chrome
+${browser_Name}    headlesschrome
 ${UserName} =    zahid@yopmail.com
 ${StudentUserName}  1@yopmail.com
 ${TeachersUserName}     zahid_3@yopmail.com
