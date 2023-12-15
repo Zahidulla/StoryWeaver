@@ -45,16 +45,37 @@ StoryWeaver/
 │   ├── test_data.robot         # Test data will be stored in it
 │   ├── configuration. robot
 │   └── webdriver.py             # Installing webdriver with webdriver manager
-├── Libraries/
-│   ├── MyCustomLibrary.py      # If in case the external Libraries are used we will store in this folder
-│   └── ...
 ├── Reports/                    # Reports generated to be stored in this
 │   ├── report_1.html
 │   ├── report_2.html
 │   └── ...
-└── Screenshots/                # Screenshots on failure to be stored in this folder
-    ├── screenshot_1.png
-    ├── screenshot_2.png
+```
+## Installation
+For Linux :
+### Install Python on Ubuntu
+```sh
+$ sudo apt update
+$ sudo apt install python3
+$ python3 --version
+```
+### Install pip package installer on Ubuntu
+```sh
+$ sudo apt-get install python3-pip python-dev
+$ pip3 --version
+```
+### Install Selenium
+```sh
+pip install selenium
+```
+### Install Robotframework SeleniumLibrary
+```sh
+pip install robotframework-selenium2library
+```
+### Install Robotframework SeleniumLibrary
+```sh
+pip install robotframework-pabot 
+```
+```
 ```
 
 ## Getting Started
