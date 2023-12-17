@@ -51,6 +51,9 @@ StoryWeaver/
 │   ├── report_2.html
 │   └── ...
 ```
+## _Tools & Technologies Used_
+_Python_, _Selenium_, _Robot_Framework_, _Pabot_
+
 ## Installation
 For Linux :
 ### Install Python on Ubuntu
@@ -72,10 +75,11 @@ pip install selenium
 ```sh
 pip install robotframework-selenium2library
 ```
-### Install Robotframework SeleniumLibrary
+### Install Robotframework Pabot
 ```sh
 pip install robotframework-pabot
 ```
+
 ## Getting Started
 
 1. Clone this repository to your local machine.
@@ -88,8 +92,6 @@ pip install robotframework-pabot
 8. Create test suite files in the `TestSuites` directory. 
 9. Running single test using default `robot /Testfile.robot`.
 10. Running parallel test cases with help of pabot library by suing the command `pabot /Testfile.robot`
-## _Tools & Technologies Used_
-_Python_, _Selenium_, _Robot_Framework_, _Pabot_
 
 ## Running Tests
 
