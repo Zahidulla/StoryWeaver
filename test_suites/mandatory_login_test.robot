@@ -9,8 +9,7 @@ Resource    ../page_objects_&_keywords/story_details_page_objects.robot
 Test Setup
     Open_Web_browser    ${StorydetailURL}
 Test for Manadatory login/signup after 3 reads
-    [Documentation]     Testing Mandatory if login/signup appears after 3 reads as an unsigned user
-    [Tags]      TC03-001       Sanity
+    [Tags]      Mandatory Login Test       Sanity
     Cick on book card to read the story
     ${ReaderOpenStatus}     Run Keyword And Return Status    Wait Until Element Is Visible    ${CloseButton}
     FOR    ${i}    IN RANGE    3    #Ensures 3 read at max
@@ -23,7 +22,7 @@ Test for Manadatory login/signup after 3 reads
     END
 
 Verify the Mandatory login/Signup modal should be visible
-    [Tags]      TC03-002       Sanity
+    [Tags]      Mandatory Login Test       Sanity
     Wait Until Element Is Visible    ${Emailbuttonmodal}    timeout=10s
     Element Should Be Visible   ${Emailbuttonmodal}
 Test Teardown

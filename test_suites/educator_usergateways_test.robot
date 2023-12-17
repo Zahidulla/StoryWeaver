@@ -12,17 +12,17 @@ Resource    ../page_objects_&_keywords/educator_gateway_objects.robot
 Test Setup
     Open_Web_browser    ${URL}
 Login as a Educator user
-   [Tags]      TC07-001       Sanity
+   [Tags]      Edu-Gateway Test       Sanity
     Login   ${TeachersUserName}
 Verify Educator gateway should load
-    [Tags]      TC07-002       Sanity
+    [Tags]      Edu-Gateway Test       Sanity
     ${CurrentUrl}=      Get Location
     Should Be Equal As Strings    "${CurrentUrl}"    "https://storyweaver.org.in/en/educator"
 Test for Banners from Educator gateway
-   [Tags]      TC07-003       Sanity
+   [Tags]      Edu-Gateway Test       Sanity
     Banners link should be present
 Test for all sections in Educator Usergateway should be visible
-   [Tags]      TC07-004       Sanity
+   [Tags]      Edu-Gateway Test       Sanity
     Verify trending this week title for Educator usergateway
     Verify the 5great thing section should be visible
     Verify Looking for books section Title

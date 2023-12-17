@@ -14,55 +14,55 @@ Login
     Login   ${UserName}
     Sleep    3s
 Test if the translate page is be opened
-    [Tags]      TC11-001       Sanity
+    [Tags]      Translate Test       Sanity
     Click on Translate from main menu
     Verify Trabslate page is opened
 Test if the language is not selected and clicking on Translate
-    [Tags]      TC11-002       Sanity
+    [Tags]      Translate Test       Sanity
     Click on translate from Story card
     Slim notification without choosing language
     Clcik on offline translate button from story card
     Slim notification without choosing language
 Test for selecting To and From language from Translate page
-    [Tags]      TC11-003       Sanity
+    [Tags]      Translate Test       Sanity
     Select 'From' language
     Search for Language
     Select the language from the dropdown to translate
     Select 'To' language from translate
 Test for translating story when clicked on translate
-    [Tags]      TC11-004       Sanity
+    [Tags]      Translate Test       Sanity
     Click on translate from Story card
     Handle alert if any
     Translate editor should open
 Test for entering Text in editor
-    [Tags]      TC11-005       Sanity
+    [Tags]      Translate Test       Sanity
     Enter Text in editor for translate page
     Click on next page from translate editor
 Test for selecting reader orientation
-    [Tags]      TC11-006       Sanity
+    [Tags]     Translate Test       Sanity
     Select orientation from Translate editor
     Enter Text in editor for translate page
 Test for adding duplicate page
-    [Tags]      TC11-007       Sanity
+    [Tags]      Translate Test      Sanity
     Click on duplicate page icon
     Enter Text in editor for translate page
 Test for preview in translate page
-    [Tags]      TC11-008       Sanity
+    [Tags]      Translate Test       Sanity
     Click on preview from translate editor
     Verify preview should open
     Close preview
 Test for filling the publish form
-    [Tags]      TC11-009       Sanity
+    [Tags]      Translate Test       Sanity
     Click on publish button
     Fill publsih form from translate
     Scroll to publish button and click on it
-#Test for publishing the translated story
-#    [Tags]      TC11-0010       Sanity
-#    Scroll to publish button and click on it
-#    Click on publish button from Translates final publish form
+Test for publishing the translated story
+    [Tags]      Translate Test       Sanity
+    Scroll to publish button and click on it
+    Click on publish button from Translates final publish form
 Verify the ugc slim notification after submitting
-    [Tags]      TC11-0011       Sanity
+    [Tags]      Translate Test      Sanity
     Verify the UGC slim notification after publishing
 Test if the translate another story modal is opened in Read page
-    [Tags]      TC11-0012       Sanity
+    [Tags]      Translate Test       Sanity
      Verify Translate another story modal is appearing

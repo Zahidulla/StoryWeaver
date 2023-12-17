@@ -11,17 +11,17 @@ Resource    ../page_objects_&_keywords/parent_gateway_objects.robot
 Test Setup
     Open_Web_browser    ${URL}
 Login as a Parent user
-   [Tags]      TC06-001       Sanity
+   [Tags]      Parent-Gateway Test      Sanity
     Login   ${ParentUserName}
 Verify Parent gateway should load
-    [Tags]      TC06-002       Sanity
+    [Tags]      Parent-Gateway Test      Sanity
     ${CurrentUrl}=      Get Location
     Should Be Equal As Strings    "${CurrentUrl}"    "https://storyweaver.org.in/en/parent"
 Test for Banners from Parent gateway
-   [Tags]      TC06-003       Sanity
+   [Tags]      Parent-Gateway Test       Sanity
     Banners link should be present
 Test for all sections in Parent Usergateway should be visible
-   [Tags]      TC06-004       Sanity
+   [Tags]      Parent-Gateway Test       Sanity
     Verify trending this week title for Parent usergateway     #Re-Using the composnents
     Books in Trending this week should be visible
     Verify Spotlight cards section should be visible in Student gateway
