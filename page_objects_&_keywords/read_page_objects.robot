@@ -7,8 +7,6 @@ ${BookCard}     (//div[@class="pb-book-card__container"])[1]
 ${3DotMenu}     (//*[@class="pb-svg-icon pb-svg-icon--type-dots"])[1]
 ${ReadStoryin3dotsmenu}    (//div[@class="pb-menu-item__label"])[1]
 ${FirstSelectedFilter}      //span[@class="pb-pill__label"]
-${ReadOptionMainMenu}       (//span[@class="pb-site-nav-link__title"])[6]
-${AllBooksOption}       (//span[@class="pb-site-nav-link__title"])[32]
 ${ReadpageLanguageFilter}       (//a[@class="pb-link pb-link--default"])[2]
 ${ReadpageLevelFilter}       (//a[@class="pb-link pb-link--default"])[3]
 ${ReadpageCategoryFilter}       (//a[@class="pb-link pb-link--default"])[4]
@@ -44,11 +42,7 @@ Close the reader
 Filter should be visible
     Wait Until Element Is Visible    ${FirstSelectedFilter}     timeout=15s
     Element Should Contain    ${FirstSelectedFilter}    TELUGU
-Select Read page from read dropdown
-    Mouse Over    ${ReadOptionMainMenu}
-    Click Element    ${ReadOptionMainMenu}
-    Sleep    2s
-    Click Element    ${AllBooksOption}
+
 Verify read page should open
     Wait Until Element Is Visible    ${BookCard}    timeout=20s
     ${ReadpageUrl}   Get Location

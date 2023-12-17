@@ -4,7 +4,7 @@ Resource    ../page_objects_&_keywords/read_page_objects.robot
 Resource    ../page_objects_&_keywords/smiley_rating_objects.robot
 Resource    ../page_objects_&_keywords/login_modal_objects.robot
 Resource    ../page_objects_&_keywords/storyfinder_objects.robot
-
+Resource    ../page_objects_&_keywords/main_menu_objects.robot
 *** Test Cases ***
 Test Setup
     Open_Web_browser    ${Url}

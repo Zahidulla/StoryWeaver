@@ -5,7 +5,7 @@ Resource    ../page_objects_&_keywords/login_modal_objects.robot
 Resource    ../page_objects_&_keywords/dashboard_objects.robot
 Resource    ../page_objects_&_keywords/story_details_page_objects.robot
 Resource    ../page_objects_&_keywords/translate_page_objects.robot
-
+Resource    ../page_objects_&_keywords/main_menu_objects.robot
 
 *** Test Cases ***
 Test Setup
@@ -66,3 +66,5 @@ Verify the ugc slim notification after submitting
 Test if the translate another story modal is opened in Read page
     [Tags]      Translate Test       Sanity
      Verify Translate another story modal is appearing
+Test Teardown
+    Close_the_browser

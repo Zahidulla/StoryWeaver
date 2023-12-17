@@ -3,10 +3,9 @@ Resource    ../resources/common.robot
 Library    SeleniumLibrary
 Resource     read_page_objects.robot
 Resource        create_feature_objects.robot
-
+Resource
 
 *** Variables ***
-${TranslateOptionMainMenu}      (//span[@class="pb-site-nav-link__title"])[8]
 ${TranslatePageTitle}       //h1[@class="pb-page-header__title"]
 ${TranslateQuickview}       (//a[@class="pb-button pb-button--default pb-button--size-s pb-book-card__quick-menu-btn"])[1]
 ${TranslateOfflineOnBookcard}       (//a[@class="pb-link pb-link--light pb-link--no-text-decoration"])[1]
@@ -33,8 +32,6 @@ ${TranslateSynopsisTextField}       //textarea[@id='story_synopsis']
 ${ContinueButtoninform}     //span[contains(text(),'Continue')]
 ${Pickanotherstorymodaltitle}       //h1[@class="pb-center-mode-carousal__title"]
 *** Keywords ***
-Click on Translate from main menu
-    Click Element    ${TranslateOptionMainMenu}
 Verify Trabslate page is opened
     Wait Until Element Is Visible    ${BookCard}        timeout=15s
     Element Should Contain    ${TranslatePageTitle}    StoryWeaver Translator
