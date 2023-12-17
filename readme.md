@@ -6,6 +6,7 @@ This documentation provides information about the automated testing framework an
 - [Introduction](#introduction)
 - [Prerequisites](#prerequisites)
 - [Directory Structure](#directory-structure)
+- [Installationn](#installation)
 - [Getting Started](#Getting Started)
 - [Running Tests](#running-tests)
 - [Reporting](#Reporting)
