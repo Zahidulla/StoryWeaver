@@ -53,7 +53,7 @@ Test for preview in translate page
 Test for filling the publish form and publishing the story
     [Tags]      Translate Test       Sanity
     Click on publish button
-    Fill publsih form from translate
+    Fill publish form from translate
     Scroll to publish button and click on it
     Click on publish button from Translates final publish form
 Verify the ugc slim notification after submitting

@@ -82,9 +82,9 @@ Verify preview should open
     Wait Until Element Is Visible    ${PreviewReader}   timeout=15s
 Click on publish button
     Click Element    ${TranslatePublishBookButton}
-    Wait Until Element Is Visible    ${TranslatesYesButton}     timeout=10s
-    Click Button    ${TranslatesYesButton}
-Fill publsih form from translate
+#    Wait Until Element Is Visible    ${TranslatesYesButton}     timeout=10s
+#    Click Button    ${TranslatesYesButton}
+Fill publish form from translate
     Wait Until Element Is Visible    ${PublishFormTitle}    timeout=15s
     Sleep    2s
     Click Element    ${TranslateStoryTitleInput}

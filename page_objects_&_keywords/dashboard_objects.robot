@@ -6,7 +6,7 @@ Resource    ../resources/test_data.robot
 *** Variables ***
 ${MyPublishedStoryTab}      //span[text()='My Published Stories']
 ${PublishedStoryTitle}      (//td[@class="underline-class"])[1]
-${StoryTitle link}      //span[text()='${StoryTitleText}']
+${StoryTitle link}      //span[text()='${StoryTitle}']
 *** Keywords ***
 My published story tab should be visible
 
