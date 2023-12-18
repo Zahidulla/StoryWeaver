@@ -6,7 +6,7 @@ Resource    ../page_objects_&_keywords/dashboard_objects.robot
 Resource    ../page_objects_&_keywords/story_details_page_objects.robot
 Resource    ../page_objects_&_keywords/translate_page_objects.robot
 Resource    ../page_objects_&_keywords/main_menu_objects.robot
-
+Resource    ../page_objects_&_keywords/user_dropdown_menu_objects.robot
 *** Test Cases ***
 Test Setup
     Open_Web_browser    ${Url}
@@ -45,19 +45,15 @@ Test for selecting reader orientation
 Test for adding duplicate page
     [Tags]      Translate Test      Sanity
     Click on duplicate page icon
-    Enter Text in editor for translate page
 Test for preview in translate page
     [Tags]      Translate Test       Sanity
     Click on preview from translate editor
     Verify preview should open
     Close preview
-Test for filling the publish form
+Test for filling the publish form and publishing the story
     [Tags]      Translate Test       Sanity
     Click on publish button
     Fill publsih form from translate
-    Scroll to publish button and click on it
-Test for publishing the translated story
-    [Tags]      Translate Test       Sanity
     Scroll to publish button and click on it
     Click on publish button from Translates final publish form
 Verify the ugc slim notification after submitting
@@ -66,5 +62,18 @@ Verify the ugc slim notification after submitting
 Test if the translate another story modal is opened in Read page
     [Tags]      Translate Test       Sanity
      Verify Translate another story modal is appearing
+     Click close button
+Verify publsihed story should appear in My Publsihed dashboard
+    [Tags]      Translate Test       Sanity
+    Click on UserName
+    Click on Dashboard option from user name dropdown
+    My published story tab should be visible
+    Verify the publsihed story should appear in My publsihed tab      ${TranslateTitleText}
+Test for editing Publsihed story from story details page
+    [Tags]      Translate Test       Sanity
+    Click on Story title link from My published tab     ${TranslateTitleText}
+    Sleep    3s
+    Edit story from story details page
+    Click on save button
 Test Teardown
     Close_the_browser

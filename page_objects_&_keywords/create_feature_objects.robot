@@ -25,7 +25,7 @@ ${CategoryButton}     //button[@class="multiselect dropdown-toggle btn btn-defau
 ${CategoryDropdown}     //*[@class='checkbox' and contains(text(),'Activity Books')]
 ${EnglishStoryTitleField}      //input[@id="story_english_title"]
 ${PublihsFormNextBtn}       //button[@id="next"]
-${FinalPublishStoryBtn}     //button[@id="publish_story"]
+${FinalPublishStoryBtn}      //button[@class="btn btn-app btn-brand-1"][text()='publish']
 ${InsertPageButton}     //span[@id='insert_pages']
 ${InsertOkaybutton}      (//span[@id='insert_page'])[1]
 ${ReadersSecondPage}       (//div[@class="illustration_container"])[2]
@@ -110,7 +110,7 @@ Click on publish button from final publish form
 Verify the UGC slim notification after publishing
     Wait Until Element Is Visible    ${GlobalSlimNotification}  timeout=15s
     Element Should Contain    ${GlobalSlimNotification}    Yay! Your story is published and will appear under 'My Published Stories' soon
-    Wait Until Element Is Visible    ${GlobalSlimNotification}      timeout=10s
+    Wait Until Element Is Not Visible    ${GlobalSlimNotification}      timeout=10s
 Insert new page in the editor
     Sleep    2s
     Click Element    ${InsertPageButton}
@@ -154,6 +154,7 @@ Verify the preview
     Wait Until Element Is Visible    ${PreviewTitle}        timeout=15s
     Element Should Be Visible    ${LevelBandInReader}
 Close preview
+    Sleep    5s
     Click Element    ${PreviewCloseButton}
     
 Check for empty speech bubble or text box while publihsing

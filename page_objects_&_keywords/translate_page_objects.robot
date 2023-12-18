@@ -24,7 +24,7 @@ ${DeletePageicon}            //div[@id="delete_page"]
 ${PreviewButtonTranslateeditor}            //a[@id='preview']
 ${PreviewReader}        //div[@class="logo-level"]
 ${TranslatePublishBookButton}       //a[@id="publish"]
-${TranslatesYesButton}        (//button[text()='Yes'])[2]
+${TranslatesYesButton}        //button[text()='Yes']
 ${PublishFormTitle}     (//div[@class="desk-one"])[1]
 ${TranslateStoryTitleInput}     //input[@id='story_title']
 ${TranslateEnglishStoryTitleField}      //input[@id='story_english_title']
@@ -82,27 +82,28 @@ Verify preview should open
     Wait Until Element Is Visible    ${PreviewReader}   timeout=15s
 Click on publish button
     Click Element    ${TranslatePublishBookButton}
-    Sleep    10s
-    Set Focus To Element    ${TranslatesYesButton}
-    Click Element    ${TranslatesYesButton}
+    Wait Until Element Is Visible    ${TranslatesYesButton}     timeout=10s
+    Click Button    ${TranslatesYesButton}
 Fill publsih form from translate
     Wait Until Element Is Visible    ${PublishFormTitle}    timeout=15s
     Sleep    2s
     Click Element    ${TranslateStoryTitleInput}
-    Input Text    ${TranslateStoryTitleInput}    TranslateStoryTitle
+    Input Text    ${TranslateStoryTitleInput}    ${TranslateTitleText}
     Sleep    2s
     Click Element    ${TranslateEnglishStoryTitleField}
-    Input Text    ${TranslateEnglishStoryTitleField}    TranslateSToryTitle
+    Input Text    ${TranslateEnglishStoryTitleField}    ${TranslateTitleText}
     Sleep    2s
     Click Element    ${TranslateSynopsisTextField}
     Input Text    ${TranslateSynopsisTextField}    Test story synopsis for checking
 Scroll to publish button and click on it
-    Scroll Element Into View    ${ContinueButtoninform}
+    Execute JavaScript    window.scrollBy(0, 600)
     Click Element    ${ContinueButtoninform}
 Click on publish button from Translates final publish form
-    Click Element    ${FinalPublishStoryBtn}
+    Sleep    5s
+    Click Button    ${FinalPublishStoryBtn}
 Verify Translate another story modal is appearing
     Element Should Contain    ${Pickanotherstorymodaltitle}    Pick another story to translate!
+
 
 
 

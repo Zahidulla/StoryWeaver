@@ -72,7 +72,7 @@ Test for filling final publish form
 Verify the UGC published Notification
     [Tags]      Create Test       Sanity
     Verify the UGC slim notification after publishing
-Verify publsihed story should appear in My Publsihed dashboard ---Made a different suite as the published story will take time to appear in My published story
+Verify publsihed story should appear in My Publsihed dashboard
     [Tags]      Create Test       Sanity
     Click on UserName
     Click on Dashboard option from user name dropdown
@@ -80,7 +80,7 @@ Verify publsihed story should appear in My Publsihed dashboard ---Made a differe
     Verify the publsihed story should appear in My publsihed tab      ${StoryTitleText}
 Test for editing Publsihed story from story details page
     [Tags]      Create Test       Sanity
-    Click on Story title link from My published tab
+    Click on Story title link from My published tab     ${StoryTitleText}
     Sleep    3s
     Edit story from story details page
     Click on save button
